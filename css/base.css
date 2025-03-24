@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+html {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  overflow-y: scroll;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+a,
+button,
+input,
+textarea {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+}
+
+.container {
+  display: block;
+  max-width: 1580px;
+  margin: 0 auto;
+  padding: 0 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media (max-width: 1580px) {
+  .container {
+    max-width: 1200px;
+    padding: 0 30px;
+  }
+}
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1020px;
+    padding: 0 20px;
+  }
+}
+@media (max-width: 1020px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+.button {
+  display: inline-block;
+  padding: 16px 32px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #000000;
+  border: 2px solid #000000;
+  background-color: #ffffff;
+  -webkit-transition-property: border, color, background-color;
+  transition-property: border, color, background-color;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  cursor: pointer;
+}
+.button_primary {
+  color: #1e674e;
+  border-color: #1e674e;
+  background-color: #ffffff;
+}
+.button_primary:hover {
+  color: #ffffff;
+  background-color: #1e674e;
+}
+.button_secondary {
+  color: #ffffff;
+  border-color: #1e674e;
+  background-color: #1e674e;
+}
+.button_secondary:hover {
+  color: #ffffff;
+  border-color: #1c1c20;
+  background-color: #1c1c20;
+}
+.button_light {
+  color: #1e674e;
+  border-color: #e9f0ed;
+  background-color: #e9f0ed;
+}
+.button_light:hover {
+  color: #ffffff;
+  border-color: #1e674e;
+  background-color: #1e674e;
+}
