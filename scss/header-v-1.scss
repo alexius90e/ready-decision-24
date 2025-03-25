@@ -1,15 +1,30 @@
 @import './b-mixins';
 
 .header-v-1 {
+  position: relative;
+  z-index: 999;
   padding: 0;
   background-color: #fefefe;
-  box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.1);
 
   @include tabletsm {
     padding: 16px 0;
   }
 
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+    background-color: #fefefe;
+    box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.1);
+  }
+
   &__wrapper {
+    position: relative;
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -129,6 +144,10 @@
             width: 24px;
             aspect-ratio: 1 / 1;
             background: url(../assets/header-v-1/menu.svg) center / cover no-repeat;
+          }
+
+          &.active::before {
+            background-image: url(../assets/header-v-1/close.svg);
           }
 
           &-text {
@@ -264,6 +283,384 @@
           color: #ffffff;
           border-color: #1e674e;
           background-color: #1e674e;
+        }
+      }
+    }
+  }
+
+  &__menu {
+    position: fixed;
+    top: 90px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background-color: #ffffff;
+    transform: translate3d(0, -120dvh, 0);
+    transition: transform ease-in-out 0.4s;
+    will-change: transform;
+
+    @include tablet {
+      top: 80px;
+    }
+
+    &.active {
+      transform: translate3d(0, 0, 0);
+    }
+
+    & > .container {
+      height: 100%;
+    }
+
+    &-wrapper {
+      max-height: 100%;
+      padding: 35px 40px;
+      box-sizing: border-box;
+
+      @include desktop {
+        padding: 35px 30px;
+      }
+
+      @include laptop {
+        padding: 30px 0;
+      }
+
+      @include mobile {
+        padding: 15px 0;
+      }
+    }
+
+    &-content {
+      display: block;
+      max-height: calc(100dvh - 170px);
+      overflow: auto;
+
+      @include mobile {
+        max-height: calc(100dvh - 120px);
+      }
+    }
+
+    &-desktop {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 98px 34px;
+
+      @include desktop {
+        gap: 78px 34px;
+      }
+
+      @include laptop {
+        gap: 70px 34px;
+      }
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &-tablet {
+      display: none;
+
+      @include tablet {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 70px 30px;
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &-mobile {
+      display: none;
+      overflow: hidden;
+      padding-bottom: 85px;
+
+      @include tablet {
+        display: block;
+      }
+
+      &-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        margin: 0 0 60px;
+
+        &:has(&-item.active) &-item:not(.active) {
+          display: none;
+        }
+
+        &-item {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+
+          &-title {
+            flex: 1 1 calc(100% - 32px);
+
+            &-link {
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+              min-height: 56px;
+              width: 100%;
+              box-sizing: border-box;
+              font-weight: 500;
+              font-size: 20px;
+              letter-spacing: -0.01em;
+              color: #1c1c20;
+            }
+          }
+
+          &.active &-title {
+            display: none;
+          }
+
+          &-more {
+            flex: 0 0 32px;
+
+            &-button {
+              display: inline-block;
+              width: 32px;
+              height: 56px;
+              padding: 0;
+              border: none;
+              background: url(../assets/header-v-1/shevron.svg) center / 8px no-repeat;
+              transform: rotate(180deg);
+              filter: brightness(0%);
+              cursor: pointer;
+            }
+          }
+
+          &.active &-more {
+            display: none;
+          }
+
+          &-details {
+            position: absolute;
+            flex: 1 1 100%;
+            transform: translateX(120dvw);
+            opacity: 0;
+            transition-property: opacity, transform;
+            transition-timing-function: ease-in-out;
+            transition-duration: 0.2s;
+          }
+
+          &.active &-details {
+            position: static;
+            opacity: 1;
+            transform: translateX(0);
+          }
+
+          &-back {
+            &-button {
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+              min-height: 56px;
+              width: 100%;
+              margin: 0 0 4px;
+              padding: 0;
+              padding-left: 48px;
+              box-sizing: border-box;
+              border: none;
+              font-weight: 500;
+              font-size: 20px;
+              letter-spacing: -0.01em;
+              color: #1e674e;
+              background: url(../assets/header-v-1/shevron.svg) left 8px center / 8px no-repeat;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      &-contacts {
+        display: block;
+
+        &-phone {
+          margin: 0 0 9px;
+
+          &-link {
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 129%;
+            letter-spacing: -0.03em;
+            color: #1c1c20;
+
+            &:hover {
+              text-decoration-line: underline;
+              text-decoration-thickness: 2px;
+              text-decoration-color: #1e674e;
+            }
+          }
+        }
+
+        &-mode {
+          margin: 0 0 17px;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 140%;
+          letter-spacing: -0.01em;
+          color: #87878e;
+        }
+
+        &-callback {
+          margin: 0 0 31px;
+        }
+
+        &-address,   &-email {
+          margin: 0 0 21px;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 140%;
+          letter-spacing: -0.01em;
+          color: #1c1c20;
+        }
+
+        &-email  {
+          margin: 0 0 27px;
+
+          & > a {
+            color: inherit;
+          }
+        }
+
+       
+
+        &-social {
+          display: flex;
+          align-items: center;
+          flex: 0 0 auto;
+          gap: 4px;
+
+          &-link {
+            display: inline-block;
+            width: 48px;
+            aspect-ratio: 1 / 1;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 24px;
+            transition-property: border, color, background-color;
+            transition-timing-function: ease-in-out;
+            transition-duration: 0.2s;
+
+            &:hover {
+              background-color: #1c1c20;
+            }
+
+            &_tg {
+              background-image: url(../assets/header-v-1/telegram.svg);
+              background-color: #166ff5;
+            }
+
+            &_wts {
+              background-image: url(../assets/header-v-1/whatsapp.svg);
+              background-color: #06cc4d;
+            }
+          }
+        }
+      }
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 calc(100% / 4 - 34px / 4 * 3);
+      gap: 24px;
+      max-width: calc(100% / 4 - 34px / 4 * 3);
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      @include tablet {
+        flex: 0 0 calc(100% / 3 - 30px / 3 * 2);
+        max-width: calc(100% / 3 - 30px / 3 * 2);
+      }
+
+      @include mobile {
+        flex: 1 1 auto;
+        gap: 4px;
+        max-width: none;
+        background-color: #ffffff;
+      }
+
+      &:has(&-item:nth-child(7)) &-item:nth-child(n + 7) {
+        display: none;
+      }
+
+      &.active:has(&-item:nth-child(7)) &-item:nth-child(n + 7) {
+        display: block;
+      }
+
+      &:not(:has(&-item:nth-child(7))) &-more {
+        display: none;
+      }
+
+      &-item {
+        &-link {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 140%;
+          letter-spacing: -0.01em;
+          color: #87878e;
+          transition: color ease-in-out 0.2s;
+
+          @include mobile {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 56px;
+            width: 100%;
+            font-size: 20px;
+            color: #1c1c20;
+          }
+
+          &:hover {
+            color: #1c1c20;
+          }
+
+          &_title {
+            font-weight: 600;
+            color: #1c1c20;
+            text-transform: uppercase;
+
+            &:hover {
+              color: #1e674e;
+            }
+          }
+        }
+      }
+
+      &-more {
+        &-button {
+          display: inline-block;
+          margin: 0;
+          padding: 0;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 140%;
+          letter-spacing: -0.01em;
+          color: #1e674e;
+          border: none;
+          background-color: rgba($color: #ffffff, $alpha: 0);
+          transition: color ease-in-out 0.2s;
+          cursor: pointer;
+
+          @include mobile {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 56px;
+            font-size: 20px;
+          }
+
+          &:hover {
+            color: #1c1c20;
+          }
         }
       }
     }
