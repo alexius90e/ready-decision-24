@@ -12,6 +12,7 @@ if (thanksModal) {
 thanksForms.forEach((thanksForm) => {
   thanksForm.addEventListener('submit', (event) => {
     event.preventDefault();
+    event.currentTarget.reset();
     if (thanksModal) thanksModal.classList.add('active');
   });
 });
