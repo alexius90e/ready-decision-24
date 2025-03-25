@@ -7,7 +7,9 @@
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/header-v-1.css" />
+    <link rel="stylesheet" href="./css/okno-spasibo-v-1.css" />
     <script type="module" src="./js/header-v-1.js" defer></script>
+    <script type="module" src="./js/okno-spasibo-v-1.js" defer></script>
   </head>
 
   <body>
@@ -1071,7 +1073,7 @@
               Мы детально проконсультируем и подберем наилучшее предложение
             </div>
 
-            <form class="header-v-1__modal-form">
+            <form class="header-v-1__modal-form form-with-okno-spasibo">
               <input type="text" placeholder="Ваше имя" required />
               <input type="text" placeholder="Ваш телефон" required />
               <button class="header-v-1__modal-form-submit button button_secondary button_wide">
@@ -1090,5 +1092,31 @@
         </div>
       </div>
     </header>
+
+    <div class="okno-spasibo-v-1">
+      <div class="okno-spasibo-v-1__body">
+        <div class="okno-spasibo-v-1__content">
+          <div class="okno-spasibo-v-1__title">Спасибо!</div>
+
+          <div class="okno-spasibo-v-1__description">
+            Мы получили вашу заявку, свяжемся с вами в ближайшее время.
+          </div>
+
+          <div class="okno-spasibo-v-1__description">
+            В рабочее время мы отвечаем в течении 1 часа, в нерабочее - вначале следующего дня.
+          </div>
+
+          <div class="okno-spasibo-v-1__disclaimer">Если вопрос срочный, позвоните:</div>
+
+          <div class="okno-spasibo-v-1__phone">
+            <a class="okno-spasibo-v-1__phone-link" href="tel:88005553333">8 800 555-33-33</a>
+          </div>
+        </div>
+
+        <div class="okno-spasibo-v-1__close">
+          <button class="okno-spasibo-v-1__close-button"></button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
