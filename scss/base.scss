@@ -25,6 +25,27 @@ textarea {
   text-decoration: none;
 }
 
+input {
+  display: inline-block;
+  width: 100%;
+  padding: 18px 24px;
+  box-sizing: border-box;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 116%;
+  letter-spacing: -0.01em;
+  color: #87878e;
+  border: 1px solid #dfdfe0;
+
+  &:user-valid {
+    border: 2px solid #1e674e;
+  }
+
+  &:user-invalid {
+    border: 2px solid #fe4343;
+  }
+}
+
 .container {
   display: block;
   max-width: 1580px;
@@ -102,5 +123,10 @@ textarea {
       border-color: #1e674e;
       background-color: #1e674e;
     }
+  }
+
+  &_wide {
+    width: 100%;
+    box-sizing: border-box;
   }
 }

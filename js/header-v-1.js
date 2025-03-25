@@ -49,3 +49,26 @@ headerMobileNavItems.forEach((mobileNavItem) => {
     if (isBackBtn) event.currentTarget.classList.remove('active');
   });
 });
+
+////
+
+const headerModal = document.querySelector('.header-v-1__modal');
+const headerCallbackButtons = document.querySelectorAll('.header-v-1__contacts-callback-button');
+const headerCallbackMobButtons = document.querySelectorAll(
+  '.header-v-1__menu-mobile-contacts-callback-button'
+);
+const headerContactButtons = [...headerCallbackButtons, ...headerCallbackMobButtons];
+
+if (headerModal) {
+  headerContactButtons.forEach((button) => {
+    button.addEventListener('click', (event) => {
+      headerModal.classList.add('active');
+    });
+  });
+
+  headerModal.addEventListener('click', (event) => {
+    const isLayout = event.currentTarget === event.target;
+    const isClose = event.target.classList.contains('header-v-1__modal-close-button');
+    if (isLayout || isClose) headerModal.classList.remove('active');
+  });
+}
