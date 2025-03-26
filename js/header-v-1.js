@@ -38,6 +38,9 @@ const headerMobileNavItems = document.querySelectorAll('.header-v-1__menu-mobile
 
 headerMobileNavItems.forEach((mobileNavItem) => {
   mobileNavItem.addEventListener('click', (event) => {
+    const isTitle = event.target.classList.contains(
+      'header-v-1__menu-mobile-nav-item-title'
+    );
     const isMoreBtn = event.target.classList.contains(
       'header-v-1__menu-mobile-nav-item-more-button'
     );
@@ -45,7 +48,7 @@ headerMobileNavItems.forEach((mobileNavItem) => {
       'header-v-1__menu-mobile-nav-item-back-button'
     );
 
-    if (isMoreBtn) event.currentTarget.classList.add('active');
+    if (isMoreBtn || isTitle) event.currentTarget.classList.add('active');
     if (isBackBtn) event.currentTarget.classList.remove('active');
   });
 });
