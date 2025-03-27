@@ -196,6 +196,10 @@
         @include desktoplg {
           display: flex;
         }
+
+        @include desktop {
+          display: none;
+        }
       }
     }
 

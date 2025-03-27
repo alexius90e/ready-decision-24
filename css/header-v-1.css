@@ -246,6 +246,11 @@
     display: flex;
   }
 }
+@media (max-width: 1200px) {
+  .header-v-1__nav-menu-laptop {
+    display: none;
+  }
+}
 .header-v-1__nav-menu-item > .header-v-1__nav-submenu {
   position: absolute;
   top: 100%;
