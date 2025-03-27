@@ -93,18 +93,6 @@
         flex: 0 0 auto;
         transition: opacity ease-in-out 0.2s;
 
-        &:nth-child(n + 3) {
-          @include desktoplg {
-            display: none;
-          }
-        }
-
-        &:nth-child(n + 2) {
-          @include desktop {
-            display: none;
-          }
-        }
-
         &-burger,
         &-link {
           display: flex;
@@ -177,6 +165,36 @@
 
         &:hover {
           opacity: 1;
+        }
+      }
+
+      &-desktop, &-laptop {
+        display: flex;
+        align-items: center;
+        gap: 48px;
+
+        @include desktoplg {
+          gap: 40px;
+        }
+  
+        @include laptop {
+          gap: 0;
+        }
+      }
+
+      &-desktop {
+        display: flex;
+
+        @include desktoplg {
+          display: none;
+        }
+      }
+
+      &-laptop {
+        display: none;
+
+        @include desktoplg {
+          display: flex;
         }
       }
     }
@@ -545,6 +563,8 @@
             }
           }
         }
+
+
       }
 
       &-contacts {
@@ -728,9 +748,6 @@
             font-size: 20px;
           }
 
-          &:hover {
-            color: #1c1c20;
-          }
         }
       }
     }
