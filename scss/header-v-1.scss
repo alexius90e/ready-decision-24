@@ -27,7 +27,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 24px;
+    gap: 36px;
+
+    @include laptop {
+      gap: 30px;
+    }
 
     @include tablet {
       gap: 4px;
@@ -58,11 +62,12 @@
   }
 
   &__nav {
-    @include laptop {
-      flex: 0 0 auto;
+    @include desktop {
+      flex: 1 1 auto;
     }
 
     @include tablet {
+      flex: 0 0 auto;
       order: 2;
     }
 
@@ -95,7 +100,7 @@
         }
 
         &:nth-child(n + 2) {
-          @include laptop {
+          @include desktop {
             display: none;
           }
         }
@@ -389,11 +394,11 @@
 
     &-wrapper {
       max-height: 100%;
-      padding: 35px 40px;
+      padding: 35px 0;
       box-sizing: border-box;
 
       @include desktop {
-        padding: 35px 30px;
+        padding: 35px 0;
       }
 
       @include laptop {
@@ -444,6 +449,7 @@
       }
 
       &-nav {
+        position: relative;
         display: flex;
         flex-direction: column;
         gap: 4px;
@@ -502,17 +508,19 @@
 
           &-details {
             position: absolute;
+            top: 0;
+            z-index: 10;
             flex: 1 1 100%;
             transform: translateX(120dvw);
-            opacity: 0;
-            transition-property: opacity, transform;
+            transition-property: transform;
             transition-timing-function: ease-in-out;
-            transition-duration: 0.2s;
+            transition-duration: 0.24s;
+            background-color: #ffffff;
           }
 
           &.active &-details {
             position: static;
-            opacity: 1;
+            top: auto;
             transform: translateX(0);
           }
 
