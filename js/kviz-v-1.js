@@ -35,7 +35,6 @@ kvizQuestionGallerySwiperEls.forEach((swiperEl) => {
   });
 });
 
-
 const kvizMain = document.querySelector('.kviz-v-1__main');
 const kvizResults = document.querySelector('.kviz-v-1__results');
 const kvizControls = document.querySelector('.kviz-v-1__controls');
@@ -51,7 +50,7 @@ function updateQuestions() {
   }
 
   if (kvizProgressIndicator) {
-    const progress = (activeQuestionId + 1) / kvizQuestionEls.length * 100
+    const progress = ((activeQuestionId + 1) / kvizQuestionEls.length) * 100;
     kvizProgressIndicator.style.width = `${progress}%`;
   }
 
@@ -89,6 +88,50 @@ if (kvizControls) {
       }
     }
 
-    updateQuestions();
+    setTimeout(() => {
+      updateQuestions();
+    }, 300);
   });
 }
+
+const kvizQuestionRadioEls = document.querySelectorAll('.kviz-v-1__question_radio');
+
+kvizQuestionRadioEls.forEach((radioEl) => {
+  const radioInputs = radioEl.querySelectorAll('.kviz-v-1__question-gallery-item-input');
+  const customInput = radioEl.querySelector('.kviz-v-1__question-custom-input');
+
+  if (customInput) {
+    customInput.addEventListener('input', (event) => {
+      if (event.target.value !== '') {
+        radioInputs.forEach((radioInput) => (radioInput.checked = false));
+      }
+    });
+  }
+
+  radioInputs.forEach((radioInput) => {
+    radioInput.addEventListener('input', () => {
+      if (customInput) customInput.value = '';
+    });
+  });
+});
+
+const kvizQuestionRadioTextEls = document.querySelectorAll('.kviz-v-1__question_radiotext');
+
+kvizQuestionRadioTextEls.forEach((radioEl) => {
+  const radioInputs = radioEl.querySelectorAll('.kviz-v-1__question-list-radio-input');
+  const customInput = radioEl.querySelector('.kviz-v-1__question-list-text-input');
+
+  if (customInput) {
+    customInput.addEventListener('input', (event) => {
+      if (event.target.value !== '') {
+        radioInputs.forEach((radioInput) => (radioInput.checked = false));
+      }
+    });
+  }
+
+  radioInputs.forEach((radioInput) => {
+    radioInput.addEventListener('input', () => {
+      if (customInput) customInput.value = '';
+    });
+  });
+});

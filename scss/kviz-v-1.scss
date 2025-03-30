@@ -144,8 +144,8 @@
           &-disclaimer {
             max-width: 300px;
             font-weight: 500;
-            font-size: 13px;
-            line-height: 154%;
+            font-size: 14px;
+            line-height: 140%;
             letter-spacing: -0.01em;
             color: #b9b9b9;
 
@@ -153,6 +153,11 @@
               color: inherit;
               text-decoration: underline;
               text-decoration-skip-ink: none;
+              transition: color  ease-in-out 0.2s;
+
+              &:hover {
+                color: #1c1c20;
+              }
             }
           }
         }
@@ -350,6 +355,9 @@
         }
 
         &-slide {
+          height: 100%;
+          background-color: #1e674e;
+
           @include mobile {
             flex: 0 1 auto;
             max-width: 100%;
@@ -412,7 +420,9 @@
 
       &-item {
         position: relative;
-        display: block;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
         box-sizing: border-box;
         border: 1px solid #dfdfe0;
         background-color: #ffffff;
@@ -424,6 +434,10 @@
 
         &:hover {
           background-color: #1c1c20;
+
+          @include laptop {
+            background-color: #ffffff;
+          }
         }
 
         &:has(input:checked) {
@@ -463,6 +477,9 @@
         }
 
         &-title {
+          display: flex;
+          align-items: center;
+          flex: 1 1 auto;
           padding: 17px 24px;
           font-weight: 500;
           font-size: 16px;
@@ -473,14 +490,17 @@
           transition-timing-function: ease-in-out;
           transition-duration: 0.2s;
 
-          @include tablet {
-            padding: 8px 24px;
+          @include laptop {
             font-size: 20px;
           }
         }
 
         &:hover &-title {
           color: #ffffff;
+
+          @include laptop {
+            color: #1c1c20;
+          }
         }
 
         &:has(input:checked) &-title {
@@ -533,7 +553,7 @@
         box-sizing: border-box;
         font-weight: 500;
         font-size: 16px;
-        line-height: 116%;
+        line-height: 140%;
         letter-spacing: -0.01em;
         color: #1c1c20;
         border: 2px solid #dfdfe0;
