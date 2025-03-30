@@ -28,7 +28,7 @@ textarea {
 input {
   display: inline-block;
   width: 100%;
-  padding: 18px 24px;
+  padding: 17px 24px;
   box-sizing: border-box;
   font-weight: 500;
   font-size: 16px;
@@ -137,5 +137,82 @@ input {
   &_wide {
     width: 100%;
     box-sizing: border-box;
+  }
+}
+
+.h1-base,
+.h2-base,
+.h3-base,
+.h4-base,
+.h5-base,
+.h6-base {
+  margin: 0;
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: #1c1c20;
+}
+
+.h1-base {
+  font-size: 74px;
+
+  @include laptop {
+    font-size: 60px;
+  }
+
+  @include mobile {
+    font-size: 44px;
+  }
+}
+
+.h2-base {
+  font-size: 60px;
+
+  @include laptop {
+    font-size: 44px;
+  }
+
+  @include mobile {
+    font-size: 38px;
+  }
+}
+
+.h3-base {
+  font-size: 48px;
+
+  @include laptop {
+    font-size: 38px;
+  }
+
+  @include mobile {
+    font-size: 32px;
+  }
+}
+
+.h4-base {
+  font-size: 38px;
+
+  @include laptop {
+    font-size: 32px;
+  }
+
+  @include mobile {
+    font-size: 28px;
+  }
+}
+
+.h5-base {
+  font-size: 28px;
+
+  @include laptop {
+    font-size: 24px;
+  }
+}
+
+.h6-base {
+  font-size: 20px;
+
+  @include mobile {
+    font-size: 24px;
   }
 }

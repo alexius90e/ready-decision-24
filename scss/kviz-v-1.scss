@@ -1,0 +1,634 @@
+@import './b-mixins';
+
+.kviz-v-1 {
+  &__main {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__results {
+    display: none;
+    background-color: #f5f5f5;
+
+    &.active {
+      display: flex;
+    }
+
+    &-info {
+      padding: 48px;
+      box-sizing: border-box;
+
+      @include desktop {
+        padding: 58px 42px 33px;
+      }
+
+      @include tablet {
+        padding: 30px 24px 24px;
+      }
+
+      &-title {
+        margin: 0 0 13px;
+      }
+
+      &-description {
+        margin: 0 0 43px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 140%;
+        letter-spacing: -0.01em;
+        color: #87878e;
+
+        @include laptop {
+          margin: 0 0 25px;
+          font-size: 18px;
+        }
+
+        @include tablet {
+          margin: 0 0 31px;
+          font-size: 20px;
+        }
+      }
+
+      &-form {
+        &-data {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 24px;
+          margin: 0 0 36px;
+          padding: 0;
+          border: none;
+
+          @include tablet {
+            margin: 0 0 32px;
+          }
+
+          &-input {
+            flex: 0 0 calc(50% - 24px / 2);
+
+            @include tablet {
+              flex: 1 1 100%;
+            }
+          }
+        }
+
+        &-social {
+          display: flex;
+          justify-content: space-between;
+          gap: 24px;
+          max-width: 455px;
+          margin: 0 0 36px;
+          padding: 0;
+          border: none;
+          border-bottom: 2px solid #dfdfe0;
+
+          @include tablet {
+            max-width: none;
+            margin: 0 0 32px;
+          }
+
+          &-item {
+            position: relative;
+            bottom: -3px;
+            cursor: pointer;
+
+            &-input {
+              display: none;
+            }
+
+            &-text {
+              display: inline-block;
+              padding: 12px 0;
+              font-weight: 600;
+              font-size: 20px;
+              letter-spacing: -0.01em;
+              color: #1c1c20;
+              border-bottom: 4px solid rgba($color: #1e674e, $alpha: 0);
+              transition: border ease-in-out 0.2s;
+
+              @include mobile {
+                font-size: 13px;
+              }
+            }
+
+            &:has(input:checked) &-text {
+              border-bottom: 4px solid rgba($color: #1e674e, $alpha: 1);
+            }
+          }
+        }
+
+        &-bottom {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 19px 41px;
+
+          @include desktoplg {
+            flex-wrap: wrap;
+          }
+
+          @include tablet {
+            gap: 11px;
+          }
+
+          &-submit {
+            flex: 0 0 auto;
+
+            @include mobile {
+              flex: 0 1 auto;
+            }
+          }
+
+          &-disclaimer {
+            max-width: 300px;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 154%;
+            letter-spacing: -0.01em;
+            color: #b9b9b9;
+
+            & a {
+              color: inherit;
+              text-decoration: underline;
+              text-decoration-skip-ink: none;
+            }
+          }
+        }
+      }
+    }
+
+    &-figure {
+      flex: 0 0 663px;
+      padding: 0;
+      margin: 0;
+
+      @include desktoplg {
+        flex: 0 0 540px;
+      }
+
+      @include desktop {
+        flex: 0 0 380px;
+      }
+
+      @include laptop {
+        display: none;
+      }
+
+      &-image {
+        display: block;
+        min-height: 590px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0 0 30px;
+    line-height: 110%;
+
+    @include tablet {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__description {
+    max-width: 822px;
+    margin: 0 0 46px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+    color: #616161;
+
+    @include laptop {
+      font-size: 18px;
+    }
+
+    @include tablet {
+      margin-bottom: 27px;
+      font-size: 20px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 992px;
+    min-height: 824px;
+    padding: 48px;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+
+    @include desktoplg {
+      flex: 1 1 100%;
+    }
+
+    @include desktop {
+      padding: 42px 42px 48px;
+    }
+
+    @include laptop {
+      padding: 32px 42px 48px;
+    }
+
+    @include tablet {
+      padding: 30px 24px 24px;
+    }
+  }
+
+  &__progress {
+    margin: 0 0 29px;
+
+    @include tablet {
+      margin: 0 0 24px;
+    }
+
+    &-step {
+      margin-bottom: 20px;
+      padding-left: 84px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 116%;
+      letter-spacing: -0.01em;
+      color: #1c1c20;
+
+      @include tablet {
+        padding-left: 12px;
+      }
+    }
+
+    &-bar {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: #dfdfe0;
+
+      &-indicator {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 5px;
+        background-color: #1e674e;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__question {
+    display: none;
+    margin: 0 0 56px;
+
+    @include mobile {
+      margin: 0 0 48px;
+    }
+
+    &.active {
+      display: block;
+    }
+
+    &-title {
+      margin: 0 0 9px;
+    }
+
+    &-description {
+      margin: 0 0 39px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 160%;
+      letter-spacing: -0.01em;
+      color: #87878e;
+
+      @include desktop {
+        font-size: 18px;
+      }
+
+      @include laptop {
+        margin: 0 0 12px;
+      }
+
+      @include tablet {
+        margin: 0 0 32px;
+        font-size: 20px;
+      }
+    }
+
+    &-gallery {
+      display: grid;
+      margin: 0 0 24px;
+
+      @include mobile {
+        display: block;
+      }
+
+      & .swiper {
+        max-width: 100%;
+        width: 100%;
+
+        @include mobile {
+          display: block;
+          overflow: visible;
+        }
+
+        &-wrapper {
+          @include mobile {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            max-width: 100%;
+            transform: none;
+          }
+        }
+
+        &-slide {
+          @include mobile {
+            flex: 0 1 auto;
+            max-width: 100%;
+            width: 100% !important;
+            height: auto;
+            margin: 0;
+            transform: none;
+          }
+        }
+
+        &-button {
+          &-prev,
+          &-next {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 54px;
+            height: 54px;
+            aspect-ratio: 1 / 1;
+            background-color: #1c1c20;
+            transition-property: color;
+            transition-timing-function: ease-in-out;
+            transition-duration: 0.2s;
+
+            @include mobile {
+              display: none;
+            }
+
+            &:hover {
+              background-color: #1e674e;
+            }
+
+            &::after {
+              content: '';
+              display: block;
+              width: 24px;
+              height: 24px;
+              filter: invert(100%);
+              background: url(../assets/kviz-v-1/arrow-left.svg) center / cover no-repeat;
+            }
+          }
+
+          &-prev {
+            left: 1px;
+
+            &::after {
+              transform: rotate(180deg);
+            }
+          }
+
+          &-next {
+            right: 1px;
+          }
+
+          &-disabled {
+            opacity: 0;
+          }
+        }
+      }
+
+      &-item {
+        position: relative;
+        display: block;
+        box-sizing: border-box;
+        border: 1px solid #dfdfe0;
+        background-color: #ffffff;
+        transition-property: border-color, background-color;
+        transition-timing-function: ease-in-out;
+        transition-duration: 0.2s;
+        user-select: none;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #1c1c20;
+        }
+
+        &:has(input:checked) {
+          background-color: #1c1c20;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 9px;
+            right: 9px;
+            display: block;
+            width: 28px;
+            aspect-ratio: 1 / 1;
+            border: 9px solid #1e674e;
+            box-sizing: border-box;
+            background-color: #ffffff;
+          }
+        }
+
+        &-input {
+          display: none;
+        }
+
+        &-figure {
+          display: block;
+          width: 100%;
+          aspect-ratio: 1 / 1;
+          margin: 0;
+
+          &-image {
+            display: block;
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        &-title {
+          padding: 17px 24px;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 140%;
+          letter-spacing: -0.01em;
+          color: #1c1c20;
+          transition-property: color;
+          transition-timing-function: ease-in-out;
+          transition-duration: 0.2s;
+
+          @include tablet {
+            padding: 8px 24px;
+            font-size: 20px;
+          }
+        }
+
+        &:hover &-title {
+          color: #ffffff;
+        }
+
+        &:has(input:checked) &-title {
+          color: #ffffff;
+        }
+      }
+    }
+
+    &-custom {
+      &-input {
+        display: block;
+        min-height: 54px;
+        width: 100%;
+        padding: 16px 24px;
+        box-sizing: border-box;
+        border: 2px solid #dfdfe0;
+      }
+    }
+
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+
+      &-text {
+        &-input {
+          &:hover {
+            border: 2px solid #1e674e;
+          }
+        }
+      }
+
+      &-text,
+      &-checkbox,
+      &-radio {
+        flex: 0 0 calc(100% / 2 - 24px / 2);
+
+        @include tablet {
+          flex: 1 1 100%;
+        }
+      }
+
+      &-checkbox,
+      &-radio {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        min-height: 56px;
+        padding: 8px 24px;
+        box-sizing: border-box;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 116%;
+        letter-spacing: -0.01em;
+        color: #1c1c20;
+        border: 2px solid #dfdfe0;
+        border-radius: 0px;
+        outline: none;
+        background-color: #ffffff;
+        transition-property: border;
+        transition-timing-function: ease-in-out;
+        transition-duration: 0.2s;
+
+        @include tablet {
+          flex: 1 1 100%;
+        }
+
+        &:hover {
+          border: 2px solid #1e674e;
+        }
+
+        &::before {
+          content: '';
+          display: block;
+          flex: 0 0 auto;
+          width: 16px;
+          height: 16px;
+          box-sizing: border-box;
+          border: 1px solid #dfdfe0;
+        }
+
+        &:has(input:checked) {
+          &::before {
+            border: 6px solid #1e674e;
+          }
+        }
+
+        &-input {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__controls {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex: 1 1 auto;
+    gap: 24px;
+
+    &-back {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      width: 56px;
+      padding: 0;
+      aspect-ratio: 1 / 1;
+      border: none;
+      border-bottom: 2px solid #dfdfe0;
+      background-color: rgba($color: #ffffff, $alpha: 0);
+      transition: border ease-in-out 0.2s;
+      cursor: pointer;
+
+      &:hover {
+        border-bottom: 2px solid #1c1c20;
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        width: 24px;
+        aspect-ratio: 1 / 1;
+        background: url(../assets/kviz-v-1/arrow-left.svg) center / cover no-repeat;
+        transform: rotate(180deg);
+      }
+    }
+
+    &-next {
+      flex: 0 0 auto;
+    }
+  }
+
+  &__photo {
+    flex: 0 1 484px;
+    margin: 0;
+
+    @include desktoplg {
+      display: none;
+    }
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/kviz-v-1.css" />
+    <script src="./js/swiper-bundle.min.js" defer></script>
+    <script type="module" src="./js/kviz-v-1.js" defer></script>
+  </head>
+
+  <body>
+    <section class="kviz-v-1">
+      <div class="container">
+        <div class="kviz-v-1__main active">
+          <h2 class="kviz-v-1__title h2-base">Основной заголовок квиза H2 тестовый вариант 1</h2>
+
+          <div class="kviz-v-1__description">
+            Ответьте на 4 вопроса и получите индивидуальную подборку автомобилей + выгоду до 40% на
+            интересующий вас автомобиль
+          </div>
+
+          <div class="kviz-v-1__wrapper">
+            <div class="kviz-v-1__content">
+              <div class="kviz-v-1__progress">
+                <div class="kviz-v-1__progress-step">1 из 4</div>
+                <div class="kviz-v-1__progress-bar">
+                  <div class="kviz-v-1__progress-bar-indicator"></div>
+                </div>
+              </div>
+
+              <div class="kviz-v-1__questions">
+                <div class="kviz-v-1__question active">
+                  <div class="kviz-v-1__question-title h4-base">
+                    Тестовый вопрос с изоображениями и со множественным выбором (чек бокс)вариант.
+                  </div>
+
+                  <div class="kviz-v-1__question-description">
+                    Выберите один или несколько вариантов ответа, Выберите один или несколь
+                  </div>
+
+                  <div class="kviz-v-1__question-gallery">
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <label class="kviz-v-1__question-gallery-item">
+                            <input
+                              class="kviz-v-1__question-gallery-item-input"
+                              name="question1"
+                              type="checkbox"
+                            />
+                            <figure class="kviz-v-1__question-gallery-item-figure">
+                              <img
+                                class="kviz-v-1__question-gallery-item-figure-image"
+                                src="./assets/kviz-v-1/фото1.jpg"
+                                alt=""
+                              />
+                            </figure>
+                            <div class="kviz-v-1__question-gallery-item-title">
+                              Пункт с изображением 1.1
+                            </div>
+                          </label>
+                        </div>
+                        <div class="swiper-slide">
+                          <label class="kviz-v-1__question-gallery-item">
+                            <input
+                              class="kviz-v-1__question-gallery-item-input"
+                              name="question1"
+                              type="checkbox"
+                            />
+                            <figure class="kviz-v-1__question-gallery-item-figure">
+                              <img
+                                class="kviz-v-1__question-gallery-item-figure-image"
+                                src="./assets/kviz-v-1/фото2.jpg"
+                                alt=""
+                              />
+                            </figure>
+                            <div class="kviz-v-1__question-gallery-item-title">
+                              Пункт с изображением 1.2
+                            </div>
+                          </label>
+                        </div>
+                        <div class="swiper-slide">
+                          <label class="kviz-v-1__question-gallery-item">
+                            <input
+                              class="kviz-v-1__question-gallery-item-input"
+                              name="question1"
+                              type="checkbox"
+                            />
+                            <figure class="kviz-v-1__question-gallery-item-figure">
+                              <img
+                                class="kviz-v-1__question-gallery-item-figure-image"
+                                src="./assets/kviz-v-1/фото3.jpg"
+                                alt=""
+                              />
+                            </figure>
+                            <div class="kviz-v-1__question-gallery-item-title">
+                              Пункт с изображением 1.3
+                            </div>
+                          </label>
+                        </div>
+                        <div class="swiper-slide">
+                          <label class="kviz-v-1__question-gallery-item">
+                            <input
+                              class="kviz-v-1__question-gallery-item-input"
+                              name="question1"
+                              type="checkbox"
+                            />
+                            <figure class="kviz-v-1__question-gallery-item-figure">
+                              <img
+                                class="kviz-v-1__question-gallery-item-figure-image"
+                                src="./assets/kviz-v-1/фото4.jpg"
+                                alt=""
+                              />
+                            </figure>
+                            <div class="kviz-v-1__question-gallery-item-title">
+                              Пункт с изображением 1.4
+                            </div>
+                          </label>
+                        </div>
+                        <div class="swiper-slide">
+                          <label class="kviz-v-1__question-gallery-item">
+                            <input
+                              class="kviz-v-1__question-gallery-item-input"
+                              name="question1"
+                              type="checkbox"
+                            />
+                            <figure class="kviz-v-1__question-gallery-item-figure">
+                              <img
+                                class="kviz-v-1__question-gallery-item-figure-image"
+                                src="./assets/kviz-v-1/фото5.jpg"
+                                alt=""
+                              />
+                            </figure>
+                            <div class="kviz-v-1__question-gallery-item-title">
+                              Пункт с изображением 1.5
+                            </div>
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+                    </div>
+                  </div>
+
+                  <div class="kviz-v-1__question-custom">
+                    <input
+                      class="kviz-v-1__question-custom-input"
+                      type="text"
+                      placeholder="Свой вариант"
+                    />
+                  </div>
+                </div>
+
+                <div class="kviz-v-1__question">
+                  <div class="kviz-v-1__question-title h4-base">
+                    Тестовый вопрос с изоображениями и с одним вариантом выбора с пунктами изобр1
+                  </div>
+
+                  <div class="kviz-v-1__question-description">Выберите один вариант ответа</div>
+
+                  <div class="kviz-v-1__question-gallery">
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <label class="kviz-v-1__question-gallery-item">
+                            <input
+                              class="kviz-v-1__question-gallery-item-input"
+                              name="question2"
+                              type="radio"
+                            />
+                            <figure class="kviz-v-1__question-gallery-item-figure">
+                              <img
+                                class="kviz-v-1__question-gallery-item-figure-image"
+                                src="./assets/kviz-v-1/фото1.jpg"
+                                alt=""
+                              />
+                            </figure>
+                            <div class="kviz-v-1__question-gallery-item-title">
+                              Пункт с изображением 1.1
+                            </div>
+                          </label>
+                        </div>
+                        <div class="swiper-slide">
+                          <label class="kviz-v-1__question-gallery-item">
+                            <input
+                              class="kviz-v-1__question-gallery-item-input"
+                              name="question2"
+                              type="radio"
+                            />
+                            <figure class="kviz-v-1__question-gallery-item-figure">
+                              <img
+                                class="kviz-v-1__question-gallery-item-figure-image"
+                                src="./assets/kviz-v-1/фото2.jpg"
+                                alt=""
+                              />
+                            </figure>
+                            <div class="kviz-v-1__question-gallery-item-title">
+                              Пункт с изображением 1.2
+                            </div>
+                          </label>
+                        </div>
+                        <div class="swiper-slide">
+                          <label class="kviz-v-1__question-gallery-item">
+                            <input
+                              class="kviz-v-1__question-gallery-item-input"
+                              name="question2"
+                              type="radio"
+                            />
+                            <figure class="kviz-v-1__question-gallery-item-figure">
+                              <img
+                                class="kviz-v-1__question-gallery-item-figure-image"
+                                src="./assets/kviz-v-1/фото3.jpg"
+                                alt=""
+                              />
+                            </figure>
+                            <div class="kviz-v-1__question-gallery-item-title">
+                              Пункт с изображением 1.3
+                            </div>
+                          </label>
+                        </div>
+                        <div class="swiper-slide">
+                          <label class="kviz-v-1__question-gallery-item">
+                            <input
+                              class="kviz-v-1__question-gallery-item-input"
+                              name="question2"
+                              type="radio"
+                            />
+                            <figure class="kviz-v-1__question-gallery-item-figure">
+                              <img
+                                class="kviz-v-1__question-gallery-item-figure-image"
+                                src="./assets/kviz-v-1/фото4.jpg"
+                                alt=""
+                              />
+                            </figure>
+                            <div class="kviz-v-1__question-gallery-item-title">
+                              Пункт с изображением 1.4
+                            </div>
+                          </label>
+                        </div>
+                        <div class="swiper-slide">
+                          <label class="kviz-v-1__question-gallery-item">
+                            <input
+                              class="kviz-v-1__question-gallery-item-input"
+                              name="question2"
+                              type="radio"
+                            />
+                            <figure class="kviz-v-1__question-gallery-item-figure">
+                              <img
+                                class="kviz-v-1__question-gallery-item-figure-image"
+                                src="./assets/kviz-v-1/фото5.jpg"
+                                alt=""
+                              />
+                            </figure>
+                            <div class="kviz-v-1__question-gallery-item-title">
+                              Пункт с изображением 1.5
+                            </div>
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+                    </div>
+                  </div>
+
+                  <div class="kviz-v-1__question-custom">
+                    <input
+                      class="kviz-v-1__question-custom-input"
+                      type="text"
+                      placeholder="Свой вариант"
+                    />
+                  </div>
+                </div>
+
+                <div class="kviz-v-1__question">
+                  <div class="kviz-v-1__question-title h4-base">
+                    Тестовый вопрос без картиночек (чек бокс)!!!
+                  </div>
+
+                  <div class="kviz-v-1__question-description">
+                    Введите значения или выберите требуемый пункт
+                  </div>
+
+                  <div class="kviz-v-1__question-list">
+                    <label class="kviz-v-1__question-list-text">
+                      <input
+                        class="kviz-v-1__question-list-text-input"
+                        type="text"
+                        name="question3"
+                        placeholder="Вариант письменного ввода, пишу текст3..1"
+                      />
+                    </label>
+
+                    <label class="kviz-v-1__question-list-text">
+                      <input
+                        class="kviz-v-1__question-list-text-input"
+                        type="text"
+                        name="question3"
+                        placeholder="Вариант письменного ввода, пишу текст3..2"
+                      />
+                    </label>
+
+                    <label class="kviz-v-1__question-list-checkbox">
+                      <input
+                        class="kviz-v-1__question-list-checkbox-input"
+                        type="checkbox"
+                        name="question3"
+                      />
+                      <span>Выбор первого варианта, при нажатии3....3</span>
+                    </label>
+
+                    <label class="kviz-v-1__question-list-checkbox">
+                      <input
+                        class="kviz-v-1__question-list-checkbox-input"
+                        type="checkbox"
+                        name="question3"
+                      />
+                      <span>Выбор первого варианта, при нажатии3....4</span>
+                    </label>
+
+                    <label class="kviz-v-1__question-list-checkbox">
+                      <input
+                        class="kviz-v-1__question-list-checkbox-input"
+                        type="checkbox"
+                        name="question3"
+                      />
+                      <span>Выбор первого варианта, при нажатии3....5</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="kviz-v-1__question">
+                  <div class="kviz-v-1__question-title h4-base">
+                    Тестовый вопрос без картинок с одним вариантом выбора 1
+                  </div>
+
+                  <div class="kviz-v-1__question-description">
+                    Введите значения или выберите требуемый пункт
+                  </div>
+
+                  <div class="kviz-v-1__question-list">
+                    <label class="kviz-v-1__question-list-text">
+                      <input
+                        class="kviz-v-1__question-list-text-input"
+                        type="text"
+                        name="question4"
+                        placeholder="Вариант письменного ввода 1, введение4.1"
+                      />
+                    </label>
+
+                    <label class="kviz-v-1__question-list-radio">
+                      <input
+                        class="kviz-v-1__question-list-radio-input"
+                        type="radio"
+                        name="question4"
+                      />
+                      <span>Выбор третьего варианта пунктав квизе 4.2</span>
+                    </label>
+
+                    <label class="kviz-v-1__question-list-radio">
+                      <input
+                        class="kviz-v-1__question-list-radio-input"
+                        type="radio"
+                        name="question4"
+                      />
+                      <span>Выбор третьего варианта пунктав квизе 4.3</span>
+                    </label>
+
+                    <label class="kviz-v-1__question-list-radio">
+                      <input
+                        class="kviz-v-1__question-list-radio-input"
+                        type="radio"
+                        name="question4"
+                      />
+                      <span>Выбор третьего варианта пунктав квизе 4.4</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="kviz-v-1__controls">
+                <button class="kviz-v-1__controls-back"></button>
+                <button class="kviz-v-1__controls-next button button_secondary">ДАЛЕЕ</button>
+              </div>
+            </div>
+
+            <figure class="kviz-v-1__photo">
+              <img
+                class="kviz-v-1__photo-image"
+                src="./assets/kviz-v-1/photo-main.jpg"
+                alt="photo-main"
+              />
+            </figure>
+          </div>
+        </div>
+
+        <div class="kviz-v-1__results">
+          <div class="kviz-v-1__results-info">
+            <h4 class="kviz-v-1__results-info-title h4-base">Предложение сформировано!</h4>
+            <div class="kviz-v-1__results-info-description">
+              Оставьте ваш номер и узнайте стоимость персонального предложения + получите
+              индивидуальную скидку + подарок!
+            </div>
+
+            <form class="kviz-v-1__results-info-form">
+              <fieldset class="kviz-v-1__results-info-form-data">
+                <input
+                  class="kviz-v-1__results-info-form-data-input"
+                  type="text"
+                  placeholder="Ваше имя"
+                  required  
+                />
+                <input
+                  class="kviz-v-1__results-info-form-data-input"
+                  type="tel"
+                  placeholder="Ваш телефон"
+                  required
+                />
+              </fieldset>
+
+              <fieldset class="kviz-v-1__results-info-form-social">
+                <label class="kviz-v-1__results-info-form-social-item">
+                  <input
+                    class="kviz-v-1__results-info-form-social-item-input"
+                    type="radio"
+                    name="kvizSocial"
+                  />
+                  <span class="kviz-v-1__results-info-form-social-item-text">ЗВОНОК</span>
+                </label>
+                <label class="kviz-v-1__results-info-form-social-item">
+                  <input
+                    class="kviz-v-1__results-info-form-social-item-input"
+                    type="radio"
+                    name="kvizSocial"
+                  />
+                  <span class="kviz-v-1__results-info-form-social-item-text">WhatsApp</span>
+                </label>
+                <label class="kviz-v-1__results-info-form-social-item">
+                  <input
+                    class="kviz-v-1__results-info-form-social-item-input"
+                    type="radio"
+                    name="kvizSocial"
+                  />
+                  <span class="kviz-v-1__results-info-form-social-item-text">Telegram</span>
+                </label>
+              </fieldset>
+
+              <fieldse class="kviz-v-1__results-info-form-bottom">
+                <button class="kviz-v-1__results-info-form-bottom-submit button button_secondary">
+                  ПОЛУЧИТЬ ПРЯМО СЕЙЧАС
+                </button>
+                <span class="kviz-v-1__results-info-form-bottom-disclaimer">
+                  Нажав на кнопку, вы даете согласие на обработку
+                  <a href="#">персональных данных</a>
+                </span>
+              </fieldse>
+            </form>
+          </div>
+
+          <figure class="kviz-v-1__results-figure">
+            <img
+              class="kviz-v-1__results-figure-image"
+              src="./assets/kviz-v-1/resuts-photo.jpg"
+              alt="resuts"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
