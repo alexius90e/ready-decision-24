@@ -1,6 +1,6 @@
 @import './b-mixins';
 
-.header-v-2 {
+.header-v-3 {
   padding: 18px 0 19px;
 
   @include tablet {
@@ -21,8 +21,8 @@
       gap: 30px;
     }
 
-    @include tablet {
-      gap: 4px;
+    @include tabletsm {
+      gap: 8px;
     }
   }
 
@@ -46,6 +46,10 @@
 
         @include tablet {
           height: 48px;
+        }
+
+        @include tabletsm {
+          height: 30px;
         }
       }
     }
@@ -78,6 +82,10 @@
 
     @include laptop {
       flex: 0 1 auto;
+    }
+
+    @include tabletsm {
+      gap: 8px;
     }
 
     &-social {
@@ -113,12 +121,12 @@
         }
 
         &_tg {
-          background-image: url(../assets/header-v-2/telegram.svg);
+          background-image: url(../assets/header-v-3/telegram.svg);
           background-color: #166ff5;
         }
 
         &_wts {
-          background-image: url(../assets/header-v-2/whatsapp.svg);
+          background-image: url(../assets/header-v-3/whatsapp.svg);
           background-color: #06cc4d;
         }
       }
@@ -143,26 +151,26 @@
       border-left: 2px solid #f2f2f2;
 
       @include tabletsm {
+        flex: 0 1 auto;
         padding-left: 0;
         border-left: none;
       }
 
-      &-link {
-        font-weight: 600;
+      &-link,
+      &-slogan {
         font-size: 14px;
         line-height: 140%;
         letter-spacing: -0.01em;
         text-align: right;
-        color: #2f2f2f;
 
         @include tabletsm {
-          display: inline-block;
-          width: 48px;
-          aspect-ratio: 1 / 1;
-          background: url(../assets/header-v-2/phone.svg) center / 24px no-repeat;
-          background-color: #00b2e3;
-          transition: background-color ease-in-out 0.2s;
+          font-size: 16px;
         }
+      }
+
+      &-link {
+        font-weight: 600;
+        color: #2f2f2f;
 
         &:hover {
           text-decoration-line: underline;
@@ -173,34 +181,16 @@
             background-color: #1c1c20;
           }
         }
-
-        &-text {
-          @include tabletsm {
-            display: none;
-          }
-        }
       }
 
       &-slogan {
         font-weight: 500;
-        font-size: 14px;
-        line-height: 140%;
-        letter-spacing: -0.01em;
-        text-align: right;
         color: #87878e;
-
-        @include tabletsm {
-          display: none;
-        }
       }
     }
 
     &-callback {
       flex: 0 0 auto;
-
-      @include tabletsm {
-        display: none;
-      }
 
       &-button {
         min-height: 48px;
@@ -209,10 +199,27 @@
         border-color: #1c1c20;
         background-color: #1c1c20;
 
+        @include tabletsm {
+          display: inline-block;
+          width: 48px;
+          aspect-ratio: 1 / 1;
+          border: none;
+          outline: none;
+          background: url(../assets/header-v-3/phone.svg) center / 24px no-repeat;
+          background-color: #00b2e3;
+          cursor: pointer;
+        }
+
         &:hover {
           color: #ffffff;
           border-color: #1e674e;
           background-color: #1e674e;
+        }
+
+        &-text {
+          @include tabletsm {
+            display: none;
+          }
         }
       }
     }
@@ -355,7 +362,7 @@
           display: block;
           width: 28px;
           aspect-ratio: 1 / 1;
-          background: url(../assets/header-v-2/close.svg) center / cover no-repeat;
+          background: url(../assets/header-v-3/close.svg) center / cover no-repeat;
           filter: brightness(0);
         }
       }
