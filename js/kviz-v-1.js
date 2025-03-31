@@ -63,6 +63,32 @@ function updateQuestions() {
   });
 }
 
+function prevStep() {
+  if (activeQuestionId - 1 < 0) {
+    activeQuestionId = 0;
+  } else {
+    activeQuestionId--;
+  }
+
+  setTimeout(() => {
+    updateQuestions();
+  }, 300);
+}
+
+function nextStep() {
+  if (activeQuestionId + 1 >= kvizQuestionEls.length) {
+    activeQuestionId = kvizQuestionEls.length - 1;
+    if (kvizMain) kvizMain.classList.remove('active');
+    if (kvizResults) kvizResults.classList.add('active');
+  } else {
+    activeQuestionId++;
+  }
+
+  setTimeout(() => {
+    updateQuestions();
+  }, 300);
+}
+
 updateQuestions();
 
 if (kvizControls) {
@@ -70,27 +96,8 @@ if (kvizControls) {
     const isBackBtn = event.target.classList.contains('kviz-v-1__controls-back');
     const isNextBtn = event.target.classList.contains('kviz-v-1__controls-next');
 
-    if (isBackBtn) {
-      if (activeQuestionId - 1 < 0) {
-        activeQuestionId = 0;
-      } else {
-        activeQuestionId--;
-      }
-    }
-
-    if (isNextBtn) {
-      if (activeQuestionId + 1 >= kvizQuestionEls.length) {
-        activeQuestionId = kvizQuestionEls.length - 1;
-        if (kvizMain) kvizMain.classList.remove('active');
-        if (kvizResults) kvizResults.classList.add('active');
-      } else {
-        activeQuestionId++;
-      }
-    }
-
-    setTimeout(() => {
-      updateQuestions();
-    }, 300);
+    if (isBackBtn) prevStep();
+    if (isNextBtn) nextStep();
   });
 }
 
@@ -111,6 +118,7 @@ kvizQuestionRadioEls.forEach((radioEl) => {
   radioInputs.forEach((radioInput) => {
     radioInput.addEventListener('input', () => {
       if (customInput) customInput.value = '';
+      nextStep();
     });
   });
 });
@@ -132,6 +140,7 @@ kvizQuestionRadioTextEls.forEach((radioEl) => {
   radioInputs.forEach((radioInput) => {
     radioInput.addEventListener('input', () => {
       if (customInput) customInput.value = '';
+      nextStep();
     });
   });
 });
