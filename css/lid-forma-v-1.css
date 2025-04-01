@@ -1,0 +1,270 @@
+.lid-forma-v-1__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #2f2f2f;
+}
+@media (max-width: 576px) {
+  .lid-forma-v-1__wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.lid-forma-v-1__figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 387px;
+          flex: 0 0 387px;
+  margin: 0;
+  margin-right: -40px;
+}
+@media (max-width: 1580px) {
+  .lid-forma-v-1__figure {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 314px;
+            flex: 0 0 314px;
+    margin-right: -30px;
+  }
+}
+@media (max-width: 1200px) {
+  .lid-forma-v-1__figure {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 271px;
+            flex: 0 0 271px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 1020px) {
+  .lid-forma-v-1__figure {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .lid-forma-v-1__figure {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    margin: 0;
+    padding: 20px 23px 0;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+}
+.lid-forma-v-1__figure-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.lid-forma-v-1__discount {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding: 40px 48px 35px;
+  padding-right: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media (max-width: 1580px) {
+  .lid-forma-v-1__discount {
+    padding: 40px 48px 29px;
+    padding-right: 0;
+  }
+}
+@media (max-width: 1200px) {
+  .lid-forma-v-1__discount {
+    padding: 33px 40px 26px;
+    padding-right: 0;
+  }
+}
+@media (max-width: 1020px) {
+  .lid-forma-v-1__discount {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    padding: 33px 40px 26px;
+  }
+}
+@media (max-width: 768px) {
+  .lid-forma-v-1__discount {
+    padding: 42px 24px 28px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+.lid-forma-v-1__discount-title {
+  margin: 0 0 9px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+@media (max-width: 1580px) {
+  .lid-forma-v-1__discount-title {
+    margin-bottom: 21px;
+    font-size: 28px;
+  }
+}
+@media (max-width: 1200px) {
+  .lid-forma-v-1__discount-title {
+    margin-bottom: 19px;
+    font-size: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .lid-forma-v-1__discount-title {
+    margin-bottom: 12px;
+    font-size: 28px;
+  }
+}
+.lid-forma-v-1__discount-description {
+  margin: 0 0 48px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: #87878e;
+}
+@media (max-width: 1200px) {
+  .lid-forma-v-1__discount-description {
+    margin-bottom: 38px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .lid-forma-v-1__discount-description {
+    margin-bottom: 31px;
+    font-size: 20px;
+  }
+}
+.lid-forma-v-1__discount-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 24px;
+  margin: 0 0 25px;
+}
+@media (max-width: 1580px) {
+  .lid-forma-v-1__discount-form {
+    gap: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .lid-forma-v-1__discount-form {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.lid-forma-v-1__discount-form-input, .lid-forma-v-1__discount-form-button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(33.3333333333% - 16px);
+          flex: 0 0 calc(33.3333333333% - 16px);
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  outline: none;
+}
+@media (max-width: 1580px) {
+  .lid-forma-v-1__discount-form-input, .lid-forma-v-1__discount-form-button {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(33.3333333333% - 13.3333333333px);
+            flex: 0 0 calc(33.3333333333% - 13.3333333333px);
+  }
+}
+@media (max-width: 768px) {
+  .lid-forma-v-1__discount-form-input, .lid-forma-v-1__discount-form-button {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
+.lid-forma-v-1__discount-form-input {
+  padding: 18px 24px;
+  color: #1c1c20;
+  border: 2px solid #444444;
+  background-color: #444444;
+}
+.lid-forma-v-1__discount-form-input:focus {
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
+}
+.lid-forma-v-1__discount-form-input:user-valid {
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
+}
+.lid-forma-v-1__discount-form-input::-webkit-input-placeholder {
+  color: #87878e;
+}
+.lid-forma-v-1__discount-form-input::-moz-placeholder {
+  color: #87878e;
+}
+.lid-forma-v-1__discount-form-input:-ms-input-placeholder {
+  color: #87878e;
+}
+.lid-forma-v-1__discount-form-input::-ms-input-placeholder {
+  color: #87878e;
+}
+.lid-forma-v-1__discount-form-input::placeholder {
+  color: #87878e;
+}
+.lid-forma-v-1__discount-form-button {
+  padding: 18px 16px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fefefe;
+  border: none;
+  background-color: #df4832;
+  -webkit-transition-property: border, color, background-color;
+  transition-property: border, color, background-color;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  cursor: pointer;
+}
+.lid-forma-v-1__discount-form-button:hover {
+  color: #1c1c20;
+  background-color: #fefefe;
+}
+.lid-forma-v-1__discount-disclaimer {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: #87878e;
+}
+.lid-forma-v-1__discount-disclaimer a {
+  color: inherit;
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  -webkit-transition-property: border, color, background-color;
+  transition-property: border, color, background-color;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+.lid-forma-v-1__discount-disclaimer a:hover {
+  color: #fefefe;
+}
