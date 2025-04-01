@@ -9,7 +9,7 @@
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% - 740px);
           flex: 0 0 calc(100% - 740px);
-  padding: 107px 72px 0 0;
+  padding: 107px 24px 0 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -34,7 +34,7 @@
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
-    padding: 32px 0 0;
+    padding: 32px 0 24px;
   }
 }
 @media (max-width: 768px) {
@@ -173,6 +173,7 @@
   margin: 0 0 41px;
   font-weight: 500;
   font-size: 24px;
+  line-height: 140%;
   letter-spacing: -0.01em;
   color: #87878e;
 }
@@ -202,6 +203,7 @@
   margin: 0 0 36px;
   font-weight: 600;
   font-size: 38px;
+  line-height: 140%;
   letter-spacing: -0.01em;
   text-align: center;
   color: #fff;
@@ -280,6 +282,7 @@
   height: auto;
 }
 .perv-ekr-v-1__advantages-card-title {
+  max-width: 314px;
   margin: 0 0 9px;
   font-weight: 600;
   font-size: 16px;
@@ -306,6 +309,7 @@
   }
 }
 .perv-ekr-v-1__advantages-card-text {
+  max-width: 314px;
   font-weight: 500;
   font-size: 16px;
   line-height: 140%;
@@ -365,9 +369,11 @@
   }
 }
 .perv-ekr-v-1__discount-title {
+  max-width: 887px;
   margin: 0 0 9px;
   font-weight: 500;
   font-size: 32px;
+  line-height: 140%;
   letter-spacing: -0.01em;
   color: #fff;
 }
@@ -390,10 +396,11 @@
   }
 }
 .perv-ekr-v-1__discount-description {
+  max-width: 887px;
   margin: 0 0 39px;
   font-weight: 500;
   font-size: 20px;
-  line-height: 160%;
+  line-height: 140%;
   letter-spacing: -0.01em;
   color: #87878e;
 }
@@ -513,7 +520,7 @@
 .perv-ekr-v-1__discount-disclaimer {
   font-weight: 400;
   font-size: 14px;
-  line-height: 110%;
+  line-height: 140%;
   letter-spacing: -0.01em;
   color: #87878e;
 }

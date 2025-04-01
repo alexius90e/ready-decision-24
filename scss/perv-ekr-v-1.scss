@@ -8,7 +8,7 @@
 
   &__main {
     flex: 0 0 calc(100% - 740px);
-    padding: 107px 72px 0 0;
+    padding: 107px 24px 0 0;
     box-sizing: border-box;
 
     @include desktoplg {
@@ -23,7 +23,7 @@
 
     @include laptop {
       flex: 1 1 100%;
-      padding: 32px 0 0;
+      padding: 32px 0 24px;
     }
 
     @include tablet {
@@ -139,6 +139,7 @@
     margin: 0 0 41px;
     font-weight: 500;
     font-size: 24px;
+    line-height: 140%;
     letter-spacing: -0.01em;
     color: #87878e;
 
@@ -164,6 +165,7 @@
     margin: 0 0 36px;
     font-weight: 600;
     font-size: 38px;
+    line-height: 140%;
     letter-spacing: -0.01em;
     text-align: center;
     color: #fff;
@@ -227,6 +229,7 @@
       }
 
       &-title {
+        max-width: 314px;
         margin: 0 0 9px;
         font-weight: 600;
         font-size: 16px;
@@ -251,6 +254,7 @@
       }
 
       &-text {
+        max-width: 314px;
         font-weight: 500;
         font-size: 16px;
         line-height: 140%;
@@ -297,9 +301,11 @@
     }
 
     &-title {
+      max-width: 887px;
       margin: 0 0 9px;
       font-weight: 500;
       font-size: 32px;
+      line-height: 140%;
       letter-spacing: -0.01em;
       color: #fff;
 
@@ -320,10 +326,11 @@
     }
 
     &-description {
+      max-width: 887px;
       margin: 0 0 39px;
       font-weight: 500;
       font-size: 20px;
-      line-height: 160%;
+      line-height: 140%;
       letter-spacing: -0.01em;
       color: #87878e;
 
@@ -420,7 +427,7 @@
     &-disclaimer {
       font-weight: 400;
       font-size: 14px;
-      line-height: 110%;
+      line-height: 140%;
       letter-spacing: -0.01em;
       color: #87878e;
 
