@@ -405,6 +405,15 @@
         color: #fefefe;
         border: none;
         background-color: #df4832;
+        transition-property: border, color, background-color;
+        transition-timing-function: ease-in-out;
+        transition-duration: 0.2s;
+        cursor: pointer;
+
+        &:hover {
+          color: #1c1c20;
+          background-color: #fefefe;
+        }
       }
     }
 
@@ -419,6 +428,13 @@
         color: inherit;
         text-decoration: underline;
         text-decoration-skip-ink: none;
+        transition-property: border, color, background-color;
+        transition-timing-function: ease-in-out;
+        transition-duration: 0.2s;
+
+        &:hover {
+          color: #fefefe;
+        }
       }
     }
   }

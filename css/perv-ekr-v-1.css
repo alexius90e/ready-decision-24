@@ -498,6 +498,17 @@
   color: #fefefe;
   border: none;
   background-color: #df4832;
+  -webkit-transition-property: border, color, background-color;
+  transition-property: border, color, background-color;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  cursor: pointer;
+}
+.perv-ekr-v-1__discount-form-button:hover {
+  color: #1c1c20;
+  background-color: #fefefe;
 }
 .perv-ekr-v-1__discount-disclaimer {
   font-weight: 400;
@@ -511,4 +522,13 @@
   text-decoration: underline;
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
+  -webkit-transition-property: border, color, background-color;
+  transition-property: border, color, background-color;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+.perv-ekr-v-1__discount-disclaimer a:hover {
+  color: #fefefe;
 }
