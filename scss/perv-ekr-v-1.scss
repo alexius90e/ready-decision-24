@@ -8,17 +8,17 @@
 
   &__main {
     flex: 0 0 calc(100% - 740px);
-    padding: 107px 24px 24px 0;
+    padding: 107px 24px 40px 0;
     box-sizing: border-box;
 
     @include desktoplg {
       flex: 0 0 calc(100% - 560px);
-      padding: 112px 20px 24px 0;
+      padding: 112px 20px 40px 0;
     }
 
     @include desktop {
       flex: 0 0 calc(100% - 398px);
-      padding: 69px 22px 24px 0;
+      padding: 69px 22px 40px 0;
     }
 
     @include laptop {
@@ -27,7 +27,7 @@
     }
 
     @include tablet {
-      margin-bottom: 72px;
+      margin-bottom: 48px;
     }
 
     &-heading {
