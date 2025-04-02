@@ -8,17 +8,17 @@
 
   &__main {
     flex: 0 0 calc(100% - 740px);
-    padding: 107px 24px 0 0;
+    padding: 107px 24px 24px 0;
     box-sizing: border-box;
 
     @include desktoplg {
       flex: 0 0 calc(100% - 560px);
-      padding: 112px 20px 0 0;
+      padding: 112px 20px 24px 0;
     }
 
     @include desktop {
       flex: 0 0 calc(100% - 398px);
-      padding: 69px 22px 0 0;
+      padding: 69px 22px 24px 0;
     }
 
     @include laptop {
@@ -195,12 +195,20 @@
     flex-wrap: wrap;
     gap: 40px 24px;
 
+    @include desktop {
+      gap: 24px;
+    }
+
     @include laptop {
       gap: 20px;
     }
 
     &-card {
       flex: 0 0 calc(100% / 2 - 24px / 2);
+
+      @include desktop {
+        flex: 0 0 230px;
+      }
 
       @include laptop {
         flex: 0 0 calc(100% / 4 - 20px / 4 * 3);
