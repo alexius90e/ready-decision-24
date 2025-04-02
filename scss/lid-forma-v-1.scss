@@ -46,7 +46,7 @@
 
   &__discount {
     flex: 1 1 auto;
-    padding: 40px 48px 35px;
+    padding: 40px 48px 33px;
     padding-right: 0;
     box-sizing: border-box;
 
@@ -95,7 +95,7 @@
     }
 
     &-description {
-      margin: 0 0 48px;
+      margin: 0 0 39px;
       font-weight: 500;
       font-size: 20px;
       line-height: 140%;
@@ -117,7 +117,7 @@
       display: flex;
       align-items: center;
       gap: 24px;
-      margin: 0 0 25px;
+      margin: 0 0 20px;
 
       @include desktoplg {
         gap: 20px;
