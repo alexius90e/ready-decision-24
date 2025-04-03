@@ -30,10 +30,11 @@
     display: flex;
     flex-wrap: wrap;
     flex: 0 1 738px;
-    gap: 24px;
+    gap: 20px 24px;
 
     @include desktop {
       flex: 0 0 480px;
+      gap: 18px 20px;
     }
 
     @include tablet {
@@ -49,12 +50,28 @@
       flex-direction: column;
       flex: 0 0 calc(50% - 24px / 2);
 
+      @include desktop {
+        flex: 0 0 calc(50% - 20px / 2);
+      }
+
       @include mobile {
         flex: 1 1 100%;
       }
 
       &_wide {
         flex: 1 1 100%;
+      }
+
+      &_address {
+        padding-top: 20px;
+
+        @include desktop {
+          padding-top: 16px;
+        }
+
+        @include mobile {
+          padding: 0;
+        }
       }
 
       &-link {
@@ -149,7 +166,6 @@
   &__map {
     position: relative;
     padding: 90px 0 135px;
-    background-color: #06cc4d;
 
     @include tablet {
       padding: 368px 0 50px;
