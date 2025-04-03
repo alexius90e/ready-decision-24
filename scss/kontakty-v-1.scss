@@ -1,0 +1,214 @@
+@import './b-mixins';
+
+.kontakty-v-1 {
+  &__title {
+    max-width: 1123px;
+    margin: 0 0 32px;
+    font-weight: 600;
+
+    @include desktop {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    padding-bottom: 56px;
+
+    @include desktop {
+      padding-bottom: 48px;
+    }
+
+    @include tablet {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 738px;
+    gap: 24px;
+
+    @include desktop {
+      flex: 0 0 480px;
+    }
+
+    @include tablet {
+      flex: 1 1 100%;
+    }
+
+    @include mobile {
+      gap: 18px;
+    }
+
+    &-block {
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 calc(50% - 24px / 2);
+
+      @include mobile {
+        flex: 1 1 100%;
+      }
+
+      &_wide {
+        flex: 1 1 100%;
+      }
+
+      &-link {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 140%;
+        letter-spacing: -0.01em;
+        color: #2f2f2f;
+
+        @include desktop {
+          font-size: 24px;
+        }
+      }
+
+      &-title {
+        display: inline-block;
+        margin-top: 4px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        letter-spacing: -0.01em;
+        color: #87878e;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex: 0 1 auto;
+    gap: 15px 28px;
+
+    @include tablet {
+      flex: 1 1 100%;
+      gap: 15px;
+    }
+
+    &-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    &-link {
+      display: inline-block;
+      width: 58px;
+      aspect-ratio: 1 / 1;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 32px;
+      transition-property: border, color, background-color;
+      transition-timing-function: ease-in-out;
+      transition-duration: 0.2s;
+
+      @include desktop {
+        width: 54px;
+        background-size: 28px;
+      }
+
+      @include tablet {
+        width: 64px;
+        background-size: 32px;
+      }
+
+      &:hover {
+        background-color: #1c1c20;
+      }
+
+      &_tg {
+        background-image: url(../assets/header-v-2/telegram.svg);
+        background-color: #166ff5;
+      }
+
+      &_wts {
+        background-image: url(../assets/header-v-2/whatsapp.svg);
+        background-color: #06cc4d;
+      }
+    }
+
+    &-slogan {
+      flex: 0 0 auto;
+      max-width: 212px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 140%;
+      letter-spacing: -0.01em;
+      color: #87878e;
+    }
+  }
+
+  &__map {
+    position: relative;
+    padding: 90px 0 135px;
+    background-color: #06cc4d;
+
+    @include tablet {
+      padding: 368px 0 50px;
+    }
+
+    &-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+
+      & iframe {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    &-list {
+      position: relative;
+      z-index: 500;
+      max-width: 330px;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      @include tablet {
+        display: flex;
+        max-width: none;
+        overflow: scroll;
+      }
+
+      &-item {
+        padding: 19px 20px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 116%;
+        letter-spacing: -0.01em;
+        color: #1c1c20;
+        background-color: #ffffff;
+        transition-property: color, background-color;
+        transition-timing-function: ease-in-out;
+        transition-duration: 0.2s;
+        cursor: pointer;
+
+        @include tablet {
+          flex: 0 0 auto;
+          width: fit-content;
+        }
+
+        &:hover {
+          color: #ffffff;
+          background-color: #df4832;
+        }
+      }
+    }
+  }
+}
