@@ -1,0 +1,107 @@
+.video-v-1__title {
+  margin: 0 0 12px;
+}
+@media (max-width: 1200px) {
+  .video-v-1__title {
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 768px) {
+  .video-v-1__title {
+    margin-bottom: 10px;
+  }
+}
+.video-v-1__message {
+  max-width: 1119px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: #616161;
+}
+@media (max-width: 1580px) {
+  .video-v-1__message {
+    max-width: 947px;
+  }
+}
+@media (max-width: 1200px) {
+  .video-v-1__message {
+    max-width: 813px;
+    font-size: 20px;
+  }
+}
+.video-v-1__video {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 40px 0 0;
+}
+@media (max-width: 1200px) {
+  .video-v-1__video {
+    margin-top: 30px;
+  }
+}
+.video-v-1__video-preview {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.video-v-1__video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  width: 100px;
+  aspect-ratio: 1/1;
+  border: none;
+  border-radius: 80px;
+  background-color: #eaeaea;
+  -webkit-transition: background-color ease-in-out 0.2s;
+  transition: background-color ease-in-out 0.2s;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+  cursor: pointer;
+}
+@media (max-width: 1200px) {
+  .video-v-1__video-play {
+    width: 80px;
+  }
+}
+@media (max-width: 768px) {
+  .video-v-1__video-play {
+    width: 60px;
+  }
+}
+.video-v-1__video-play:hover {
+  background-color: #ffffff;
+}
+.video-v-1__video-play::before {
+  content: "";
+  display: block;
+  width: 50%;
+  aspect-ratio: 1/1;
+  background: url(../assets/video-tekst-v-1/play.svg) center/cover no-repeat;
+}
+.video-v-1__video.active .video-v-1__video-play, .video-v-1__video.active .video-v-1__video-preview {
+  display: none;
+}
+.video-v-1__video-iframe {
+  display: none;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1500/844;
+}
+.video-v-1__video.active .video-v-1__video-iframe {
+  display: block;
+}
