@@ -91,7 +91,7 @@
   display: block;
   width: 50%;
   aspect-ratio: 1/1;
-  background: url(../assets/video-tekst-v-1/play.svg) center/cover no-repeat;
+  background: url(../assets/video-v-1/play.svg) center/cover no-repeat;
 }
 .video-v-1__video.active .video-v-1__video-play, .video-v-1__video.active .video-v-1__video-preview {
   display: none;
