@@ -44,7 +44,7 @@
 }
 @media (max-width: 1020px) {
   .video-tekst-v-1__video {
-    position: static;
+    position: relative;
     top: auto;
     left: auto;
     max-width: none;

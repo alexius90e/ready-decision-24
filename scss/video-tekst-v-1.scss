@@ -38,7 +38,7 @@
     }
 
     @include laptop {
-      position: static;
+      position: relative;
       top: auto;
       left: auto;
       max-width: none;
