@@ -78,8 +78,11 @@ function prevStep() {
 function nextStep() {
   if (activeQuestionId + 1 >= kvizQuestionEls.length) {
     activeQuestionId = kvizQuestionEls.length - 1;
-    if (kvizMain) kvizMain.classList.remove('active');
-    if (kvizResults) kvizResults.classList.add('active');
+
+    setTimeout(() => {
+      if (kvizMain) kvizMain.classList.remove('active');
+      if (kvizResults) kvizResults.classList.add('active');
+    }, 300);
   } else {
     activeQuestionId++;
   }
