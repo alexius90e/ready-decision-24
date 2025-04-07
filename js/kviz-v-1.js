@@ -35,6 +35,8 @@ kvizQuestionGallerySwiperEls.forEach((swiperEl) => {
   });
 });
 
+const kvizV1 = document.getElementById('kvizV1');
+const kvizV1Content = document.getElementById('kvizV1Content');
 const kvizMain = document.querySelector('.kviz-v-1__main');
 const kvizResults = document.querySelector('.kviz-v-1__results');
 const kvizControls = document.querySelector('.kviz-v-1__controls');
@@ -74,6 +76,12 @@ function prevStep() {
   setTimeout(() => {
     updateQuestions();
   }, kvizDelay);
+
+  setTimeout(() => {
+    if (kvizV1Content) {
+      kvizV1Content.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, kvizDelay);
 }
 
 function nextStep() {
@@ -84,8 +92,19 @@ function nextStep() {
       if (kvizMain) kvizMain.classList.remove('active');
       if (kvizResults) kvizResults.classList.add('active');
     }, kvizDelay);
+
+    setTimeout(() => {
+      if (kvizV1) {
+        kvizV1.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, kvizDelay);
   } else {
     activeQuestionId++;
+    setTimeout(() => {
+      if (kvizV1Content) {
+        kvizV1Content.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, kvizDelay);
   }
 
   setTimeout(() => {
@@ -106,7 +125,6 @@ if (kvizControls) {
 }
 
 const kvizQuestionRadioEls = document.querySelectorAll('.kviz-v-1__question_radio');
-const kvizV1Content = document.getElementById('kvizV1Content');
 
 kvizQuestionRadioEls.forEach((radioEl) => {
   const radioInputs = radioEl.querySelectorAll('.kviz-v-1__question-gallery-item-input');
@@ -124,11 +142,6 @@ kvizQuestionRadioEls.forEach((radioEl) => {
     radioInput.addEventListener('input', () => {
       if (customInput) customInput.value = '';
       nextStep();
-      if (kvizV1Content)
-        kvizV1Content.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-        });
     });
   });
 });
@@ -151,11 +164,6 @@ kvizQuestionRadioTextEls.forEach((radioEl) => {
     radioInput.addEventListener('input', () => {
       if (customInput) customInput.value = '';
       nextStep();
-      if (kvizV1Content)
-        kvizV1Content.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-        });
     });
   });
 });
