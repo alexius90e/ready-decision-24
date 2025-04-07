@@ -79,6 +79,7 @@
         width: 100%;
         height: auto;
         opacity: 0;
+        user-select: none;
 
         &:nth-child(1) {
           animation: appear 6s infinite;
@@ -111,6 +112,7 @@
         display: block;
         width: 100%;
         height: auto;
+        user-select: none;
       }
     }
   }
