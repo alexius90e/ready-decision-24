@@ -106,6 +106,7 @@ if (kvizControls) {
 }
 
 const kvizQuestionRadioEls = document.querySelectorAll('.kviz-v-1__question_radio');
+const kvizV1Content = document.getElementById('kvizV1Content');
 
 kvizQuestionRadioEls.forEach((radioEl) => {
   const radioInputs = radioEl.querySelectorAll('.kviz-v-1__question-gallery-item-input');
@@ -123,6 +124,11 @@ kvizQuestionRadioEls.forEach((radioEl) => {
     radioInput.addEventListener('input', () => {
       if (customInput) customInput.value = '';
       nextStep();
+      if (kvizV1Content)
+        kvizV1Content.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
     });
   });
 });
@@ -145,6 +151,11 @@ kvizQuestionRadioTextEls.forEach((radioEl) => {
     radioInput.addEventListener('input', () => {
       if (customInput) customInput.value = '';
       nextStep();
+      if (kvizV1Content)
+        kvizV1Content.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
     });
   });
 });
