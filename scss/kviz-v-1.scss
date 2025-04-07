@@ -225,12 +225,14 @@
   }
 
   &__content {
+    position: relative;
     display: flex;
     flex-direction: column;
     flex: 1 1 992px;
     min-height: 824px;
     padding: 48px;
     box-sizing: border-box;
+    overflow: hidden;
     background-color: #f5f5f5;
 
     @include desktoplg {
@@ -290,15 +292,20 @@
   }
 
   &__question {
-    display: none;
+    position: absolute;
+    left: 120vw;
     margin: 0 0 56px;
+    opacity: 0;
+    transition: opacity ease-in-out 0.5s;
 
     @include mobile {
       margin: 0 0 48px;
     }
 
     &.active {
-      display: block;
+      position: static;
+      left: auto;
+      opacity: 1;
     }
 
     &-title {

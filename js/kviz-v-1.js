@@ -39,6 +39,7 @@ const kvizMain = document.querySelector('.kviz-v-1__main');
 const kvizResults = document.querySelector('.kviz-v-1__results');
 const kvizControls = document.querySelector('.kviz-v-1__controls');
 const kvizQuestionEls = document.querySelectorAll('.kviz-v-1__question');
+const kvizDelay = 500;
 let activeQuestionId = 0;
 
 function updateQuestions() {
@@ -72,7 +73,7 @@ function prevStep() {
 
   setTimeout(() => {
     updateQuestions();
-  }, 300);
+  }, kvizDelay);
 }
 
 function nextStep() {
@@ -82,14 +83,14 @@ function nextStep() {
     setTimeout(() => {
       if (kvizMain) kvizMain.classList.remove('active');
       if (kvizResults) kvizResults.classList.add('active');
-    }, 300);
+    }, kvizDelay);
   } else {
     activeQuestionId++;
   }
 
   setTimeout(() => {
     updateQuestions();
-  }, 300);
+  }, kvizDelay);
 }
 
 updateQuestions();
