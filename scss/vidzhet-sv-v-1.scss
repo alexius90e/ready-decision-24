@@ -25,6 +25,7 @@
   position: fixed;
   right: 64px;
   bottom: 64px;
+  z-index: 100;
   width: fit-content;
 
   @include mobile {

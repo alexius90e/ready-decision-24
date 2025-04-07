@@ -36,6 +36,7 @@
   position: fixed;
   right: 64px;
   bottom: 64px;
+  z-index: 100;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
