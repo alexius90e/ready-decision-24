@@ -165,20 +165,14 @@
 
   &__map {
     position: relative;
-    display: flex;
-    align-items: center;
+    display: block;
     min-height: 568px;
     padding: 90px 0 135px;
     box-sizing: border-box;
 
     @include tablet {
-      display: block;
       padding: 368px 0 50px;
       min-height: auto;
-    }
-
-    & .container {
-      flex: 1 1 100%;
     }
 
     &-wrapper {
