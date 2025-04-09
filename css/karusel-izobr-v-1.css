@@ -101,5 +101,6 @@
 @media (max-width: 576px) {
   .karusel-izobr-v-1__slide-text {
     padding: 22px 36px 0;
+    font-size: 24px;
   }
 }
