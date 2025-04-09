@@ -1,0 +1,19 @@
+.page__container {
+  width: 100%;
+  max-width: 1640px;
+  margin: 0 auto;
+  padding: 0 120px;
+  box-sizing: border-box;
+
+  @include desktop {
+    padding: 0 40px;
+  }
+
+  @include tablet {
+    padding: 0 20px;
+  }
+
+  @include mobile {
+    padding: 0 10px;
+  }
+}

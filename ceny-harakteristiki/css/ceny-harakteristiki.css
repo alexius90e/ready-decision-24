@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+html {
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  overflow-y: scroll;
+}
+
+a,
+button,
+input,
+textarea {
+  font-family: "Inter", sans-serif;
+}
+
+.page__container {
+  width: 100%;
+  max-width: 1640px;
+  margin: 0 auto;
+  padding: 0 120px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media (max-width: 1440px) {
+  .page__container {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 768px) {
+  .page__container {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 576px) {
+  .page__container {
+    padding: 0 10px;
+  }
+}
+
+.ceny-harakteristiki {
+  padding: 129px 0;
+  background: url(../assets/ceny-harakteristiki-bg.png) center/cover no-repeat;
+}
+@media (max-width: 1440px) {
+  .ceny-harakteristiki {
+    padding: 80px 0;
+  }
+}
+@media (max-width: 768px) {
+  .ceny-harakteristiki {
+    padding: 64px 0;
+  }
+}
+@media (max-width: 576px) {
+  .ceny-harakteristiki {
+    padding: 56px 0;
+    background-image: none;
+  }
+}
+.ceny-harakteristiki__title {
+  margin: 0 0 64px;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 110%;
+  color: #102d21;
+}
+@media (max-width: 1440px) {
+  .ceny-harakteristiki__title {
+    margin-bottom: 48px;
+    font-size: 54px;
+  }
+}
+@media (max-width: 768px) {
+  .ceny-harakteristiki__title {
+    margin-bottom: 36px;
+    font-size: 44px;
+  }
+}
+@media (max-width: 576px) {
+  .ceny-harakteristiki__title {
+    margin-bottom: 29px;
+    font-size: 38px;
+  }
+}
+.ceny-harakteristiki__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 66px 24px;
+}
+@media (max-width: 992px) {
+  .ceny-harakteristiki__cards {
+    gap: 24px;
+  }
+}
+.ceny-harakteristiki__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(25% - 18px);
+          flex: 0 0 calc(25% - 18px);
+  min-height: 201px;
+  padding: 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+@media (max-width: 1440px) {
+  .ceny-harakteristiki__card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(33.3333333333% - 16px);
+            flex: 0 0 calc(33.3333333333% - 16px);
+  }
+}
+@media (max-width: 992px) {
+  .ceny-harakteristiki__card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% - 12px);
+            flex: 0 0 calc(50% - 12px);
+  }
+}
+@media (max-width: 576px) {
+  .ceny-harakteristiki__card {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
+.ceny-harakteristiki__card-title {
+  margin: 0 0 35px;
+  font-weight: 500;
+  font-size: 24px;
+  color: #265f47;
+}
+.ceny-harakteristiki__card-text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 130%;
+  color: #102d21;
+}
+.ceny-harakteristiki__card-text_sm {
+  font-size: 20px;
+}
