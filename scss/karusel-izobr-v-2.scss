@@ -1,0 +1,124 @@
+@import './b-mixins';
+
+.karusel-izobr-v-2 {
+  &__title {
+    margin: 0 0 12px;
+
+    @include desktop {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__description {
+    max-width: 1119px;
+    margin: 0 0 40px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+    color: #616161;
+
+    @include desktop {
+      margin-bottom: 32px;
+      font-size: 20px;
+    }
+  }
+
+  &__gallery {
+    & .swiper {
+      &-button {
+        &-prev,
+        &-next {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 70px;
+          height: 70px;
+          aspect-ratio: 1 / 1;
+          background-color: #1c1c20;
+          transition-property: color;
+          transition-timing-function: ease-in-out;
+          transition-duration: 0.2s;
+
+          @include desktoplg {
+            width: 54px;
+            height: 54px;
+          }
+
+          &:hover {
+            background-color: #1e674e;
+          }
+
+          &::after {
+            content: '';
+            display: block;
+            width: 32px;
+            height: 32px;
+            filter: invert(100%);
+            background: url(../assets/kviz-v-1/arrow-left.svg) center / cover no-repeat;
+
+            @include desktoplg {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+
+        &-prev {
+          left: 1px;
+
+          &::after {
+            transform: rotate(180deg);
+          }
+        }
+
+        &-next {
+          right: 1px;
+        }
+
+        &-disabled {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  &__slide {
+    &-figure {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    &-text {
+      padding: 24px 47px 0;
+      font-weight: 500;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 140%;
+      letter-spacing: -0.01em;
+      color: #1c1c20;
+
+      @include desktoplg {
+        padding: 24px 22px 0;
+      }
+
+      @include tablet {
+        max-width: calc(400px - 48px);
+        margin: 0 auto;
+        padding: 24px 24px 0;
+      }
+
+      @include mobile {
+        font-size: 24px;
+      }
+    }
+  }
+}
