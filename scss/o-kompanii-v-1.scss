@@ -1,0 +1,222 @@
+@import './b-mixins';
+
+.o-kompanii-v-1 {
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 24px;
+  }
+
+  &__info {
+    flex: 0 0 calc(50% - 24px / 2);
+
+    @include laptop {
+      flex: 1 1 100%;
+      order: 1;
+    }
+
+    &-title {
+      @include laptop {
+        display: none;
+      }
+    }
+
+    &-subtitle {
+      margin: 28px 0 0;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 140%;
+      letter-spacing: -0.01em;
+      color: #2f2f2f;
+
+      @include desktop {
+        margin: 20px 0 0;
+      }
+
+      @include laptop {
+        margin: 24px 0 0;
+      }
+    }
+
+    &-text {
+      margin: 24px 0 0;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 140%;
+      letter-spacing: -0.01em;
+      color: #87878e;
+
+      @include desktop {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__gallery {
+    flex: 0 0 calc(50% - 24px / 2);
+
+    @include laptop {
+      flex: 1 1 100%;
+      order: 0;
+    }
+
+    &-title {
+      display: none;
+
+      @include laptop {
+        display: block;
+        margin: 0 0 28px;
+      }
+    }
+
+    & .swiper {
+      display: grid;
+
+      &-wrapper {
+        min-width: 0;
+      }
+
+      &-button {
+        &-prev,
+        &-next {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 70px;
+          height: 70px;
+          aspect-ratio: 1 / 1;
+          background-color: #1c1c20;
+          transition-property: color;
+          transition-timing-function: ease-in-out;
+          transition-duration: 0.2s;
+
+          @include desktoplg {
+            width: 54px;
+            height: 54px;
+          }
+
+          &:hover {
+            background-color: #1e674e;
+          }
+
+          &::after {
+            content: '';
+            display: block;
+            width: 32px;
+            height: 32px;
+            filter: invert(100%);
+            background: url(../assets/kviz-v-1/arrow-left.svg) center / cover no-repeat;
+
+            @include desktoplg {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+
+        &-prev {
+          left: 1px;
+
+          &::after {
+            transform: rotate(180deg);
+          }
+        }
+
+        &-next {
+          right: 1px;
+        }
+
+        &-disabled {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  &__slide {
+    &-figure {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &__advantages {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 70px 0 28px;
+
+    @include desktoplg {
+      padding: 65px 0 0;
+    }
+
+    @include desktop {
+      padding: 55px 0 0;
+    }
+
+    @include laptop {
+      order: 2;
+      padding: 40px 0 0;
+    }
+
+    &-card {
+      flex: 0 0 288px;
+
+      @include desktoplg {
+        flex: 0 0 246px;
+      }
+
+      @include desktop {
+        flex: 0 0 196px;
+      }
+
+      @include laptop {
+        flex: 0 0 calc(50% - 30px / 2);
+      }
+
+      &-title {
+        margin: 0 0 25px;
+        font-weight: 500;
+        font-size: 60px;
+        letter-spacing: -0.01em;
+        color: #2f2f2f;
+
+        @include desktoplg {
+          font-size: 50px;
+        }
+
+        @include desktop {
+          font-size: 38px;
+        }
+
+        @include laptop {
+          margin-bottom: 16px;
+          font-size: 32px;
+        }
+      }
+
+      &-text {
+        margin: 0;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 140%;
+        letter-spacing: -0.01em;
+        color: #87878e;
+
+        @include desktop {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
