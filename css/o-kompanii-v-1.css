@@ -125,7 +125,7 @@
   height: 32px;
   -webkit-filter: invert(100%);
           filter: invert(100%);
-  background: url(../assets/kviz-v-1/arrow-left.svg) center/cover no-repeat;
+  background: url(../assets/o-kompanii-v-1/arrow-left.svg) center/cover no-repeat;
 }
 @media (max-width: 1580px) {
   .o-kompanii-v-1__gallery .swiper-button-prev::after, .o-kompanii-v-1__gallery .swiper-button-next::after {
