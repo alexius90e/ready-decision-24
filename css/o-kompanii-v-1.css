@@ -37,6 +37,7 @@
 @media (max-width: 1200px) {
   .o-kompanii-v-1__info-subtitle {
     margin: 20px 0 0;
+    font-size: 20px;
   }
 }
 @media (max-width: 1020px) {

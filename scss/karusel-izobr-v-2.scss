@@ -11,7 +11,7 @@
 
   &__description {
     max-width: 1119px;
-    margin: 0 0 40px;
+    margin: 0;
     font-weight: 500;
     font-size: 24px;
     line-height: 140%;
@@ -19,12 +19,21 @@
     color: #616161;
 
     @include desktop {
-      margin-bottom: 32px;
       font-size: 20px;
+    }
+
+    & b {
+      font-weight: 600;
     }
   }
 
   &__gallery {
+    margin: 40px 0 0;
+
+    @include desktop {
+      margin-top: 32px;
+    }
+
     & .swiper {
       &-button {
         &-prev,
@@ -110,7 +119,7 @@
         padding: 24px 22px 0;
       }
 
-      @include tablet {
+      @include laptop {
         max-width: calc(400px - 48px);
         margin: 0 auto;
         padding: 24px 24px 0;
@@ -118,6 +127,10 @@
 
       @include mobile {
         font-size: 24px;
+      }
+
+      &:empty {
+        display: none;
       }
     }
   }

@@ -8,7 +8,7 @@
 }
 .karusel-izobr-v-2__description {
   max-width: 1119px;
-  margin: 0 0 40px;
+  margin: 0;
   font-weight: 500;
   font-size: 24px;
   line-height: 140%;
@@ -17,8 +17,18 @@
 }
 @media (max-width: 1200px) {
   .karusel-izobr-v-2__description {
-    margin-bottom: 32px;
     font-size: 20px;
+  }
+}
+.karusel-izobr-v-2__description b {
+  font-weight: 600;
+}
+.karusel-izobr-v-2__gallery {
+  margin: 40px 0 0;
+}
+@media (max-width: 1200px) {
+  .karusel-izobr-v-2__gallery {
+    margin-top: 32px;
   }
 }
 .karusel-izobr-v-2__gallery .swiper-button-prev, .karusel-izobr-v-2__gallery .swiper-button-next {
@@ -110,7 +120,7 @@
     padding: 24px 22px 0;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1020px) {
   .karusel-izobr-v-2__slide-text {
     max-width: 352px;
     margin: 0 auto;
@@ -121,4 +131,7 @@
   .karusel-izobr-v-2__slide-text {
     font-size: 24px;
   }
+}
+.karusel-izobr-v-2__slide-text:empty {
+  display: none;
 }
