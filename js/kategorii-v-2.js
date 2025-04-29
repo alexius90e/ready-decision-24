@@ -41,3 +41,25 @@ if (kategoriiV1Modal && kategoriiV1ModalForm) {
     kategoriiV1Modal.classList.remove('active');
   });
 }
+
+/// kategorii-v-2__card-figure-image
+
+const kategoriiV2Images = document.querySelectorAll('.kategorii-v-2__card-figure-image');
+
+kategoriiV2Images.forEach((image) => {
+  image.addEventListener('pointerdown', (event) => {
+    event.currentTarget.style.transform = 'scale(1.08)';
+  });
+
+  image.addEventListener('pointerenter', (event) => {
+    event.currentTarget.style.transform = 'scale(1.08)';
+  });
+
+  image.addEventListener('pointerup', (event) => {
+    event.currentTarget.style.transform = null;
+  });
+
+  image.addEventListener('pointerleave', (event) => {
+    event.currentTarget.style.transform = null;
+  });
+});
