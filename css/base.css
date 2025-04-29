@@ -242,34 +242,34 @@ input::placeholder {
 }
 
 .block_otstup_l {
-  margin: 270px 0;
+  padding: 270px 0;
 }
 @media (max-width: 1200px) {
   .block_otstup_l {
-    margin: 240px 0;
+    padding: 240px 0;
   }
 }
 .block_otstup_m {
-  margin: 180px 0;
+  padding: 180px 0;
 }
 @media (max-width: 1200px) {
   .block_otstup_m {
-    margin: 160px 0;
+    padding: 160px 0;
   }
 }
 .block_otstup_s {
-  margin: 90px 0;
+  padding: 90px 0;
 }
 @media (max-width: 1200px) {
   .block_otstup_s {
-    margin: 80px 0;
+    padding: 80px 0;
   }
 }
 .block_otstup_xs {
-  margin: 45px 0;
+  padding: 45px 0;
 }
 @media (max-width: 1200px) {
   .block_otstup_xs {
-    margin: 40px 0;
+    padding: 40px 0;
   }
 }

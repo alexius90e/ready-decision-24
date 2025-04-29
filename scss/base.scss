@@ -220,34 +220,34 @@ input {
 
 .block_otstup {
   &_l {
-    margin: 270px 0;
+    padding: 270px 0;
 
     @include desktop {
-      margin: 240px 0;
+      padding: 240px 0;
     }
   }
 
   &_m {
-    margin: 180px 0;
+    padding: 180px 0;
 
     @include desktop {
-      margin: 160px 0;
+      padding: 160px 0;
     }
   }
 
   &_s {
-    margin: 90px 0;
+    padding: 90px 0;
 
     @include desktop {
-      margin: 80px 0;
+      padding: 80px 0;
     }
   }
 
   &_xs {
-    margin: 45px 0;
+    padding: 45px 0;
 
     @include desktop {
-      margin: 40px 0;
+      padding: 40px 0;
     }
   }
 }
