@@ -67,12 +67,24 @@
       margin: 0 0 24px;
       background-color: #d9d9d9;
 
+      &-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
       &-image {
         display: block;
         max-width: 100%;
         width: 100%;
         height: auto;
         object-fit: cover;
+        transition: transform ease-out 0.32s;
+
+        &:hover {
+          transform: scale(1.05);
+        }
       }
     }
 

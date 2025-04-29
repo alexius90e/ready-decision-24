@@ -52,8 +52,8 @@
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 calc(25% - 18px);
-          flex: 0 0 calc(25% - 18px);
+      -ms-flex: 0 0 calc(33.3333333333% - 16px);
+          flex: 0 0 calc(33.3333333333% - 16px);
 }
 @media (max-width: 1580px) {
   .kategorii-v-1__card {
@@ -83,6 +83,18 @@
   margin: 0 0 24px;
   background-color: #d9d9d9;
 }
+.kategorii-v-1__card-figure-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
 .kategorii-v-1__card-figure-image {
   display: block;
   max-width: 100%;
@@ -90,6 +102,14 @@
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: -webkit-transform ease-out 0.32s;
+  transition: -webkit-transform ease-out 0.32s;
+  transition: transform ease-out 0.32s;
+  transition: transform ease-out 0.32s, -webkit-transform ease-out 0.32s;
+}
+.kategorii-v-1__card-figure-image:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 .kategorii-v-1__card-title {
   margin: 0 0 16px;
