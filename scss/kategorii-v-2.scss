@@ -7,7 +7,6 @@
 
   &__description {
     max-width: 1120px;
-    margin: 0 0 40px;
     font-weight: 500;
     font-size: 24px;
     line-height: 140%;
@@ -26,6 +25,7 @@
 
   &__wrapper {
     display: block;
+    margin: 40px 0 0;
   }
 
   &__main {
@@ -89,7 +89,6 @@
     }
 
     &-title {
-      margin: 0 0 16px;
       font-weight: 600;
       font-size: 24px;
       line-height: 140%;
@@ -99,7 +98,7 @@
 
     &-advantages {
       flex: 1 1 auto;
-      margin: 0 0 32px;
+      margin: 16px 0 0;
       padding: 0 0 0 21px;
       list-style-type: '— ';
 
@@ -120,7 +119,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 24px;
-      margin: 0 0 25px;
+      margin: 32px 0 0;
 
       @include desktoplg {
         gap: 20px;
@@ -160,6 +159,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 24px;
+      margin: 25px 0 0;
 
       @include desktoplg {
         gap: 20px;
@@ -168,7 +168,7 @@
       &-count,
       &-more {
         flex: 0 0 calc(100% / 2 - 24px / 2);
-        padding: 16px;
+        padding: 16px 12px;
         box-sizing: border-box;
 
         @include desktoplg {
