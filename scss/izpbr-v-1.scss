@@ -1,0 +1,82 @@
+@import './b-mixins';
+
+.izpbr-v-1 {
+  &__title {
+    max-width: 1120px;
+    margin: 0 0 12px;
+
+    @include desktoplg {
+      max-width: 947px;
+    }
+
+    @include desktop {
+      max-width: 814px;
+    }
+
+    @include laptop {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__description {
+    max-width: 1120px;
+    margin: 0 0 40px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+    color: #616161;
+
+    @include desktoplg {
+      max-width: 947px;
+    }
+
+    @include desktop {
+      max-width: 814px;
+      margin-bottom: 32px;
+      font-size: 20px;
+    }
+  }
+
+  &__figure {
+    margin: 0;
+    padding: 0;
+
+    @include tablet {
+      margin: 0 -20px;
+    }
+
+    @include mobile  {
+      height: 550px;
+      overflow: auto;
+    }
+
+    &-image {
+      &_desktop {
+        display: block;
+        max-width: 100%;
+        height: auto;
+
+        @include tablet {
+          display: none;
+        }
+      }
+
+      &_mobile {
+        display: none;
+
+        @include tablet {
+          display: block;
+          max-width: 100%;
+          height: auto;
+        }
+
+        @include mobile {
+          max-width: none;
+          height: 100%;
+          width: auto;
+        }
+      }
+    }
+  }
+}
