@@ -55,19 +55,23 @@
   .izpbr-v-1__figure {
     height: 550px;
     overflow-x: scroll;
-    scrollbar-color: #658696 rgba(101, 134, 150, 0);
+    scrollbar-color: #658696 #142a3f;
     scrollbar-width: thin;
   }
 }
-.izpbr-v-1__figure::-webkit-scrollbar {
-  width: 7px;
+@media (max-width: 576px) {
+  .izpbr-v-1__figure::-webkit-scrollbar {
+    width: 7px;
+  }
 }
-.izpbr-v-1__figure::-webkit-scrollbar-track {
-  background-color: rgba(101, 134, 150, 0);
+@media (max-width: 576px) {
+  .izpbr-v-1__figure::-webkit-scrollbar-track {
+    background-color: #142a3f;
+  }
 }
 @media (max-width: 576px) {
   .izpbr-v-1__figure::-webkit-scrollbar-thumb {
-    background: #658696;
+    background-color: #658696;
   }
 }
 .izpbr-v-1__figure-image_desktop {

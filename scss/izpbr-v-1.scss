@@ -52,21 +52,25 @@
     @include mobile {
       height: 550px;
       overflow-x: scroll;
-      scrollbar-color: #658696 rgba($color: #658696, $alpha: 0);
+      scrollbar-color: #658696 #142a3f;
       scrollbar-width: thin;
     }
 
     &::-webkit-scrollbar {
-      width: 7px;
+      @include mobile {
+        width: 7px;
+      }
     }
 
     &::-webkit-scrollbar-track {
-      background-color: rgba($color: #658696, $alpha: 0);
+      @include mobile {
+        background-color: #142a3f;
+      }
     }
 
     &::-webkit-scrollbar-thumb {
       @include mobile {
-        background: #658696;
+        background-color: #658696;
       }
     }
 
