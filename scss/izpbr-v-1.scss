@@ -20,7 +20,7 @@
 
   &__description {
     max-width: 1120px;
-    margin: 0 0 40px;
+    margin: 0;
     font-weight: 500;
     font-size: 24px;
     line-height: 140%;
@@ -33,22 +33,41 @@
 
     @include desktop {
       max-width: 814px;
-      margin-bottom: 32px;
       font-size: 20px;
     }
   }
 
   &__figure {
-    margin: 0;
+    margin: 40px 0 0;
     padding: 0;
+
+    @include desktop {
+      margin-top: 32px;
+    }
 
     @include tablet {
       margin: 0 -20px;
     }
 
-    @include mobile  {
+    @include mobile {
       height: 550px;
-      overflow: auto;
+      overflow-x: scroll;
+      scrollbar-color: #658696 rgba($color: #658696, $alpha: 0);
+      scrollbar-width: thin;
+    }
+
+    &::-webkit-scrollbar {
+      width: 7px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: rgba($color: #658696, $alpha: 0);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      @include mobile {
+        background: #658696;
+      }
     }
 
     &-image {

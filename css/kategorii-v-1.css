@@ -107,6 +107,10 @@
   transition: transform ease-out 0.32s;
   transition: transform ease-out 0.32s, -webkit-transform ease-out 0.32s;
 }
+.kategorii-v-1__card-figure-image:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
 .kategorii-v-1__card-title {
   font-weight: 600;
   font-size: 24px;

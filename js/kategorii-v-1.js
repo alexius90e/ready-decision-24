@@ -41,17 +41,3 @@ if (kategoriiV1Modal && kategoriiV1ModalForm) {
     kategoriiV1Modal.classList.remove('active');
   });
 }
-
-/// kategorii-v-1__card-figure-image
-
-const kategoriiV1Images = document.querySelectorAll('.kategorii-v-1__card-figure-image');
-
-kategoriiV1Images.forEach((image) => {
-  image.addEventListener('pointerenter', (event) => {
-    event.currentTarget.style.transform = 'scale(1.08)';
-  });
-
-  image.addEventListener('pointerleave', (event) => {
-    event.currentTarget.style.transform = null;
-  });
-});
