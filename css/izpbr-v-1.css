@@ -48,20 +48,22 @@
 }
 @media (max-width: 768px) {
   .izpbr-v-1__figure {
-    margin: 0 -20px;
+    margin: 32px -20px 0;
   }
 }
 @media (max-width: 576px) {
   .izpbr-v-1__figure {
     height: 550px;
-    overflow-x: scroll;
+    overflow-x: auto;
     scrollbar-color: #658696 #142a3f;
     scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
   }
 }
 @media (max-width: 576px) {
   .izpbr-v-1__figure::-webkit-scrollbar {
     width: 7px;
+    height: 7px;
   }
 }
 @media (max-width: 576px) {

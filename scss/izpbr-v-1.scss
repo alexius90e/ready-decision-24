@@ -46,19 +46,21 @@
     }
 
     @include tablet {
-      margin: 0 -20px;
+      margin: 32px -20px 0;
     }
 
     @include mobile {
       height: 550px;
-      overflow-x: scroll;
+      overflow-x: auto;
       scrollbar-color: #658696 #142a3f;
       scrollbar-width: thin;
+      -webkit-overflow-scrolling: touch;
     }
 
     &::-webkit-scrollbar {
       @include mobile {
         width: 7px;
+        height: 7px;
       }
     }
 
