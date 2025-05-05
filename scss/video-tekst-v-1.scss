@@ -2,29 +2,26 @@
 
 .video-tekst-v-1 {
   &__wrapper {
-    position: relative;
     display: flex;
     align-items: flex-start;
     gap: 24px;
-    padding-left: calc(738px + 24px);
-
-    @include desktoplg {
-      padding-left: calc(561px + 24px);
-    }
-
-    @include desktop {
-      padding-left: calc(477px + 24px);
-    }
 
     @include laptop {
-      padding-left: 0;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__title {
+    display: none;
+
+    @include laptop {
+      display: block;
     }
   }
 
   &__video {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
+    flex: 0 0 auto;
     max-width: 738px;
     width: 100%;
     aspect-ratio: 738 / 501;
@@ -38,11 +35,7 @@
     }
 
     @include laptop {
-      position: relative;
-      top: auto;
-      left: auto;
       max-width: none;
-      margin: 0 auto 20px;
     }
 
     &-preview {
