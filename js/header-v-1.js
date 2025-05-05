@@ -35,12 +35,11 @@ headerLists.forEach((list) => {
 });
 
 const headerMobileNavItems = document.querySelectorAll('.header-v-1__menu-mobile-nav-item');
+const headerMenuContent = document.querySelector('.header-v-1__menu-content');
 
 headerMobileNavItems.forEach((mobileNavItem) => {
   mobileNavItem.addEventListener('click', (event) => {
-    const isTitle = event.target.classList.contains(
-      'header-v-1__menu-mobile-nav-item-title'
-    );
+    const isTitle = event.target.classList.contains('header-v-1__menu-mobile-nav-item-title');
     const isMoreBtn = event.target.classList.contains(
       'header-v-1__menu-mobile-nav-item-more-button'
     );
@@ -48,7 +47,10 @@ headerMobileNavItems.forEach((mobileNavItem) => {
       'header-v-1__menu-mobile-nav-item-back-button'
     );
 
-    if (isMoreBtn || isTitle) event.currentTarget.classList.add('active');
+    if (isMoreBtn || isTitle) {
+      event.currentTarget.classList.add('active');
+      if (headerMenuContent) headerMenuContent.scrollTop = 0;
+    }
     if (isBackBtn) event.currentTarget.classList.remove('active');
   });
 });

@@ -168,7 +168,8 @@
         }
       }
 
-      &-desktop, &-laptop {
+      &-desktop,
+      &-laptop {
         display: flex;
         align-items: center;
         gap: 48px;
@@ -176,7 +177,7 @@
         @include desktoplg {
           gap: 40px;
         }
-  
+
         @include laptop {
           gap: 0;
         }
@@ -483,7 +484,7 @@
 
         &-item {
           display: flex;
-          align-items: center;
+          align-items: flex-start;
           flex-wrap: wrap;
 
           &-title {
@@ -493,7 +494,7 @@
               display: flex;
               align-items: center;
               justify-content: flex-start;
-              min-height: 56px;
+              padding: 16px 0;
               width: 100%;
               box-sizing: border-box;
               font-weight: 500;
@@ -510,12 +511,14 @@
 
           &-more {
             flex: 0 0 32px;
+            display: flex;
+            justify-content: center;
 
             &-button {
               display: inline-block;
-              width: 32px;
+              width: 24px;
               height: 56px;
-              padding: 0;
+              padding: 16px 0;
               border: none;
               background: url(../assets/header-v-1/shevron.svg) center / 8px no-repeat;
               transform: rotate(180deg);
@@ -567,8 +570,6 @@
             }
           }
         }
-
-
       }
 
       &-contacts {
@@ -675,15 +676,15 @@
         background-color: #ffffff;
       }
 
-      &:has(&-item:nth-child(7)) &-item:nth-child(n + 7) {
+      &:has(.header-v-1__menu-list-item_hidden) &-item_hidden {
         display: none;
       }
 
-      &.active:has(&-item:nth-child(7)) &-item:nth-child(n + 7) {
+      &.active:has(.header-v-1__menu-list-item_hidden) &-item_hidden {
         display: block;
       }
 
-      &:not(:has(&-item:nth-child(7))) &-more {
+      &:not(:has(.header-v-1__menu-list-item_hidden)) &-more {
         display: none;
       }
 
@@ -704,8 +705,8 @@
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            min-height: 56px;
             width: 100%;
+            padding: 14px 0;
             font-size: 20px;
             color: #1c1c20;
           }
@@ -751,7 +752,6 @@
             min-height: 56px;
             font-size: 20px;
           }
-
         }
       }
     }

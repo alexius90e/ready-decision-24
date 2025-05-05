@@ -572,9 +572,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -593,7 +593,7 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  min-height: 56px;
+  padding: 16px 0;
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -610,12 +610,18 @@
   -webkit-box-flex: 0;
       -ms-flex: 0 0 32px;
           flex: 0 0 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .header-v-1__menu-mobile-nav-item-more-button {
   display: inline-block;
-  width: 32px;
+  width: 24px;
   height: 56px;
-  padding: 0;
+  padding: 16px 0;
   border: none;
   background: url(../assets/header-v-1/shevron.svg) center/8px no-repeat;
   -webkit-transform: rotate(180deg);
@@ -784,13 +790,13 @@
     background-color: #ffffff;
   }
 }
-.header-v-1__menu-list:has(.header-v-1__menu-list-item:nth-child(7)) .header-v-1__menu-list-item:nth-child(n+7) {
+.header-v-1__menu-list:has(.header-v-1__menu-list-item_hidden) .header-v-1__menu-list-item_hidden {
   display: none;
 }
-.header-v-1__menu-list.active:has(.header-v-1__menu-list-item:nth-child(7)) .header-v-1__menu-list-item:nth-child(n+7) {
+.header-v-1__menu-list.active:has(.header-v-1__menu-list-item_hidden) .header-v-1__menu-list-item_hidden {
   display: block;
 }
-.header-v-1__menu-list:not(:has(.header-v-1__menu-list-item:nth-child(7))) .header-v-1__menu-list-more {
+.header-v-1__menu-list:not(:has(.header-v-1__menu-list-item_hidden)) .header-v-1__menu-list-more {
   display: none;
 }
 .header-v-1__menu-list-item-link {
@@ -818,8 +824,8 @@
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    min-height: 56px;
     width: 100%;
+    padding: 14px 0;
     font-size: 20px;
     color: #1c1c20;
   }
