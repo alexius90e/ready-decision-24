@@ -120,8 +120,7 @@
 }
 @media (max-width: 1020px) {
   .video-tekst-v-1__details-title {
-    margin: 0 0 20px;
-    font-size: 32px;
+    display: none;
   }
 }
 .video-tekst-v-1__details-message, .video-tekst-v-1__details-author, .video-tekst-v-1__details-role {
