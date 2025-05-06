@@ -494,7 +494,7 @@
               display: flex;
               align-items: center;
               justify-content: flex-start;
-              padding: 16px 0;
+              padding: 15px 0;
               width: 100%;
               box-sizing: border-box;
               font-weight: 500;
@@ -516,14 +516,21 @@
 
             &-button {
               display: inline-block;
-              width: 24px;
-              height: 56px;
-              padding: 16px 0;
+              padding: 17px 0 13px;
               border: none;
-              background: url(../assets/header-v-1/shevron.svg) center / 8px no-repeat;
-              transform: rotate(180deg);
-              filter: brightness(0%);
+              background-color: rgba($color: #ffffff, $alpha: 0);
               cursor: pointer;
+
+              &::before {
+                content: '';
+                display: block;
+                width: 24px;
+                height: 24px;
+                box-sizing: border-box;
+                background: url(../assets/header-v-1/shevron.svg) center / 8px no-repeat;
+                transform: rotate(180deg);
+                filter: brightness(0%);
+              }
             }
           }
 
