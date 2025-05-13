@@ -9,7 +9,6 @@ proektyV1CardSliders.forEach((slidersElem) => {
 
   if (mainSliderElem && thumbsSliderElem) {
     const thumbsSwiper = new Swiper(thumbsSliderElem, {
-      loop: true,
       spaceBetween: 0,
       slidesPerView: 3,
       freeMode: true,
@@ -18,7 +17,6 @@ proektyV1CardSliders.forEach((slidersElem) => {
     });
     const mainSwiper = new Swiper(mainSliderElem, {
       spaceBetween: 20,
-      loop: true,
       navigation: {
         nextEl: mainSliderNext,
         prevEl: mainSliderPrev,
