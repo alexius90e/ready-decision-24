@@ -1,6 +1,7 @@
 .perv-ekr-v-2__main {
   position: relative;
   z-index: 1;
+  overflow: hidden;
 }
 .perv-ekr-v-2__main-bg {
   margin: 0;
@@ -28,6 +29,22 @@
     width: 100%;
     height: 100%;
     aspect-ratio: auto;
+  }
+}
+.perv-ekr-v-2__main-bg-image_desktop {
+  display: block;
+}
+@media (max-width: 768px) {
+  .perv-ekr-v-2__main-bg-image_desktop {
+    display: none;
+  }
+}
+.perv-ekr-v-2__main-bg-image_mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .perv-ekr-v-2__main-bg-image_mobile {
+    display: block;
   }
 }
 .perv-ekr-v-2__main-content {
