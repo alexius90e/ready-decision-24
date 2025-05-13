@@ -17,6 +17,7 @@ proektyV1CardSliders.forEach((slidersElem) => {
     });
     const mainSwiper = new Swiper(mainSliderElem, {
       spaceBetween: 20,
+      loop: true,
       navigation: {
         nextEl: mainSliderNext,
         prevEl: mainSliderPrev,
