@@ -1,6 +1,6 @@
 @import './b-mixins';
 
-.proekty-v-1 {
+.proekty-v-2 {
   &__title {
     margin: 0;
     max-width: 1120px;
@@ -202,49 +202,55 @@
         }
       }
 
-      &-price {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 32px 24px;
-        margin: 38px 0 0;
+      &-info {
+        margin: 32px 0 0;
 
         @include desktop {
-          margin-top: 30px;
+          margin-top: 24px;
         }
 
-        &-item {
-          flex: 0 0 calc(100% / 3 - 24px / 3 * 2);
+        &-title {
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 140%;
+          letter-spacing: -0.01em;
+          color: #87878e;
 
-          @include mobile {
-            flex: 0 0 calc(100% / 2 - 24px / 2);
+          @include desktop {
+            font-size: 16px;
           }
+        }
 
-          &-name {
-            font-weight: 500;
+        &-text {
+          margin: 3px 0 0;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 140%;
+          letter-spacing: -0.01em;
+          color: #fff;
+
+          @include desktop {
             font-size: 20px;
-            line-height: 140%;
+          }
+        }
+
+        &-list {
+          margin: 12px 0 0;
+          padding: 0;
+          list-style-type: none;
+
+          &-item {
+            display: flex;
+            gap: 6px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 200%;
             letter-spacing: -0.01em;
             color: #87878e;
 
-            @include desktop {
-              font-size: 16px;
-            }
-          }
-
-          &-value {
-            margin: 3px 0 0;
-            font-weight: 500;
-            font-size: 32px;
-            line-height: 140%;
-            letter-spacing: -0.01em;
-            color: #fff;
-
-            @include desktoplg {
-              font-size: 24px;
-            }
-
-            @include desktop {
-              font-size: 20px;
+            &::before {
+              content: '—';
+              flex: 0 0 auto;
             }
           }
         }
