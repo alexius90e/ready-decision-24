@@ -2,8 +2,13 @@
 
 .proekty-v-1 {
   &__title {
-    margin: 0;
     max-width: 1120px;
+    margin: 0;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+    color: #2f2f2f;
 
     @include desktoplg {
       max-width: 948px;
@@ -11,10 +16,15 @@
 
     @include desktop {
       max-width: 814px;
+      font-size: 44px;
     }
 
     @include laptop {
       max-width: none;
+    }
+
+    @include tablet {
+      font-size: 38px;
     }
 
     & span {
@@ -52,11 +62,11 @@
   &__cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 34px 24px;
     margin: 40px 0 0;
 
     @include desktoplg {
-      gap: 20px;
+      gap: 30px 20px;
     }
   }
 

@@ -1,7 +1,12 @@
 @charset "UTF-8";
 .proekty-v-2__title {
-  margin: 0;
   max-width: 1120px;
+  margin: 0;
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: #2f2f2f;
 }
 @media (max-width: 1580px) {
   .proekty-v-2__title {
@@ -11,11 +16,17 @@
 @media (max-width: 1200px) {
   .proekty-v-2__title {
     max-width: 814px;
+    font-size: 44px;
   }
 }
 @media (max-width: 1020px) {
   .proekty-v-2__title {
     max-width: none;
+  }
+}
+@media (max-width: 768px) {
+  .proekty-v-2__title {
+    font-size: 38px;
   }
 }
 .proekty-v-2__title span {
@@ -55,12 +66,12 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 24px;
+  gap: 34px 24px;
   margin: 40px 0 0;
 }
 @media (max-width: 1580px) {
   .proekty-v-2__cards {
-    gap: 20px;
+    gap: 30px 20px;
   }
 }
 .proekty-v-2__card {
