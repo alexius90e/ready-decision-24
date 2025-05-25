@@ -100,7 +100,7 @@
   display: block;
   width: 24px;
   aspect-ratio: 1/1;
-  background: url(../assets/proekty-v-1/arrow-left.svg) center/cover no-repeat;
+  background: url(../assets/etapy-v-1/arrow-left.svg) center/cover no-repeat;
 }
 .etapy-v-1__cards-controls-prev.swiper-button-disabled, .etapy-v-1__cards-controls-next.swiper-button-disabled {
   display: none;
