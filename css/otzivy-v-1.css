@@ -249,6 +249,14 @@
   text-align: center;
   color: #898989;
 }
+.otzivy-v-1__stats-item-info-link {
+  color: inherit;
+  -webkit-transition: color ease-out 0.2s;
+  transition: color ease-out 0.2s;
+}
+.otzivy-v-1__stats-item-info-link:hover {
+  color: #2f2f2f;
+}
 .otzivy-v-1__stats-item-logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -318,7 +326,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   max-width: 357px;
-  min-height: 400px;
+  min-height: 410px;
   width: 100%;
   padding: 24px 24px 40px;
   -webkit-box-sizing: border-box;
