@@ -49,6 +49,7 @@
   border-radius: 7px;
   opacity: 1;
   background-color: #828282;
+  cursor: pointer;
 }
 .perv-ekr-v-3__slider .swiper-pagination-bullet-active {
   background-color: #1e674e;

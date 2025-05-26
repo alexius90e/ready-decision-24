@@ -9,6 +9,7 @@ const pervEkrV3Swiper = new Swiper(pervEkrV3SwiperEl, {
   },
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
   },
 });
 
