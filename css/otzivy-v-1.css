@@ -459,6 +459,7 @@
   background-color: rgba(255, 255, 255, 0);
   -webkit-transition: all ease-out 0.2s;
   transition: all ease-out 0.2s;
+  cursor: pointer;
 }
 .otzivy-v-1__review:hover .otzivy-v-1__review-text {
   color: #87878e;
