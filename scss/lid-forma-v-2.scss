@@ -1,0 +1,185 @@
+@import './b-mixins';
+
+.lid-forma-v-2 {
+  background-color: #1e674e;
+  padding: 0 0 64px;
+
+  @include desktoplg {
+    padding-bottom: 54px;
+  }
+
+  @include desktop {
+    padding-bottom: 48px;
+  }
+
+  @include laptop {
+    padding-bottom: 41px;
+  }
+
+  @include tablet {
+    padding-bottom: 38px;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+    color: #fff;
+
+    @include desktop {
+      font-size: 44px;
+    }
+
+    @include tablet {
+      font-size: 38px;
+    }
+  }
+
+  &__description {
+    margin: 12px 0 0;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+    color: #e3e3e3;
+
+    @include desktop {
+      margin-top: 10px;
+      font-size: 20px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    gap: 24px;
+    margin: 40px 0 0;
+
+    @include desktoplg {
+      gap: 20px;
+      margin-top: 32px;
+    }
+
+    @include tablet {
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+  }
+
+  &__callback {
+    flex: 0 0 484px;
+    padding: 43px 48px 55px;
+    box-sizing: border-box;
+    background-color: #fff;
+
+    @include desktoplg {
+      flex: 0 0 463px;
+    }
+
+    @include desktop {
+      flex: 0 0 360px;
+      padding: 37px 24px;
+    }
+
+    @include tablet {
+      order: 1;
+      flex: 1 1 100%;
+    }
+
+    &-title {
+      margin: 0;
+      font-weight: 500;
+      font-size: 38px;
+      line-height: 140%;
+      letter-spacing: -0.01em;
+      color: #1c1c20;
+
+      @include desktop {
+        font-size: 32px;
+      }
+    }
+
+    &-description {
+      margin: 13px 0 0 ;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 140%;
+      letter-spacing: -0.01em;
+      color: #87878e;
+
+      @include desktop {
+        margin-top: 11px;
+      }
+    }
+
+    &-form {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin: 46px 0 0;
+
+      @include desktop {
+        margin-top: 31px;
+      }
+
+      &-submit {
+        margin: 24px 0 0;
+        padding: 16px 24px;
+        font-size: 20px;
+        text-transform: uppercase;
+
+        @include desktop {
+          margin: 0;
+          font-size: 16px;
+        }
+      }
+    }
+
+    &-disclaimer {
+      margin: 19px 0 0;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 143%;
+      letter-spacing: -0.01em;
+      color: #b9b9b9;
+      transition: color ease-in-out 0.2s;
+
+      @include desktop {
+        margin-top: 11px;
+        font-size: 13px;
+      }
+
+      & a {
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: inherit;
+
+        &:hover {
+          color: #1e674e;
+        }
+      }
+    }
+  }
+
+  &__figure {
+    margin: 0;
+    background-color: rgba($color: #ffffff, $alpha: 0.1);
+
+    @include tablet {
+      order: 0;
+      flex: 1 1 100%;
+    }
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      @include tablet {
+        height: auto;
+      }
+    }
+  }
+}
