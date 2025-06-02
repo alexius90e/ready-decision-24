@@ -1,0 +1,84 @@
+@import './b-mixins';
+
+.kategorii-v-5 {
+  &__title {
+    margin: 0 0 35px;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+    color: #87878e;
+
+    @include desktoplg {
+      font-size: 28px;
+    }
+
+    @include desktop {
+      margin-bottom: 25px;
+      font-size: 20px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    @include desktoplg {
+      gap: 20px;
+    }
+
+    &-item {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex: 0 0 calc(100% / 3 - 24px / 3 * 2);
+      box-sizing: border-box;
+      gap: 18px;
+      padding: 18px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 140%;
+      letter-spacing: -0.01em;
+      color: #2f2f2f;
+      background-color: #f5f5f5;
+      transition-property: color, background-color;
+      transition-timing-function: ease-out;
+      transition-duration: 0.2s;
+
+      @include desktoplg {
+        flex: 0 0 calc(100% / 3 - 20px / 3 * 2);
+        min-height: 92px;
+      }
+
+      @include laptop {
+        flex: 0 0 calc(100% / 2 - 20px / 2);
+      }
+
+      @include tablet {
+        flex: 1 1 100%;
+      }
+
+      &:hover {
+        color: #ffffff;
+        background-color: #1e674e;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        flex: 0 0 auto;
+        width: 28px;
+        aspect-ratio: 1 / 1;
+        background: url(../assets/kategorii-v-5/arrow-right.svg) center / cover no-repeat;
+        transition-property: filter;
+        transition-timing-function: ease-out;
+        transition-duration: 0.2s;
+      }
+
+      &:hover::after {
+        filter: brightness(0%) invert(100%);
+      }
+    }
+  }
+}
