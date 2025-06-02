@@ -1,0 +1,79 @@
+body {
+  scroll-behavior: smooth;
+}
+
+.knopka-naverh-v-1__button {
+  position: fixed;
+  left: auto;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 54px;
+  aspect-ratio: 1/1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #2f2f2f;
+  border-radius: 54px;
+  opacity: 1;
+  background-color: #2f2f2f;
+  -webkit-transition-property: background-color, opacity;
+  transition-property: background-color, opacity;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  will-change: background-color;
+  pointer-events: all;
+}
+@media (max-width: 1200px) {
+  .knopka-naverh-v-1__button {
+    width: 48px;
+  }
+}
+.knopka-naverh-v-1__button_left {
+  left: 20px;
+  right: auto;
+}
+.knopka-naverh-v-1__button:hover {
+  background-color: #ffffff;
+}
+.knopka-naverh-v-1__button::before {
+  content: "";
+  display: block;
+  width: 36px;
+  aspect-ratio: 1/1;
+  background: url(../assets/knopka-naverh-v-1/arrow-up.svg) center/cover no-repeat;
+  -webkit-filter: brightness(0%) invert(100%);
+          filter: brightness(0%) invert(100%);
+  -webkit-transition-property: -webkit-filter;
+  transition-property: -webkit-filter;
+  transition-property: filter;
+  transition-property: filter, -webkit-filter;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  will-change: filter;
+}
+@media (max-width: 1200px) {
+  .knopka-naverh-v-1__button::before {
+    width: 32px;
+  }
+}
+.knopka-naverh-v-1__button:hover::before {
+  -webkit-filter: brightness(100%) invert(0%);
+          filter: brightness(100%) invert(0%);
+}
+.knopka-naverh-v-1__button.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
