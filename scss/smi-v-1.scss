@@ -1,0 +1,174 @@
+@import './b-mixins';
+
+.smi-v-1 {
+  &__title {
+    margin: 0 0 12px;
+  }
+
+  &__description {
+    max-width: 1120px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+    color: #616161;
+
+    @include desktoplg {
+      max-width: 947px;
+    }
+
+    @include desktop {
+      max-width: 814px;
+      font-size: 20px;
+    }
+  }
+
+  &__wrapper {
+    display: block;
+    margin: 40px 0 0;
+  }
+
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px 24px;
+
+    @include desktoplg {
+      gap: 48px 20px;
+    }
+
+    @include desktop {
+      gap: 40px 20px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+
+    &.hidden {
+      display: none;
+    }
+
+    &-figure {
+      margin: 0 0 24px;
+      background-color: #d9d9d9;
+
+      &-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        transition: transform ease-out 0.32s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    &-title {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 140%;
+      letter-spacing: -0.01em;
+      color: #1c1c20;
+    }
+
+    &-advantages {
+      flex: 1 1 auto;
+      margin: 16px 0 0;
+      padding: 0 0 0 21px;
+      list-style-type: '— ';
+
+      @include desktop {
+        margin-bottom: 28px;
+      }
+
+      &-item {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 200%;
+        letter-spacing: -0.01em;
+        color: #616161;
+      }
+    }
+
+    &-price {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin: 32px 0 0;
+
+      @include desktoplg {
+        gap: 20px;
+      }
+
+      &-item {
+        flex: 0 0 calc(100% / 2 - 24px / 2);
+
+        @include desktoplg {
+          flex: 0 0 calc(100% / 2 - 20px / 2);
+        }
+
+        &-name {
+          margin: 0 0 5px;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 140%;
+          letter-spacing: -0.01em;
+          color: #616161;
+        }
+
+        &-value {
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 140%;
+          letter-spacing: -0.01em;
+          color: #1e674e;
+
+          @include desktop {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    &-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin: 25px 0 0;
+
+      @include desktoplg {
+        gap: 20px;
+      }
+
+      &-count,
+      &-more {
+        flex: 0 0 calc(100% / 2 - 24px / 2);
+        padding: 16px 12px;
+        box-sizing: border-box;
+
+        @include desktoplg {
+          flex: 0 0 calc(100% / 2 - 20px / 2);
+        }
+      }
+
+      &-calculate {
+        flex: 1 1 100%;
+        padding: 16px;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+}

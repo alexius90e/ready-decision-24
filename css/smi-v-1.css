@@ -1,0 +1,199 @@
+@charset "UTF-8";
+.smi-v-1__title {
+  margin: 0 0 12px;
+}
+.smi-v-1__description {
+  max-width: 1120px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: #616161;
+}
+@media (max-width: 1580px) {
+  .smi-v-1__description {
+    max-width: 947px;
+  }
+}
+@media (max-width: 1200px) {
+  .smi-v-1__description {
+    max-width: 814px;
+    font-size: 20px;
+  }
+}
+.smi-v-1__wrapper {
+  display: block;
+  margin: 40px 0 0;
+}
+.smi-v-1__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 48px 24px;
+}
+@media (max-width: 1580px) {
+  .smi-v-1__main {
+    gap: 48px 20px;
+  }
+}
+@media (max-width: 1200px) {
+  .smi-v-1__main {
+    gap: 40px 20px;
+  }
+}
+.smi-v-1__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.smi-v-1__card.hidden {
+  display: none;
+}
+.smi-v-1__card-figure {
+  margin: 0 0 24px;
+  background-color: #d9d9d9;
+}
+.smi-v-1__card-figure-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+.smi-v-1__card-figure-image {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: -webkit-transform ease-out 0.32s;
+  transition: -webkit-transform ease-out 0.32s;
+  transition: transform ease-out 0.32s;
+  transition: transform ease-out 0.32s, -webkit-transform ease-out 0.32s;
+}
+.smi-v-1__card-figure-image:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.smi-v-1__card-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: #1c1c20;
+}
+.smi-v-1__card-advantages {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin: 16px 0 0;
+  padding: 0 0 0 21px;
+  list-style-type: "— ";
+}
+@media (max-width: 1200px) {
+  .smi-v-1__card-advantages {
+    margin-bottom: 28px;
+  }
+}
+.smi-v-1__card-advantages-item {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 200%;
+  letter-spacing: -0.01em;
+  color: #616161;
+}
+.smi-v-1__card-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 24px;
+  margin: 32px 0 0;
+}
+@media (max-width: 1580px) {
+  .smi-v-1__card-price {
+    gap: 20px;
+  }
+}
+.smi-v-1__card-price-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(50% - 12px);
+          flex: 0 0 calc(50% - 12px);
+}
+@media (max-width: 1580px) {
+  .smi-v-1__card-price-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% - 10px);
+            flex: 0 0 calc(50% - 10px);
+  }
+}
+.smi-v-1__card-price-item-name {
+  margin: 0 0 5px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: #616161;
+}
+.smi-v-1__card-price-item-value {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: #1e674e;
+}
+@media (max-width: 1200px) {
+  .smi-v-1__card-price-item-value {
+    font-size: 20px;
+  }
+}
+.smi-v-1__card-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 24px;
+  margin: 25px 0 0;
+}
+@media (max-width: 1580px) {
+  .smi-v-1__card-controls {
+    gap: 20px;
+  }
+}
+.smi-v-1__card-controls-count, .smi-v-1__card-controls-more {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(50% - 12px);
+          flex: 0 0 calc(50% - 12px);
+  padding: 16px 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media (max-width: 1580px) {
+  .smi-v-1__card-controls-count, .smi-v-1__card-controls-more {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% - 10px);
+            flex: 0 0 calc(50% - 10px);
+  }
+}
+.smi-v-1__card-controls-calculate {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  padding: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
