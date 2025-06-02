@@ -9,7 +9,7 @@ const smiV1Swiper = new Swiper(smiV1SwiperEl, {
   spaceBetween: 20,
   breakpoints: {
     320: {
-      slidesPerView: 1,
+      slidesPerView: 1.2,
       spaceBetween: 20,
     },
     768: {

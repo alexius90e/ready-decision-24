@@ -106,6 +106,7 @@
   opacity: 0;
 }
 .smi-v-1__card {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,6 +138,14 @@
   .smi-v-1__card:hover {
     background-color: #f5f5f5;
   }
+}
+.smi-v-1__card-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
 }
 .smi-v-1__card-title {
   font-weight: 600;
