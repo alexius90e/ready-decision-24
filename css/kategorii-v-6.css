@@ -1,0 +1,109 @@
+.kategorii-v-6__title {
+  margin: 0 0 35px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: #87878e;
+}
+@media (max-width: 1580px) {
+  .kategorii-v-6__title {
+    font-size: 28px;
+  }
+}
+@media (max-width: 1200px) {
+  .kategorii-v-6__title {
+    margin-bottom: 25px;
+    font-size: 20px;
+  }
+}
+.kategorii-v-6__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 24px;
+}
+@media (max-width: 1580px) {
+  .kategorii-v-6__links {
+    gap: 20px;
+  }
+}
+.kategorii-v-6__links-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(50% - 12px);
+          flex: 0 0 calc(50% - 12px);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  gap: 18px;
+  padding: 18px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: #2f2f2f;
+  background-color: #f5f5f5;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+@media (max-width: 1580px) {
+  .kategorii-v-6__links-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% - 10px);
+            flex: 0 0 calc(50% - 10px);
+    min-height: 92px;
+  }
+}
+@media (max-width: 1020px) {
+  .kategorii-v-6__links-item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    min-height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .kategorii-v-6__links-item {
+    min-height: 120px;
+  }
+}
+.kategorii-v-6__links-item:hover {
+  color: #ffffff;
+  background-color: #1e674e;
+}
+.kategorii-v-6__links-item::after {
+  content: "";
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 28px;
+  aspect-ratio: 1/1;
+  background: url(../assets/kategorii-v-5/arrow-right.svg) center/cover no-repeat;
+  -webkit-transition-property: -webkit-filter;
+  transition-property: -webkit-filter;
+  transition-property: filter;
+  transition-property: filter, -webkit-filter;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+.kategorii-v-6__links-item:hover::after {
+  -webkit-filter: brightness(0%) invert(100%);
+          filter: brightness(0%) invert(100%);
+}
