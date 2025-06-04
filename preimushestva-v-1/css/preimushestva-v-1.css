@@ -1,0 +1,43 @@
+.preimushestva-v-1 {
+  padding: 0 0 10px;
+  overflow: hidden;
+}
+@media (max-width: 1228px) {
+  .preimushestva-v-1__slider .swiper {
+    overflow: visible;
+  }
+}
+.preimushestva-v-1__card-figure {
+  margin: 0;
+  padding-left: 10px;
+}
+.preimushestva-v-1__card-figure-icon {
+  display: block;
+  max-width: 100%;
+  width: 36px;
+  height: auto;
+}
+.preimushestva-v-1__card-title {
+  margin: 17px 0 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #1c1c20;
+}
+.preimushestva-v-1__card-text {
+  margin: 15px 0 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: #a6a6a6;
+}
+@media (max-width: 599px) {
+  .preimushestva-v-1__card-text {
+    margin-top: 26px;
+  }
+}

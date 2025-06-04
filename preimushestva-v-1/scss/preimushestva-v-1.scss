@@ -1,0 +1,53 @@
+@import './b-mixins';
+
+.preimushestva-v-1 {
+  padding: 0 0 10px;
+  overflow: hidden;
+
+  &__slider {
+    & .swiper {
+      @include desktop {
+        overflow: visible;
+      }
+    }
+  }
+
+  &__card {
+    &-figure {
+      margin: 0;
+      padding-left: 10px;
+
+      &-icon {
+        display: block;
+        max-width: 100%;
+        width: 36px;
+        height: auto;
+      }
+    }
+
+    &-title {
+      margin: 17px 0 0 ;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 140%;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      color: #1c1c20;
+    }
+
+    &-text {
+      margin: 15px 0  0;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 140%;
+      letter-spacing: -0.01em;
+      color: #a6a6a6;
+
+      @include mobile {
+        margin-top: 26px;
+      }
+    }
+  }
+}
