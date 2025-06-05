@@ -36,3 +36,27 @@ if (proektyV3More) {
     }
   });
 }
+
+const proektyV3CardMoreEls = document.querySelectorAll('.proekty-v-3__card-content-more');
+
+proektyV3CardMoreEls.forEach((proektyV3CardMore) => {
+  proektyV3CardMore.addEventListener('click', (event) => {
+    const isToggleButton = event.target.classList.contains(
+      'proekty-v-3__card-content-more-toggler-button'
+    );
+
+    if (isToggleButton) {
+      const isActive = event.currentTarget.classList.contains('active');
+      
+      if (isActive) {
+        event.target.textContent = 'Еще...';
+        event.currentTarget.classList.remove('active');
+        console.log('Еще...');
+      } else {
+        event.target.textContent = 'Скрыть';
+        event.currentTarget.classList.add('active');
+        console.log('Скрыть');
+      }
+    }
+  });
+});

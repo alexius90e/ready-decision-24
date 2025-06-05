@@ -242,6 +242,47 @@
           }
         }
       }
+
+      &-more {
+        margin: 48px 0 0;
+
+        @include desktop {
+          margin-top: 30px;
+        }
+
+        &-wrapper {
+          display: none;
+          margin: 0 0 48px;
+
+          @include desktop {
+            margin-bottom: 30px;
+          }
+        }
+
+        &.active &-wrapper {
+          display: block;
+        }
+
+        &:not(:has(&-wrapper > *)) {
+          display: none !important;
+        }
+
+        &-toggler {
+          margin: 0;
+
+          &-button {
+            display: inline-block;
+            padding: 0;
+            font-size: 16px;
+            line-height: 140%;
+            letter-spacing: -0.01em;
+            color: #ffffff;
+            border: none;
+            background-color: rgba($color: #ffffff, $alpha: 0);
+            cursor: pointer;
+          }
+        }
+      }
     }
   }
 
