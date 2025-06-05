@@ -47,15 +47,15 @@ proektyV3CardMoreEls.forEach((proektyV3CardMore) => {
 
     if (isToggleButton) {
       const isActive = event.currentTarget.classList.contains('active');
-      
+
       if (isActive) {
         event.target.textContent = 'Еще...';
         event.currentTarget.classList.remove('active');
-        console.log('Еще...');
+        const parentCardEl = event.currentTarget.closest('.proekty-v-3__card')
+        parentCardEl.scrollIntoView({ behavior: 'smooth' });
       } else {
         event.target.textContent = 'Скрыть';
         event.currentTarget.classList.add('active');
-        console.log('Скрыть');
       }
     }
   });
