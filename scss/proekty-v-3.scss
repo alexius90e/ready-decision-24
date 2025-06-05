@@ -277,6 +277,8 @@
             line-height: 140%;
             letter-spacing: -0.01em;
             color: #ffffff;
+            text-decoration: underline;
+            text-underline-offset: 4px;
             border: none;
             background-color: rgba($color: #ffffff, $alpha: 0);
             cursor: pointer;
