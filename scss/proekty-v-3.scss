@@ -244,18 +244,14 @@
       }
 
       &-more {
-        margin: 48px 0 0;
-
-        @include desktop {
-          margin-top: 30px;
-        }
+        margin: 0;
 
         &-wrapper {
           display: none;
-          margin: 0 0 48px;
+          margin: 48px 0 0;
 
           @include desktop {
-            margin-bottom: 30px;
+            margin-top: 30px;
           }
         }
 
@@ -268,7 +264,11 @@
         }
 
         &-toggler {
-          margin: 0;
+           margin: 32px 0 0;
+
+          @include desktop {
+            margin-top: 24px;
+          }
 
           &-button {
             display: inline-block;
