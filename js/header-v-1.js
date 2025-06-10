@@ -40,17 +40,34 @@ const headerMenuContent = document.querySelector('.header-v-1__menu-content');
 headerMobileNavItems.forEach((mobileNavItem) => {
   mobileNavItem.addEventListener('click', (event) => {
     const isTitle = event.target.classList.contains('header-v-1__menu-mobile-nav-item-title');
+    const isTitleLink = event.target.classList.contains(
+      'header-v-1__menu-mobile-nav-item-title-link'
+    );
     const isMoreBtn = event.target.classList.contains(
       'header-v-1__menu-mobile-nav-item-more-button'
     );
     const isBackBtn = event.target.classList.contains(
       'header-v-1__menu-mobile-nav-item-back-button'
     );
+    const detailsEl = event.currentTarget.querySelector(
+      '.header-v-1__menu-mobile-nav-item-details'
+    );
 
-    if (isMoreBtn || isTitle) {
+    if (isMoreBtn) {
       event.currentTarget.classList.add('active');
       if (headerMenuContent) headerMenuContent.scrollTop = 0;
     }
+
+    if (isTitle || isTitleLink) {
+      console.log('isTitle');
+      console.log(detailsEl);
+
+      if (detailsEl !== null) {
+        event.currentTarget.classList.add('active');
+        if (headerMenuContent) headerMenuContent.scrollTop = 0;
+      }
+    }
+
     if (isBackBtn) event.currentTarget.classList.remove('active');
   });
 });
