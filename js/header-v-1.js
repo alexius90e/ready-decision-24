@@ -59,9 +59,6 @@ headerMobileNavItems.forEach((mobileNavItem) => {
     }
 
     if (isTitle || isTitleLink) {
-      console.log('isTitle');
-      console.log(detailsEl);
-
       if (detailsEl !== null) {
         event.currentTarget.classList.add('active');
         if (headerMenuContent) headerMenuContent.scrollTop = 0;

@@ -121,6 +121,17 @@
           flex: 0 0 auto;
   -webkit-transition: opacity ease-in-out 0.2s;
   transition: opacity ease-in-out 0.2s;
+  margin: 0;
+}
+.header-v-1__nav-menu-item.hidden-xxl {
+  display: none;
+}
+@media (max-width: 1580px) {
+  .header-v-1__nav-menu-item.hidden-xxl {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 .header-v-1__nav-menu-item-burger, .header-v-1__nav-menu-item-link {
   display: -webkit-box;
@@ -215,6 +226,7 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 48px;
+  margin: 0;
 }
 @media (max-width: 1580px) {
   .header-v-1__nav-menu-desktop, .header-v-1__nav-menu-laptop {
