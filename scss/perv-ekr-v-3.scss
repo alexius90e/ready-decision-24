@@ -6,21 +6,29 @@
   &__slider {
     & .swiper {
       &-pagination {
-        left: 40px;
-        right: 40px;
+        left: 50%;
+        right: auto;
         bottom: 130px;
         display: flex;
         flex-wrap: wrap;
         gap: 13px;
-        width: auto;
+        max-width: calc(100% - 80px);
+        width: calc(1900px - 80px);
+        transform: translateX(-50%);
 
         @include desktopxl {
           bottom: 70px;
+          width: calc(1700px - 80px);
+        }
+
+        @include desktoplg {
+          bottom: 70px;
+          width: calc(1500px - 80px);
         }
 
         @include desktop {
-          left: 30px;
-          right: 30px;
+          max-width: calc(100% - 60px);
+          width: calc(1200px - 60px);
         }
 
         @include tablet {
@@ -28,6 +36,7 @@
           right: 20px;
           bottom: 40px;
           justify-content: center;
+          transform: none;
         }
 
         @include mobile {
@@ -56,6 +65,7 @@
 
   &__card {
     display: flex;
+    justify-content: flex-end;
 
     @include tablet {
       flex-wrap: wrap;
@@ -63,15 +73,22 @@
     }
 
     &-content {
-      flex: 0 0 50%;
+      flex: 0 1 calc(1900px / 2);
       padding: 198px 40px;
       box-sizing: border-box;
 
       @include desktopxl {
+        flex: 0 1 calc(1700px / 2);
+        padding: 123px 40px;
+      }
+
+      @include desktoplg {
+        flex: 0 1 calc(1500px / 2);
         padding: 123px 40px;
       }
 
       @include desktop {
+        flex: 0 1 calc(1200px / 2);
         padding: 70px 30px;
       }
 

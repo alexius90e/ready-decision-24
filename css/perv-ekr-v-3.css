@@ -2,8 +2,8 @@
   background-color: #003765;
 }
 .perv-ekr-v-3__slider .swiper-pagination {
-  left: 40px;
-  right: 40px;
+  left: 50%;
+  right: auto;
   bottom: 130px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11,17 +11,27 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 13px;
-  width: auto;
+  max-width: calc(100% - 80px);
+  width: 1820px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 @media (max-width: 1880px) {
   .perv-ekr-v-3__slider .swiper-pagination {
     bottom: 70px;
+    width: 1620px;
+  }
+}
+@media (max-width: 1580px) {
+  .perv-ekr-v-3__slider .swiper-pagination {
+    bottom: 70px;
+    width: 1420px;
   }
 }
 @media (max-width: 1200px) {
   .perv-ekr-v-3__slider .swiper-pagination {
-    left: 30px;
-    right: 30px;
+    max-width: calc(100% - 60px);
+    width: 1140px;
   }
 }
 @media (max-width: 768px) {
@@ -32,6 +42,8 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-transform: none;
+            transform: none;
   }
 }
 @media (max-width: 576px) {
@@ -58,6 +70,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 @media (max-width: 768px) {
   .perv-ekr-v-3__card {
@@ -68,19 +83,33 @@
 }
 .perv-ekr-v-3__card-content {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
+      -ms-flex: 0 1 950px;
+          flex: 0 1 950px;
   padding: 198px 40px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 @media (max-width: 1880px) {
   .perv-ekr-v-3__card-content {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 850px;
+            flex: 0 1 850px;
+    padding: 123px 40px;
+  }
+}
+@media (max-width: 1580px) {
+  .perv-ekr-v-3__card-content {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 750px;
+            flex: 0 1 750px;
     padding: 123px 40px;
   }
 }
 @media (max-width: 1200px) {
   .perv-ekr-v-3__card-content {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 600px;
+            flex: 0 1 600px;
     padding: 70px 30px;
   }
 }
