@@ -265,21 +265,27 @@ p {
   color: #1c1c20;
 }
 
-p.regular {
+p.regular,
+.regular {
   font-weight: 400;
 }
 
-p.medium {
+p.medium,
+.medium {
   font-weight: 500;
 }
 
-p.semibold {
+p.semibold,
+.semibold {
   font-weight: 600;
 }
 
 p.st-regular,
+.st-regular,
 p.st-medium,
-p.st-semibold {
+.st-medium,
+p.st-semibold,
+.st-semibold {
   font-size: 18px;
 
   @include laptop {
@@ -287,15 +293,18 @@ p.st-semibold {
   }
 }
 
-p.st-regular {
+p.st-regular,
+.st-regular {
   font-weight: 400;
 }
 
-p.st-medium {
+p.st-medium,
+.st-medium {
   font-weight: 500;
 }
 
-p.st-semibold {
+p.st-semibold,
+.st-semibold {
   font-weight: 600;
 }
 
@@ -322,9 +331,17 @@ ul,
 ol {
   margin: 0;
   font-weight: 500;
-  line-height: 200%;
+  line-height: 140%;
   letter-spacing: -0.01em;
   color: #1c1c20;
+
+  & > li {
+    margin-bottom: 0.6em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .block_otstup {
