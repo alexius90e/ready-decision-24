@@ -619,6 +619,9 @@
 .header-v-1__menu-mobile-nav-item.active .header-v-1__menu-mobile-nav-item-title {
   display: none;
 }
+.header-v-1__menu-mobile-nav-item:has(.header-v-1__menu-mobile-nav-item-details) .header-v-1__menu-mobile-nav-item-title-link {
+  pointer-events: none;
+}
 .header-v-1__menu-mobile-nav-item-more {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 32px;

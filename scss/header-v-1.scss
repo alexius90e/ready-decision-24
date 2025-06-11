@@ -518,6 +518,12 @@
             display: none;
           }
 
+          &:has(&-details) &-title {
+            &-link {
+              pointer-events: none;
+            }
+          }
+
           &-more {
             flex: 0 0 32px;
             display: flex;
