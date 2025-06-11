@@ -58,10 +58,17 @@ headerMobileNavItems.forEach((mobileNavItem) => {
       if (headerMenuContent) headerMenuContent.scrollTop = 0;
     }
 
-    if (isTitle || isTitleLink) {
+    if (isTitle) {
       if (detailsEl !== null) {
         event.currentTarget.classList.add('active');
         if (headerMenuContent) headerMenuContent.scrollTop = 0;
+      }
+    }
+
+    if (isTitleLink) {
+      if (headerBurger && headerMenu) {
+        headerBurger.classList.remove('active');
+        headerMenu.classList.remove('active');
       }
     }
 

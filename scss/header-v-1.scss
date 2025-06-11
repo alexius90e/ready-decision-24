@@ -499,19 +499,18 @@
 
           &-title {
             flex: 1 1 calc(100% - 32px);
+            padding: 15px 0;
 
             &-link {
               display: flex;
               align-items: center;
               justify-content: flex-start;
-              padding: 15px 0;
-              width: 100%;
+              width: fit-content;
               box-sizing: border-box;
               font-weight: 500;
               font-size: 20px;
               letter-spacing: -0.01em;
               color: #1c1c20;
-              pointer-events: none;
             }
           }
 
@@ -706,6 +705,10 @@
       }
 
       &-item {
+        @include tablet {
+          padding: 14px 0;
+        }
+
         &-link {
           font-weight: 500;
           font-size: 16px;
@@ -723,7 +726,6 @@
             align-items: center;
             justify-content: flex-start;
             width: 100%;
-            padding: 14px 0;
             font-size: 20px;
             color: #1c1c20;
           }
