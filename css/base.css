@@ -363,20 +363,20 @@ img.st-image {
   height: auto;
 }
 
-ul,
-ol {
+ul.st-list,
+ol.st-list {
   margin: 0;
   font-weight: 500;
   line-height: 140%;
   letter-spacing: -0.01em;
   color: #1c1c20;
 }
-ul > li,
-ol > li {
+ul.st-list > li,
+ol.st-list > li {
   margin-bottom: 0.6em;
 }
-ul > li:last-child,
-ol > li:last-child {
+ul.st-list > li:last-child,
+ol.st-list > li:last-child {
   margin-bottom: 0;
 }
 
