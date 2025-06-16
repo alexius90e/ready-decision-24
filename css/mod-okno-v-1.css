@@ -48,12 +48,12 @@
   opacity: 1;
 }
 .mod-okno-v-1__content {
-  max-height: calc(100dvh - 68px);
+  max-height: calc(100dvh - 144px);
   overflow: auto;
 }
 @media (max-width: 768px) {
   .mod-okno-v-1__content {
-    max-height: calc(100dvh - 88px);
+    max-height: calc(100dvh - 120px);
   }
 }
 .mod-okno-v-1__close-button {

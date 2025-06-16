@@ -43,11 +43,11 @@
   }
 
   &__content {
-    max-height: calc(100dvh - 68px);
+    max-height: calc(100dvh - 144px);
     overflow: auto;
 
     @include tablet {
-      max-height: calc(100dvh - 88px);
+      max-height: calc(100dvh - 120px);
     }
   }
 
