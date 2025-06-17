@@ -256,6 +256,23 @@ input {
   font-size: 20px;
 }
 
+ul.st-list,
+ol.st-list {
+  margin: 0;
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: #1c1c20;
+
+  & > li {
+    margin-bottom: 0.6em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
 p {
   margin: 0;
   font-size: 16px;
@@ -308,16 +325,20 @@ p.st-semibold,
   font-weight: 600;
 }
 
-.color-tekst-1 {
+.color-tekst-1,
+.st-list.color-tekst-1 {
   color: #1c1c20;
 }
-.color-tekst-2 {
+.color-tekst-2,
+.st-list.color-tekst-2 {
   color: #87878e;
 }
-.color-tekst-3 {
+.color-tekst-3,
+.st-list.color-tekst-3 {
   color: #fefefe;
 }
-.color-tekst-4 {
+.color-tekst-4,
+.st-list.color-tekst-4 {
   color: #e7e7e7;
 }
 
@@ -325,23 +346,6 @@ img.st-image {
   display: block;
   width: 100%;
   height: auto;
-}
-
-ul.st-list,
-ol.st-list {
-  margin: 0;
-  font-weight: 500;
-  line-height: 140%;
-  letter-spacing: -0.01em;
-  color: #1c1c20;
-
-  & > li {
-    margin-bottom: 0.6em;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
 }
 
 .block_otstup {
@@ -375,5 +379,77 @@ ol.st-list {
     @include desktop {
       padding: 40px 0;
     }
+  }
+}
+
+.ssylka {
+  text-decoration: underline;
+}
+
+.ssylka-cvet {
+  color: #1661ce;
+}
+
+.container-text-v-1 {
+  max-width: 980px;
+}
+
+.citata {
+  position: relative;
+  min-height: 50px;
+  padding-left: 74px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: #1c1c20;
+
+  @include desktop {
+    min-height: 40px;
+    padding-left: 60px;
+    font-size: 16px;
+  }
+
+  @include tablet {
+    padding-left: 55px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    background: url(../assets/base/right-quote.svg) center / cover no-repeat;
+
+    @include desktop {
+      width: 40px;
+    }
+  }
+
+  & b {
+    font-weight: 600;
+  }
+}
+
+.pryamougolnik {
+  padding: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: #1c1c20;
+  background-color: #f5f5f5;
+
+  @include desktop {
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  @include tablet {
+    padding: 15px;
   }
 }
