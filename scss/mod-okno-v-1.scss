@@ -49,6 +49,11 @@
     @include tablet {
       max-height: calc(100dvh - 120px);
     }
+
+    &.has-scroll {
+      padding-right: 2px;
+      margin-right: -12px;
+    }
   }
 
   &__close {

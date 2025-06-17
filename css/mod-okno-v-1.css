@@ -56,6 +56,10 @@
     max-height: calc(100dvh - 120px);
   }
 }
+.mod-okno-v-1__content.has-scroll {
+  padding-right: 2px;
+  margin-right: -12px;
+}
 .mod-okno-v-1__close-button {
   position: absolute;
   top: 0;
