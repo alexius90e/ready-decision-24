@@ -120,6 +120,19 @@
             }
           }
 
+          &-item {
+            display: block;
+            padding: 16px 0;
+
+            &-link {
+              display: inline-block;
+              font-weight: 500;
+              font-size: 20px;
+              letter-spacing: -0.01em;
+              color: #fff;
+            }
+          }
+
           &-list {
             display: none;
             margin: 0;

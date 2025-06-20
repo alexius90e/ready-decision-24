@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
 html {
   font-size: 16px;
@@ -346,10 +347,10 @@ p.podzagolovok,
 ul.st-list,
 ol.st-list {
   margin: 0;
+  padding-left: 24px;
   font-weight: 500;
   line-height: 140%;
   letter-spacing: -0.01em;
-  color: #1c1c20;
 }
 ul.st-list > li,
 ol.st-list > li {
@@ -357,6 +358,21 @@ ol.st-list > li {
 }
 ul.st-list > li:last-child,
 ol.st-list > li:last-child {
+  margin-bottom: 0;
+}
+
+ul.custom-list {
+  margin: 0;
+  padding-left: 24px;
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  list-style-type: "–  ";
+}
+ul.custom-list > li {
+  margin-bottom: 0.6em;
+}
+ul.custom-list > li:last-child {
   margin-bottom: 0;
 }
 
@@ -420,22 +436,26 @@ p.st-semibold,
 }
 
 .color-tekst-1,
-.st-list.color-tekst-1 {
+.st-list.color-tekst-1,
+.custom-list.color-tekst-1 {
   color: #1c1c20;
 }
 
 .color-tekst-2,
-.st-list.color-tekst-2 {
+.st-list.color-tekst-2,
+.custom-list.color-tekst-2 {
   color: #87878e;
 }
 
 .color-tekst-3,
-.st-list.color-tekst-3 {
+.st-list.color-tekst-3,
+.custom-list.color-tekst-3 {
   color: #fefefe;
 }
 
 .color-tekst-4,
-.st-list.color-tekst-4 {
+.st-list.color-tekst-4,
+.custom-list.color-tekst-4 {
   color: #e7e7e7;
 }
 
@@ -497,16 +517,16 @@ img.st-image {
     padding: 13px 0;
   }
 }
-.block_otstup .block_otstup_xxs {
+.block_otstup_xxs {
   padding: 8px 0;
 }
 @media (max-width: 1200px) {
-  .block_otstup .block_otstup_xxs {
+  .block_otstup_xxs {
     padding: 7px 0;
   }
 }
 @media (max-width: 768px) {
-  .block_otstup .block_otstup_xxs {
+  .block_otstup_xxs {
     padding: 6px 0;
   }
 }
