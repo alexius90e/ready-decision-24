@@ -45,7 +45,7 @@ input {
           transition-duration: 0.2s;
 }
 input:focus {
-  border: 2px solid #1e674e;
+  border: 2px solid #1074b9;
 }
 input:user-invalid {
   border: 2px solid #fe4343;
@@ -120,18 +120,18 @@ input::placeholder {
   cursor: pointer;
 }
 .button_primary {
-  color: #1e674e;
-  border-color: #1e674e;
+  color: #1074b9;
+  border-color: #1074b9;
   background-color: #ffffff;
 }
 .button_primary:hover {
   color: #ffffff;
-  background-color: #1e674e;
+  background-color: #1074b9;
 }
 .button_secondary {
   color: #ffffff;
-  border-color: #1e674e;
-  background-color: #1e674e;
+  border-color: #1074b9;
+  background-color: #1074b9;
 }
 .button_secondary:hover {
   color: #ffffff;
@@ -139,14 +139,14 @@ input::placeholder {
   background-color: #1c1c20;
 }
 .button_light {
-  color: #1e674e;
+  color: #1074b9;
   border-color: #e9f0ed;
   background-color: #e9f0ed;
 }
 .button_light:hover {
   color: #ffffff;
-  border-color: #1e674e;
-  background-color: #1e674e;
+  border-color: #1074b9;
+  background-color: #1074b9;
 }
 .button_wide {
   width: 100%;
@@ -244,10 +244,11 @@ input::placeholder {
 .h1-st,
 .h2-st,
 .h3-st,
-.h4-st {
-  margin: 0;
+.h4-st,
+.h5-st {
+  margin: 28px 0 22px 0;
   font-weight: 500;
-  line-height: 140%;
+  line-height: 120%;
   letter-spacing: -0.01em;
   color: #1c1c20;
 }
@@ -281,6 +282,65 @@ input::placeholder {
 
 .h4-st {
   font-size: 20px;
+}
+
+.h5-st {
+  font-size: 18px;
+  margin: 20px 0 14px 0;
+}
+
+.zag-block {
+  margin: 0 0 40px 0;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  color: #1c1c20;
+  font-size: 60px;
+}
+@media (max-width: 1200px) {
+  .zag-block {
+    margin: 0 0 32px 0;
+    font-size: 44px;
+  }
+}
+@media (max-width: 768px) {
+  .zag-block {
+    font-size: 38px;
+  }
+}
+
+.zag-block-text {
+  margin: 0 0 12px 0;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  color: #1c1c20;
+  font-size: 60px;
+}
+@media (max-width: 1200px) {
+  .zag-block-text {
+    margin: 0 0 10px 0;
+    font-size: 44px;
+  }
+}
+@media (max-width: 768px) {
+  .zag-block-text {
+    font-size: 38px;
+  }
+}
+
+p.podzagolovok,
+.podzagolovok {
+  margin: 0 0 40px 0;
+  font-size: 20px;
+  line-height: 140%;
+  color: #616161;
+}
+@media (max-width: 1200px) {
+  p.podzagolovok,
+  .podzagolovok {
+    font-size: 16px;
+  }
 }
 
 ul.st-list,
@@ -331,6 +391,7 @@ p.st-medium,
 p.st-semibold,
 .st-semibold {
   font-size: 18px;
+  line-height: 175%;
 }
 @media (max-width: 1020px) {
   p.st-regular,
@@ -385,35 +446,68 @@ img.st-image {
 }
 
 .block_otstup_l {
-  padding: 270px 0;
+  padding: 120px 0;
 }
 @media (max-width: 1200px) {
   .block_otstup_l {
-    padding: 240px 0;
+    padding: 96px 0;
+  }
+}
+@media (max-width: 768px) {
+  .block_otstup_l {
+    padding: 78px 0;
   }
 }
 .block_otstup_m {
-  padding: 180px 0;
+  padding: 80px 0;
 }
 @media (max-width: 1200px) {
   .block_otstup_m {
-    padding: 160px 0;
+    padding: 64px 0;
+  }
+}
+@media (max-width: 768px) {
+  .block_otstup_m {
+    padding: 52px 0;
   }
 }
 .block_otstup_s {
-  padding: 90px 0;
+  padding: 40px 0;
 }
 @media (max-width: 1200px) {
   .block_otstup_s {
-    padding: 80px 0;
+    padding: 32px 0;
+  }
+}
+@media (max-width: 768px) {
+  .block_otstup_s {
+    padding: 26px 0;
   }
 }
 .block_otstup_xs {
-  padding: 45px 0;
+  padding: 20px 0;
 }
 @media (max-width: 1200px) {
   .block_otstup_xs {
-    padding: 40px 0;
+    padding: 16px 0;
+  }
+}
+@media (max-width: 768px) {
+  .block_otstup_xs {
+    padding: 13px 0;
+  }
+}
+.block_otstup .block_otstup_xxs {
+  padding: 8px 0;
+}
+@media (max-width: 1200px) {
+  .block_otstup .block_otstup_xxs {
+    padding: 7px 0;
+  }
+}
+@media (max-width: 768px) {
+  .block_otstup .block_otstup_xxs {
+    padding: 6px 0;
   }
 }
 
@@ -435,11 +529,11 @@ img.st-image {
   padding-left: 74px;
   font-weight: 500;
   font-size: 18px;
-  line-height: 140%;
+  line-height: 160%;
   letter-spacing: -0.01em;
   color: #1c1c20;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1020px) {
   .citata {
     min-height: 40px;
     padding-left: 60px;
@@ -448,7 +542,7 @@ img.st-image {
 }
 @media (max-width: 768px) {
   .citata {
-    padding-left: 55px;
+    padding-left: 45px;
   }
 }
 .citata::before {
@@ -464,6 +558,11 @@ img.st-image {
 @media (max-width: 1200px) {
   .citata::before {
     width: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .citata::before {
+    width: 30px;
   }
 }
 .citata b {

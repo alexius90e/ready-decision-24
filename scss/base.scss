@@ -43,7 +43,7 @@ input {
   transition-duration: 0.2s;
 
   &:focus {
-    border: 2px solid #1e674e;
+    border: 2px solid #1074b9;
   }
 
   &:user-invalid {
@@ -100,20 +100,20 @@ input {
   cursor: pointer;
 
   &_primary {
-    color: #1e674e;
-    border-color: #1e674e;
+    color: #1074b9;
+    border-color: #1074b9;
     background-color: #ffffff;
 
     &:hover {
       color: #ffffff;
-      background-color: #1e674e;
+      background-color: #1074b9;
     }
   }
 
   &_secondary {
     color: #ffffff;
-    border-color: #1e674e;
-    background-color: #1e674e;
+    border-color: #1074b9;
+    background-color: #1074b9;
 
     &:hover {
       color: #ffffff;
@@ -123,14 +123,14 @@ input {
   }
 
   &_light {
-    color: #1e674e;
+    color: #1074b9;
     border-color: #e9f0ed;
     background-color: #e9f0ed;
 
     &:hover {
       color: #ffffff;
-      border-color: #1e674e;
-      background-color: #1e674e;
+      border-color: #1074b9;
+      background-color: #1074b9;
     }
   }
 
@@ -220,10 +220,11 @@ input {
 .h1-st,
 .h2-st,
 .h3-st,
-.h4-st {
-  margin: 0;
+.h4-st,
+.h5-st {
+  margin: 28px 0 22px 0;
   font-weight: 500;
-  line-height: 140%;
+  line-height: 120%;
   letter-spacing: -0.01em;
   color: #1c1c20;
 }
@@ -254,6 +255,59 @@ input {
 
 .h4-st {
   font-size: 20px;
+}
+
+.h5-st {
+  font-size: 18px;
+  margin: 20px 0 14px 0;
+}
+
+.zag-block {
+  margin: 0 0 40px 0;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  color: #1c1c20;
+  font-size: 60px;
+
+  @include desktop {
+    margin: 0 0 32px 0;
+    font-size: 44px;
+  }
+
+  @include tablet {
+    font-size: 38px;
+  }
+}
+
+.zag-block-text {
+  margin: 0 0 12px 0;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  color: #1c1c20;
+  font-size: 60px;
+
+  @include desktop {
+    margin: 0 0 10px 0;
+    font-size: 44px;
+  }
+
+  @include tablet {
+    font-size: 38px;
+  }
+}
+
+p.podzagolovok,
+.podzagolovok {
+  margin: 0 0 40px 0;
+  font-size: 20px;
+  line-height: 140%;
+  color: #616161;
+
+  @include desktop {
+    font-size: 16px;
+  }
 }
 
 ul.st-list,
@@ -304,6 +358,7 @@ p.st-medium,
 p.st-semibold,
 .st-semibold {
   font-size: 18px;
+  line-height: 175%;
 
   @include laptop {
     font-size: 16px;
@@ -350,34 +405,62 @@ img.st-image {
 
 .block_otstup {
   &_l {
-    padding: 270px 0;
+    padding: 120px 0;
 
     @include desktop {
-      padding: 240px 0;
+      padding: 96px 0;
+    }
+
+    @include tablet {
+      padding: 78px 0;
     }
   }
 
   &_m {
-    padding: 180px 0;
+    padding: 80px 0;
 
     @include desktop {
-      padding: 160px 0;
+      padding: 64px 0;
+    }
+
+    @include tablet {
+      padding: 52px 0;
     }
   }
 
   &_s {
-    padding: 90px 0;
+    padding: 40px 0;
 
     @include desktop {
-      padding: 80px 0;
+      padding: 32px 0;
+    }
+
+    @include tablet {
+      padding: 26px 0;
     }
   }
 
   &_xs {
-    padding: 45px 0;
+    padding: 20px 0;
 
     @include desktop {
-      padding: 40px 0;
+      padding: 16px 0;
+    }
+
+    @include tablet {
+      padding: 13px 0;
+    }
+  }
+
+  .block_otstup_xxs {
+    padding: 8px 0;
+
+    @include desktop {
+      padding: 7px 0;
+    }
+
+    @include tablet {
+      padding: 6px 0;
     }
   }
 }
@@ -400,18 +483,18 @@ img.st-image {
   padding-left: 74px;
   font-weight: 500;
   font-size: 18px;
-  line-height: 140%;
+  line-height: 160%;
   letter-spacing: -0.01em;
   color: #1c1c20;
 
-  @include desktop {
+  @include laptop {
     min-height: 40px;
     padding-left: 60px;
     font-size: 16px;
   }
 
   @include tablet {
-    padding-left: 55px;
+    padding-left: 45px;
   }
 
   &::before {
@@ -426,6 +509,10 @@ img.st-image {
 
     @include desktop {
       width: 40px;
+    }
+
+    @include tablet {
+        width: 30px;
     }
   }
 
