@@ -1,0 +1,92 @@
+@import './b-mixins';
+
+.karusel-izobr-v-5 {
+  &__title {
+    margin: 0 0 12px;
+
+    @include desktop {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__description {
+    max-width: 1119px;
+    margin: 0;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+    color: #616161;
+
+    @include desktop {
+      font-size: 20px;
+    }
+
+    & b {
+      font-weight: 600;
+    }
+  }
+
+  &__gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 24px;
+    margin: 40px 0 0;
+
+    @include desktoplg {
+      gap: 40px 20px;
+    }
+
+    @include desktop {
+      gap: 32px 20px;
+      margin-top: 32px;
+    }
+  }
+
+  &__slide {
+    flex: 0 0 calc(100% / 4 - 24px / 4 * 3);
+
+    @include desktoplg {
+      flex: 0 0 calc(100% / 4 - 20px / 4 * 3);
+    }
+
+    @include desktop {
+      flex: 0 0 calc(100% / 3 - 20px / 3 * 2);
+    }
+
+    @include laptop {
+      flex: 0 0 calc(100% / 2 - 20px / 2 * 2);
+    }
+
+    @include tablet {
+      flex: 1 1 100%;
+    }
+
+    &-figure {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    &-text {
+      padding: 24px 6px 0;
+      font-weight: 500;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 140%;
+      letter-spacing: -0.01em;
+      color: #1c1c20;
+
+      &:empty {
+        display: none;
+      }
+    }
+  }
+}
