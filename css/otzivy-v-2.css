@@ -323,8 +323,8 @@
       -ms-flex-direction: column;
           flex-direction: column;
   max-width: 357px;
+  min-height: 400px;
   width: 100%;
-  height: 100%;
   padding: 24px 24px 40px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -415,7 +415,7 @@
   color: #ffffff;
 }
 .otzivy-v-2__review-text {
-  max-height: 242px;
+  min-height: 180px;
   margin: 19px 0 0;
   font-weight: 500;
   font-size: 16px;
