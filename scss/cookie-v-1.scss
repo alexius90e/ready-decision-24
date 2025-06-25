@@ -9,7 +9,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
   padding: 6px 15px;
   background: #f7f7f7;
 
@@ -21,7 +20,18 @@
     display: none;
   }
 
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 1 auto;
+    gap: 20px;
+  }
+
   &__disclaimer {
+    display: inline-block;
+    flex: 0 1 auto;
+    max-width: max-content;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 13px;

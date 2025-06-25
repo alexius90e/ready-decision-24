@@ -173,6 +173,7 @@
         -ms-flex: 1 0 50%;
             flex: 1 0 50%;
     min-height: 309px;
+    min-width: auto;
     padding: 34px 24px 45px;
     width: 100%;
   }
