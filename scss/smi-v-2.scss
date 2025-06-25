@@ -1,0 +1,242 @@
+@import './b-mixins';
+
+.smi-v-2 {
+  overflow: hidden;
+
+  &__title {
+    margin: 0;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+    color: #2f2f2f;
+
+    @include desktop {
+      font-size: 44px;
+    }
+
+    @include tablet {
+      font-size: 38px;
+    }
+  }
+
+  &__description {
+    max-width: 1244px;
+    margin: 12px 0 0;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+    color: #828282;
+
+    @include desktoplg {
+      max-width: 947px;
+    }
+
+    @include desktop {
+      margin-top: 10px;
+      max-width: 814px;
+      font-size: 20px;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 30px 24px;
+
+    @include desktoplg {
+      gap: 30px 20px;
+    }
+
+    @include desktop {
+      gap: 24px 20px;
+    }
+  }
+
+  &__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 calc(100% / 3 - 24px / 3 * 2);
+    padding: 56px 42px 18px;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+    transition-property: background-color;
+    transition-timing-function: ease-out;
+    transition-duration: 0.2s;
+
+    @include desktoplg {
+      flex: 0 0 calc(100% / 3 - 20px / 3 * 2);
+      padding: 42px 28px 18px;
+    }
+
+    @include desktop {
+      flex: 0 0 calc(100% / 2 - 20px / 2);
+      min-height: 420px;
+    }
+
+    @include tablet {
+      flex: 1 1 100%;
+      min-height: 518px;
+    }
+
+    &:hover {
+      background-color: #283b59;
+
+      @include tablet {
+        background-color: #f5f5f5;
+      }
+    }
+
+    &-link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 10;
+    }
+
+    &-title {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 140%;
+      letter-spacing: -0.01em;
+      color: #1c1c20;
+      transition-property: color;
+      transition-timing-function: ease-out;
+      transition-duration: 0.2s;
+
+      @include desktop {
+        font-size: 20px;
+      }
+    }
+
+    &:hover &-title {
+      color: #ffffff;
+
+      @include tablet {
+        color: #1c1c20;
+      }
+    }
+
+    &-text {
+      margin: 28px 0 0;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 140%;
+      letter-spacing: -0.01em;
+      color: #727278;
+      transition-property: color;
+      transition-timing-function: ease-out;
+      transition-duration: 0.2s;
+
+      @include desktop {
+        font-size: 16px;
+      }
+    }
+
+    &:hover &-text {
+      color: #ffffff;
+
+      @include tablet {
+        color: #1c1c20;
+      }
+    }
+
+    &-logo {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      flex: 1 1 auto;
+      margin: 54px 0 0;
+
+      @include tablet {
+        margin-top: 104px;
+      }
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        max-height: 32px;
+        height: auto;
+        transition-property: filter;
+        transition-timing-function: ease-out;
+        transition-duration: 0.2s;
+
+        @include desktop {
+          max-height: 28px;
+        }
+      }
+    }
+
+    &:hover &-logo {
+      &-image {
+        filter: brightness(0%) invert(100%);
+
+        @include tablet {
+          filter: brightness(100%) invert(0%);
+        }
+      }
+    }
+
+    &-details {
+      display: flex;
+      justify-content: flex-end;
+      margin: 20px 0 0;
+
+      @include desktop {
+        margin-top: 16px;
+      }
+
+      &-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 54px;
+        aspect-ratio: 1 / 1;
+        background-color: #283b59;
+        transition-property: background-color;
+        transition-timing-function: ease-out;
+        transition-duration: 0.2s;
+        cursor: pointer;
+
+        @include desktop {
+          width: 46px;
+        }
+
+        &::before {
+          content: '';
+          display: block;
+          width: 24px;
+          aspect-ratio: 1 / 1;
+          background: url(../assets/smi-v-2/arrow-top-left.svg) center / cover no-repeat;
+          transition-property: filter;
+          transition-timing-function: ease-out;
+          transition-duration: 0.2s;
+          filter: brightness(0%) invert(100%);
+        }
+      }
+    }
+
+    &:hover &-details {
+      &-link {
+        background-color: #ffffff;
+
+        @include tablet {
+          background-color: #283b59;
+        }
+
+        &::before {
+          filter: brightness(100%) invert(0%);
+
+          @include tablet {
+            filter: brightness(0%) invert(100%);
+          }
+        }
+      }
+    }
+  }
+}
