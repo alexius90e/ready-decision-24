@@ -4,6 +4,8 @@ const tabyV1TabsItems = document.querySelectorAll('.taby-v-1__tabs-item');
 tabyV1ControlsButtons.forEach((button) => {
   button.addEventListener('click', (event) => {
     const targetTabItemId = event.currentTarget.dataset.tabid;
+    tabyV1ControlsButtons.forEach((button) => button.classList.remove('active'));
+    event.currentTarget.classList.add('active');
     updateTabsV1(targetTabItemId);
   });
 });
@@ -16,6 +18,8 @@ function updateTabsV1(id) {
   if (resultTabEl) {
     tabyV1TabsItems.forEach((tabItem) => tabItem.classList.remove('active'));
     resultTabEl.classList.add('active');
+  } if (resultTabEl === firstTabItemEl) {
+    tabyV1ControlsButtons[0].classList.add('active');
   }
 }
 

@@ -52,6 +52,11 @@
   border: 1px solid #283b59;
   background-color: #283b59;
 }
+.taby-v-1__controls-button.active {
+  color: #fefefe;
+  border: 1px solid #283b59;
+  background-color: #283b59;
+}
 .taby-v-1__tabs {
   margin: 30px 0 0;
 }
