@@ -47,9 +47,10 @@
 }
 @media (max-width: 1020px) {
   .kontakty-v-2__main-block_office {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 360px;
-            flex: 0 0 360px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 300px;
+            flex: 1 0 300px;
+    max-width: 360px;
   }
 }
 @media (max-width: 768px) {
@@ -57,18 +58,21 @@
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
+    max-width: none;
   }
 }
 .kontakty-v-2__main-block_social {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
+  padding: 12px 0 0;
 }
 @media (max-width: 1020px) {
   .kontakty-v-2__main-block_social {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
+    padding: 0;
   }
 }
 .kontakty-v-2__main-block-title {
@@ -77,7 +81,6 @@
   font-size: 32px;
   line-height: 140%;
   letter-spacing: -0.01em;
-  font-variant: small-caps;
   color: #313131;
 }
 @media (max-width: 1020px) {
