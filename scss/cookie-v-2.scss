@@ -1,0 +1,74 @@
+@import './b-mixins';
+
+.cookie-v-2 {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 15px;
+  background: #f7f7f7;
+
+  @include laptop {
+    gap: 15px;
+  }
+
+  &.hidden {
+    display: none;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 1 auto;
+    gap: 20px;
+
+    @include laptop {
+      padding-right: 75px;
+    }
+  }
+
+  &__disclaimer {
+    display: inline-block;
+    flex: 0 1 auto;
+    max-width: max-content;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+    color: #2f2f2f;
+
+    @include laptop {
+      font-size: 12px;
+    }
+
+    &-link {
+      color: #2f2f2f;
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+    }
+  }
+
+  &__button {
+    display: inline-block;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+    color: #2f2f2f;
+    border: none;
+    background-color: rgba($color: #ffffff, $alpha: 0);
+    cursor: pointer;
+
+    @include laptop {
+      font-size: 12px;
+    }
+  }
+}
