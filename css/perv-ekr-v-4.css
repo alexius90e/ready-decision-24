@@ -239,6 +239,7 @@
   text-align: center;
   color: #fefefe;
   border: none;
+  background-color: #1e674e;
   -webkit-transition-property: border, color, background-color;
   transition-property: border, color, background-color;
   -webkit-transition-timing-function: ease-in-out;
