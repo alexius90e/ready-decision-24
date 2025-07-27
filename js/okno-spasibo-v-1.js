@@ -11,8 +11,14 @@ if (thanksModal) {
 
 thanksForms.forEach((thanksForm) => {
   thanksForm.addEventListener('submit', (event) => {
+    const url = 'https://example.com';
+
     event.preventDefault();
     event.currentTarget.reset();
+
+    if (url) {
+      window.open(url, '_blank');
+    }
 
     setTimeout(() => {
       if (thanksModal) thanksModal.classList.add('active');
