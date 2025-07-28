@@ -17,7 +17,10 @@ thanksForms.forEach((thanksForm) => {
     event.currentTarget.reset();
 
     if (url) {
-      window.open(url, '_blank');
+      setTimeout(() => {
+         window.open(url, '_blank');
+      }, 4000)
+     
     }
 
     setTimeout(() => {
