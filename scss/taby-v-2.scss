@@ -1,0 +1,38 @@
+@import './b-mixins';
+
+.taby-v-2 {
+  overflow: hidden;
+
+  &__gallery {
+    & .swiper {
+      overflow: visible;
+
+      &-slide {
+        width: auto;
+      }
+    }
+  }
+
+  &__tab {
+    width: fit-content;
+    padding: 18px 24px;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.01em;
+    color: #2f2f2f;
+    white-space: nowrap;
+    border-radius: 64px;
+    background-color: #f5f5f5;
+    transition-property: background-color, color;
+    transition-timing-function: ease-out;
+    transition-duration: 0.2s;
+    will-change: background-color, color;
+    user-select: none;
+    cursor: pointer;
+
+    &:hover {
+      color: #ffffff;
+      background-color: #1e674e;
+    }
+  }
+}
