@@ -1,0 +1,81 @@
+@import './b-mixins';
+
+.karusel-izobr-v-3 {
+  &__gallery {
+    & .swiper {
+      &-button {
+        &-prev,
+        &-next {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 54px;
+          height: 54px;
+          aspect-ratio: 1 / 1;
+          background-color: #1c1c20;
+          transition-property: color;
+          transition-timing-function: ease-in-out;
+          transition-duration: 0.2s;
+
+          &:hover {
+            background-color: #1e674e;
+          }
+
+          &::after {
+            content: '';
+            display: block;
+            width: 24px;
+            height: 24px;
+            filter: invert(100%);
+            background: url(../assets/karusel-izobr-v-3/arrow-left.svg) center / cover no-repeat;
+          }
+        }
+
+        &-prev {
+          left: 1px;
+
+          &::after {
+            transform: rotate(180deg);
+          }
+        }
+
+        &-next {
+          right: 1px;
+        }
+
+        &-disabled {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  &__slide {
+    &-figure {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    &-text {
+      padding: 20px 6px 0;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 140%;
+      letter-spacing: -0.01em;
+      color: #000;
+
+      @include mobile {
+        padding: 22px 36px 0;
+        font-size: 24px;
+      }
+    }
+  }
+}
