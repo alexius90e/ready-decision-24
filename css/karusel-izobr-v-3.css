@@ -8,10 +8,13 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 0;
   width: 54px;
   height: 54px;
   aspect-ratio: 1/1;
   background-color: #1c1c20;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-timing-function: ease-in-out;
@@ -71,7 +74,7 @@
 }
 @media (max-width: 576px) {
   .karusel-izobr-v-3__slide-text {
-    padding: 22px 36px 0;
-    font-size: 24px;
+    padding: 20px 6px 0;
+    font-size: 16px;
   }
 }

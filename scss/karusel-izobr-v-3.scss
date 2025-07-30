@@ -9,10 +9,12 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          margin: 0;
           width: 54px;
           height: 54px;
           aspect-ratio: 1 / 1;
           background-color: #1c1c20;
+          transform: translateY(-50%);
           transition-property: color;
           transition-timing-function: ease-in-out;
           transition-duration: 0.2s;
@@ -73,8 +75,8 @@
       color: #000;
 
       @include mobile {
-        padding: 22px 36px 0;
-        font-size: 24px;
+        padding: 20px 6px 0;
+        font-size: 16px;
       }
     }
   }
