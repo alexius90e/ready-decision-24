@@ -7,16 +7,21 @@
           align-items: stretch;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 24px;
+  gap: 30px 24px;
 }
 @media (max-width: 1580px) {
   .kategorii-v-8__cards {
-    gap: 20px;
+    gap: 30px 20px;
+  }
+}
+@media (max-width: 1020px) {
+  .kategorii-v-8__cards {
+    gap: 24px 20px;
   }
 }
 @media (max-width: 768px) {
   .kategorii-v-8__cards {
-    gap: 16px;
+    gap: 24px 16px;
   }
 }
 .kategorii-v-8__card {
@@ -68,6 +73,6 @@
 @media (max-width: 1020px) {
   .kategorii-v-8__card-text {
     padding: 12px 6px 0;
-    font-size: 18px;
+    font-size: 16px;
   }
 }

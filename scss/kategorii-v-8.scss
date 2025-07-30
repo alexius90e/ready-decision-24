@@ -5,14 +5,18 @@
     display: flex;
     align-items: stretch;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 30px 24px;
 
     @include desktoplg {
-      gap: 20px;
+      gap: 30px 20px;
+    }
+
+    @include laptop {
+      gap: 24px 20px;
     }
 
     @include tablet {
-      gap: 16px;
+      gap: 24px 16px;
     }
   }
 
@@ -55,7 +59,7 @@
 
       @include laptop {
         padding: 12px 6px 0;
-        font-size: 18px;
+        font-size: 16px;
       }
     }
   }
