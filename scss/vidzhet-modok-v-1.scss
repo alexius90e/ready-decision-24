@@ -1,0 +1,231 @@
+@import './b-mixins';
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+.vidzhet-modok-v-1 {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: rgba($color: #000000, $alpha: 0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition-property: opacity;
+  transition-timing-function: ease-out;
+  transition-duration: 0.2s;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &__body {
+    position: relative;
+    width: 980px;
+    max-width: calc(100vw - 40px);
+    background-color: #ffffff;
+    transform: translateY(-120vh);
+    transition-property: transform;
+    transition-timing-function: ease-out;
+    transition-duration: 0.4s;
+
+    @include laptop {
+      width: 768px;
+    }
+
+    @include tablet {
+      width: 390px;
+    }
+  }
+
+  &.active &__body {
+    transform: translateY(0);
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    display: block;
+    width: 32px;
+    aspect-ratio: 1 / 1;
+    background: url(../assets/vidzhet-modok-v-1/close.svg) center / 24px no-repeat;
+    background-color: #f5f5f5;
+    cursor: pointer;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__figure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 50%;
+    bottom: 0;
+    z-index: 1;
+    margin: 0;
+
+    @include tablet {
+      position: static;
+    }
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      &_lg {
+        @include tablet {
+          display: none;
+        }
+      }
+
+      &_sm {
+        display: none;
+
+        @include tablet {
+          display: block;
+          width: 100%;
+          height: auto;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  &__details {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 24px 40px 29px 24px;
+    box-sizing: border-box;
+
+    @include laptop {
+      padding: 20px;
+    }
+
+    @include tablet {
+      max-width: none;
+      padding: 16px 15px 20px;
+    }
+
+    &-title {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 140%;
+      color: #1c1c20;
+
+      @include laptop {
+        font-size: 20px;
+      }
+
+      &-link {
+        color: #0088cc;
+      }
+    }
+
+    &-subtitle {
+      margin: 20px 0 0;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 140%;
+      color: #1c1c20;
+
+      @include laptop {
+        margin-top: 12px;
+        font-size: 15px;
+      }
+    }
+
+    &-list {
+      margin: 8px 0 0;
+      padding: 0;
+      list-style-type: none;
+
+      @include laptop {
+        margin-top: 5px;
+      }
+
+      &-item {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 160%;
+        color: #616161;
+
+        @include laptop {
+          font-size: 15px;
+        }
+
+        & strong {
+          font-weight: 500;
+          color: #1c1c20;
+        }
+      }
+    }
+
+    &-disclaimer {
+      margin: 27px 0 0;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 140%;
+      color: #1c1c20;
+
+      @include laptop {
+        margin-top: 18px;
+        font-size: 16px;
+      }
+    }
+
+    &-telegram {
+      margin: 27px 0 0;
+
+      @include laptop {
+        margin-top: 16px;
+      }
+
+      &-link {
+        display: inline-block;
+        padding: 16px 24px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 140%;
+        letter-spacing: -0.01em;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        border: none;
+        background-color: #f0f;
+        transition: background-color ease-out 0.2s;
+        cursor: pointer;
+
+        @include laptop {
+          padding: 14px 24px;
+          font-size: 15px;
+        }
+
+        &:hover {
+          background-color: #1e674e;
+        }
+      }
+    }
+  }
+}
