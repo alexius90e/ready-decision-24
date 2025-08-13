@@ -1,0 +1,221 @@
+@import './b-mixins';
+
+.lid-forma-v-4 {
+  &__wrapper {
+    display: flex;
+    background-color: #2f2f2f;
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__figure {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex: 0 0 365px;
+    margin: 0;
+
+    @include desktoplg {
+      display: none;
+    }
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__main {
+    flex: 1 1 auto;
+    padding: 40px 48px;
+    padding-right: 0;
+    box-sizing: border-box;
+
+    @include desktoplg {
+      padding-right: 48px;
+    }
+
+    @include desktop {
+      padding: 30px 19px;
+    }
+
+    &-title {
+      margin: 0;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 140%;
+      letter-spacing: -0.01em;
+      color: #fff;
+
+      @include desktoplg {
+        font-size: 28px;
+      }
+
+      @include desktop {
+        font-size: 24px;
+      }
+
+      @include laptop {
+        font-size: 20px;
+      }
+    }
+
+    &-menu {
+      margin: 14px 0 0;
+
+      @include desktop {
+        margin-top: 12px;
+      }
+
+      &-link {
+        display: inline-block;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 140%;
+        letter-spacing: -0.01em;
+        color: #87878e;
+        transition: color ease-out 0.2s;
+
+        @include desktoplg {
+          font-size: 18px;
+        }
+
+        @include desktop {
+          font-size: 17px;
+        }
+
+        @include laptop {
+          font-size: 16px;
+        }
+
+        &:hover {
+          color: #ffffff;
+        }
+
+        &::after {
+          content: ' /';
+          display: inline;
+        }
+
+        &:hover::after {
+          color: #87878e;
+        }
+
+        &:last-child::after{
+          display: none;
+        }
+      }
+    }
+
+    &-form {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin: 36px 0 0;
+
+      @include desktoplg {
+        gap: 20px;
+        margin-top: 28px;
+      }
+
+      @include tablet {
+        flex-wrap: wrap;
+      }
+
+      &-input,
+      &-button {
+        flex: 0 0 calc(100% / 3 - 24px / 3 * 2);
+        display: inline-block;
+        min-height: 56px;
+        padding: 16px 24px;
+        box-sizing: border-box;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 125%;
+        letter-spacing: -0.01em;
+        outline: none;
+
+        @include desktoplg {
+          flex: 0 0 calc(100% / 3 - 20px / 3 * 2);
+        }
+
+        @include laptop {
+          min-height: 52px;
+          padding: 15px 20px;
+          font-size: 15px;
+        }
+
+        @include tablet {
+          flex: 1 1 100%;
+        }
+      }
+
+      &-input {
+        color: #1c1c20;
+        border: 2px solid #444444;
+        background-color: #444444;
+
+        &:focus {
+          border: 2px solid #ffffff;
+
+          background-color: #ffffff;
+        }
+
+        &:user-valid {
+          border: 2px solid #ffffff;
+          background-color: #ffffff;
+        }
+
+        &::placeholder {
+          color: #87878e;
+        }
+      }
+
+      &-button {
+        text-transform: uppercase;
+        text-align: center;
+        color: #fefefe;
+        border: none;
+        background-color: #1e674e;
+        transition-property: border, color, background-color;
+        transition-timing-function: ease-in-out;
+        transition-duration: 0.2s;
+        cursor: pointer;
+
+        @include laptop {
+          padding: 15px 4px;
+        }
+
+        &:hover {
+          color: #1c1c20;
+          background-color: #fefefe;
+        }
+      }
+    }
+
+    &-disclaimer {
+      margin: 14px 0 0;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      letter-spacing: -0.01em;
+      color: #87878e;
+
+      & a {
+        color: inherit;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        transition-property: border, color, background-color;
+        transition-timing-function: ease-in-out;
+        transition-duration: 0.2s;
+
+        &:hover {
+          color: #fefefe;
+        }
+      }
+    }
+  }
+}
