@@ -1,0 +1,216 @@
+@import './b-mixins';
+
+.lid-forma-v-3 {
+  background-color: #1e674e;
+  padding: 60px 0;
+
+  @include desktoplg {
+    padding: 50px 0;
+  }
+
+  @include desktop {
+    padding: 42px 0;
+  }
+
+  @include laptop {
+    padding: 36px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+
+    @include desktoplg {
+      gap: 20px;
+    }
+
+    @include tablet {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__photo {
+    flex: 0 0 750px;
+    margin: 0;
+
+    @include desktoplg {
+      flex: 0 0 580px;
+    }
+
+    @include desktop {
+      flex: 0 0 490px;
+    }
+
+    @include laptop {
+      flex: 0 0 388px;
+    }
+
+    @include tablet {
+      flex: 1 1 100%;
+    }
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+
+      @include laptop {
+        height: 370px;
+      }
+
+      @include tablet {
+        height: auto;
+      }
+    }
+  }
+
+  &__callback {
+    flex: 0 1 auto;
+    box-sizing: border-box;
+
+    @include tablet {
+      flex: 1 1 100%;
+    }
+
+    &-title {
+      margin: 0;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 140%;
+      letter-spacing: -0.01em;
+      color: #f5f5f5;
+
+      @include desktoplg {
+        font-size: 34px;
+      }
+
+      @include desktop {
+        font-size: 28px;
+      }
+
+      @include laptop {
+        font-size: 24px;
+      }
+    }
+
+    &-description {
+      margin: 10px 0 0;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 140%;
+      letter-spacing: -0.01em;
+      color: #f5f5f5;
+    }
+
+    &-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin: 46px 0 0;
+
+      @include desktoplg {
+        gap: 20px;
+      }
+
+      @include desktop {
+        margin-top: 31px;
+      }
+
+      &-input,
+      &-textarea {
+        display: inline-block;
+        flex: 0 0 calc(100% / 2 - 24px / 2);
+        width: 100%;
+        padding: 17px 24px;
+        box-sizing: border-box;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        letter-spacing: -0.01em;
+        color: #1c1c20;
+        border: 2px solid #dfdfe0;
+
+        @include desktoplg {
+          flex: 0 0 calc(100% / 2 - 20px / 2);
+        }
+
+        @include laptop {
+          flex: 1 1 100%;
+          padding: 15px 24px;
+        }
+
+        &:focus {
+          border: 2px solid #afafaf;
+        }
+      }
+
+      &-textarea {
+        flex: 1 1 100%;
+        min-height: 195px;
+        resize: none;
+
+        @include desktoplg {
+          min-height: 115px;
+        }
+
+        @include desktop {
+          min-height: 79px;
+        }
+
+        @include laptop {
+          min-height: 120px;
+        }
+      }
+
+      &-submit {
+        padding: 17px 24px;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #ffffff;
+        border-color: #2a2a2a;
+        background-color: #2a2a2a;
+
+        @include desktoplg {
+          font-size: 15px;
+        }
+
+        @include laptop {
+          flex: 1 1 100%;
+          font-size: 16px;
+        }
+
+        &:hover {
+          color: #2a2a2a;
+          background-color: #ffffff;
+        }
+      }
+
+      &-disclaimer {
+        flex: 1 1 20%;
+        margin: 0;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 140%;
+        letter-spacing: -0.01em;
+        color: #b9b9b9;
+        transition: color ease-in-out 0.2s;
+
+        @include desktop {
+          font-size: 13px;
+        }
+
+        & a {
+          text-decoration: underline;
+          text-decoration-skip-ink: none;
+          color: inherit;
+
+          &:hover {
+            color: #1e674e;
+          }
+        }
+      }
+    }
+  }
+}
