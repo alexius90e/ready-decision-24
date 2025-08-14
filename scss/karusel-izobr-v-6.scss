@@ -40,6 +40,7 @@
     left: 0;
     right: 0;
     z-index: 99;
+    height: 0px;
     transform: translateY(-50%);
 
     @include tablet {
@@ -47,6 +48,7 @@
     }
 
     &-wrapper {
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -54,6 +56,8 @@
 
     &-prev,
     &-next {
+      position: absolute;
+      top: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -87,7 +91,7 @@
     }
 
     &-prev {
-      left: 1px;
+      left: 0px;
 
       &::after {
         transform: rotate(180deg);
@@ -95,7 +99,7 @@
     }
 
     &-next {
-      right: 1px;
+      right: 0px;
     }
 
     &-disabled {
