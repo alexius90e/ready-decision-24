@@ -83,6 +83,11 @@
     min-height: 370px;
   }
 }
+@media (max-width: 768px) {
+  .lid-forma-v-4__photo-image {
+    min-height: auto;
+  }
+}
 .lid-forma-v-4__callback {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;

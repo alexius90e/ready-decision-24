@@ -59,6 +59,10 @@
       @include laptop {
         min-height: 370px;
       }
+
+      @include tablet {
+        min-height: auto;
+      }
     }
   }
 
