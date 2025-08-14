@@ -106,6 +106,7 @@
 
     &-form {
       display: flex;
+      align-items: flex-start;
       flex-wrap: wrap;
       gap: 24px;
       margin: 46px 0 0;
@@ -138,9 +139,12 @@
           flex: 0 0 calc(100% / 2 - 20px / 2);
         }
 
+        @include desktop {
+          padding: 13px 24px;
+        }
+
         @include laptop {
           flex: 1 1 100%;
-          padding: 13px 24px;
         }
 
         &:focus {
@@ -175,8 +179,11 @@
       }
 
       &-submit {
-        padding: 17px 24px;
+        min-height: 56px;
+        padding: 18px 24px;
+        box-sizing: border-box;
         font-size: 16px;
+        line-height: 100%;
         text-transform: uppercase;
         color: #ffffff;
         border-color: #2a2a2a;
@@ -184,6 +191,12 @@
 
         @include desktoplg {
           font-size: 15px;
+        }
+
+        @include desktop {
+          min-height: 52px;
+        padding: 16px 24px;
+
         }
 
         @include laptop {
