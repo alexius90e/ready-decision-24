@@ -1,0 +1,112 @@
+@import './b-mixins';
+
+.etapy-v-2 {
+  background-color: #2f2f2f;
+
+  &__wrapper {
+    overflow: auto;
+  }
+
+  &__list {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    @include desktoplg {
+      gap: 20px;
+    }
+
+    @include laptop {
+      min-width: 1010px;
+    }
+
+    @include tablet {
+      gap: 15px;
+      min-width: 880px;
+    }
+
+    &-item {
+      display: flex;
+      align-items: stretch;
+      flex: 0 0 calc(100% / 3 - 24px / 3 * 2);
+
+      @include desktoplg {
+        flex: 0 0 calc(100% / 3 - 20px / 3 * 2);
+      }
+
+      @include desktop {
+        flex: 0 0 calc(100% / 2 - 20px / 2);
+      }
+
+      @include laptop {
+        flex: 0 0 calc(100% / 3 - 20px / 3 * 2);
+      }
+
+      @include tablet {
+        flex: 0 0 calc(100% / 3 - 15px / 3 * 2);
+      }
+
+      &-id {
+        display: block;
+        flex: 0 0 127px;
+        padding: 10px 32px;
+        box-sizing: border-box;
+        font-weight: 500;
+        font-size: 60px;
+        line-height: 140%;
+        letter-spacing: -0.01em;
+        text-align: right;
+        color: #fff;
+        background-color: #1e674e;
+
+        @include desktoplg {
+          flex: 0 0 78px;
+          padding: 10px 22px;
+        }
+
+        @include laptop {
+          flex: 0 0 47px;
+          padding: 10px;
+          font-size: 50px;
+        }
+      }
+
+      &-details {
+        padding: 24px;
+        background-color: #ffffff;
+
+        @include desktoplg {
+          padding: 20px;
+        }
+
+        &-title {
+          margin: 0;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 140%;
+          letter-spacing: -0.01em;
+          text-transform: uppercase;
+          color: #1c1c20;
+          overflow-wrap: break-word;
+          word-break: break-word;
+
+          @include desktoplg {
+            font-size: 18px;
+          }
+        }
+
+        &-description {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 140%;
+          letter-spacing: -0.01em;
+          color: #727278;
+        }
+      }
+    }
+  }
+}
