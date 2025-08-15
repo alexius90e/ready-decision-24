@@ -6,6 +6,7 @@ if (karuselIzobrV6SwiperEl) {
   const swiper = new Swiper(karuselIzobrV6SwiperEl, {
     slidesPerView: 'auto',
     spaceBetween: 20,
+    loop: true,
     breakpoints: {
       320: {
         spaceBetween: 15,
