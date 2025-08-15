@@ -7,6 +7,10 @@
     & .swiper {
       &-slide {
         width: auto;
+
+        @include laptop {
+          width: 100%;
+        }
       }
     }
 
@@ -21,16 +25,21 @@
       }
 
       @include laptop {
-        max-height: 297px;
+        max-height: none;
+        width: 100%;
       }
 
-      @include laptop {
-        max-height: 244px;
-      }
+      // @include laptop {
+      //   max-height: 297px;
+      // }
 
-      @include laptop {
-        max-height: 222px;
-      }
+      // @include tablet {
+      //   max-height: 244px;
+      // }
+
+      // @include mobile {
+      //   max-height: 222px;
+      // }
     }
   }
 

@@ -4,6 +4,11 @@
 .karusel-izobr-v-6__gallery .swiper-slide {
   width: auto;
 }
+@media (max-width: 1020px) {
+  .karusel-izobr-v-6__gallery .swiper-slide {
+    width: 100%;
+  }
+}
 .karusel-izobr-v-6__gallery-image {
   display: block;
   max-width: 100%;
@@ -17,17 +22,8 @@
 }
 @media (max-width: 1020px) {
   .karusel-izobr-v-6__gallery-image {
-    max-height: 297px;
-  }
-}
-@media (max-width: 1020px) {
-  .karusel-izobr-v-6__gallery-image {
-    max-height: 244px;
-  }
-}
-@media (max-width: 1020px) {
-  .karusel-izobr-v-6__gallery-image {
-    max-height: 222px;
+    max-height: none;
+    width: 100%;
   }
 }
 .karusel-izobr-v-6__controls {
