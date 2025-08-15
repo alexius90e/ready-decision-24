@@ -81,13 +81,14 @@
         }
 
         @include laptop {
-          flex: 0 0 47px;
+          flex: 0 0 53px;
           padding: 10px;
           font-size: 50px;
         }
       }
 
       &-details {
+        flex: 1 1 auto;
         padding: 24px;
         background-color: #ffffff;
 
