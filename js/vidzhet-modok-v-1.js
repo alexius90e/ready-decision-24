@@ -1,6 +1,6 @@
 const vidzhetModokV1El = document.querySelector('.vidzhet-modok-v-1');
-const vidzhetModokV1Delay = 10000;
-const tenMinutesInMs = 1 * 60 * 1000;
+const vidzhetModokV1Delay = 30000;
+const tenMinutesInMs = 10 * 60 * 1000;
 
 function showVidzhetModokV1() {
   if (vidzhetModokV1El) {
@@ -8,19 +8,24 @@ function showVidzhetModokV1() {
   }
 }
 
-if (vidzhetModokV1El) {
-  const lastShowTime = localStorage.getItem('vidzhetModokV1ShowTime');
+function updateVidgetTimer() {
+  const lastShowTimeStr = localStorage.getItem('vidzhetModokV1ShowTime');
+  const lastShowTime = new Date(lastShowTimeStr).getTime();
+  const delta = new Date().getTime() - lastShowTime;
 
-  if (lastShowTime === null) {
+  console.log(delta);
+
+  if (lastShowTime === 0 || delta >= tenMinutesInMs) {
     setTimeout(() => showVidzhetModokV1(), vidzhetModokV1Delay);
-    console.log(vidzhetModokV1Delay);
-  } else if (new Date().getTime() - Number(lastShowTime) >= tenMinutesInMs) {
-    setTimeout(() => showVidzhetModokV1(), vidzhetModokV1Delay);
-    console.log(vidzhetModokV1Delay);
+    console.log('lastShowTime === 0 || delta >= tenMinutesInMs');
   } else {
-    setTimeout(() => showVidzhetModokV1(), new Date().getTime() - Number(lastShowTime));
-    console.log(new Date().getTime() - Number(lastShowTime));
+    setTimeout(() => showVidzhetModokV1(), tenMinutesInMs - delta);
+    console.log('delta < tenMinutesInMs');
   }
+}
+
+if (vidzhetModokV1El) {
+  updateVidgetTimer();
 
   vidzhetModokV1El.addEventListener('click', (event) => {
     const isLayout = event.target === event.currentTarget;
@@ -28,7 +33,8 @@ if (vidzhetModokV1El) {
 
     if (isLayout || isClose) {
       vidzhetModokV1El.classList.remove('active');
-      localStorage.setItem('vidzhetModokV1ShowTime', new Date().getTime());
+      localStorage.setItem('vidzhetModokV1ShowTime', new Date().toISOString());
+      updateVidgetTimer();
     }
   });
 }
