@@ -1,6 +1,6 @@
 const karuselIzobrV6SwiperEl = document.querySelector('.karusel-izobr-v-6 .swiper');
-const karuselIzobrV6PrevBtn = document.querySelector('.karusel-izobr-v-6__controls-prev');
-const karuselIzobrV6NextBtn = document.querySelector('.karusel-izobr-v-6__controls-next');
+const karuselIzobrV6PrevBtn = document.querySelector('.karusel-izobr-v-6__gallery-controls-prev');
+const karuselIzobrV6NextBtn = document.querySelector('.karusel-izobr-v-6__gallery-controls-next');
 
 if (karuselIzobrV6SwiperEl) {
   const swiper = new Swiper(karuselIzobrV6SwiperEl, {

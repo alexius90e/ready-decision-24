@@ -1,6 +1,9 @@
 .karusel-izobr-v-6 {
   background-color: #2f2f2f;
 }
+.karusel-izobr-v-6__gallery {
+  position: relative;
+}
 .karusel-izobr-v-6__gallery .swiper-slide {
   width: auto;
 }
@@ -26,7 +29,7 @@
     width: 100%;
   }
 }
-.karusel-izobr-v-6__controls {
+.karusel-izobr-v-6__gallery-controls {
   position: absolute;
   top: 50%;
   left: 0;
@@ -37,11 +40,11 @@
           transform: translateY(-50%);
 }
 @media (max-width: 768px) {
-  .karusel-izobr-v-6__controls {
+  .karusel-izobr-v-6__gallery-controls {
     display: none;
   }
 }
-.karusel-izobr-v-6__controls-wrapper {
+.karusel-izobr-v-6__gallery-controls-wrapper {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -53,7 +56,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.karusel-izobr-v-6__controls-prev, .karusel-izobr-v-6__controls-next {
+.karusel-izobr-v-6__gallery-controls-prev, .karusel-izobr-v-6__gallery-controls-next {
   position: absolute;
   top: 50%;
   display: -webkit-box;
@@ -84,32 +87,32 @@
   cursor: pointer;
 }
 @media (max-width: 1020px) {
-  .karusel-izobr-v-6__controls-prev, .karusel-izobr-v-6__controls-next {
+  .karusel-izobr-v-6__gallery-controls-prev, .karusel-izobr-v-6__gallery-controls-next {
     width: 54px;
   }
 }
-.karusel-izobr-v-6__controls-prev:hover, .karusel-izobr-v-6__controls-next:hover {
+.karusel-izobr-v-6__gallery-controls-prev:hover, .karusel-izobr-v-6__gallery-controls-next:hover {
   background-color: #1e674e;
 }
-.karusel-izobr-v-6__controls-prev::after, .karusel-izobr-v-6__controls-next::after {
+.karusel-izobr-v-6__gallery-controls-prev::after, .karusel-izobr-v-6__gallery-controls-next::after {
   content: "";
   display: block;
   width: 24px;
   height: 24px;
   -webkit-filter: invert(100%);
           filter: invert(100%);
-  background: url(../assets/karusel-izobr-v-3/arrow-left.svg) center/cover no-repeat;
+  background: url(../assets/karusel-izobr-v-6/arrow-left.svg) center/cover no-repeat;
 }
-.karusel-izobr-v-6__controls-prev {
+.karusel-izobr-v-6__gallery-controls-prev {
   left: 0px;
 }
-.karusel-izobr-v-6__controls-prev::after {
+.karusel-izobr-v-6__gallery-controls-prev::after {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
-.karusel-izobr-v-6__controls-next {
+.karusel-izobr-v-6__gallery-controls-next {
   right: 0px;
 }
-.karusel-izobr-v-6__controls-disabled {
+.karusel-izobr-v-6__gallery-controls-disabled {
   opacity: 0;
 }
