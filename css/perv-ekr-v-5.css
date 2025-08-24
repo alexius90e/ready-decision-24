@@ -258,8 +258,14 @@
 .perv-ekr-v-5__buttons-consult {
   background-color: #000000;
 }
+.perv-ekr-v-5__buttons-consult:hover {
+  background-color: #1e674e;
+}
 .perv-ekr-v-5__buttons-proposal {
   background-color: #1e674e;
+}
+.perv-ekr-v-5__buttons-proposal:hover {
+  background-color: #1c1c20;
 }
 .perv-ekr-v-5__photo {
   margin: 0;

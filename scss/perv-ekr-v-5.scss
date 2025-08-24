@@ -197,10 +197,18 @@
 
     &-consult {
       background-color: #000000;
+
+      &:hover {
+        background-color: #1e674e;
+      }
     }
 
     &-proposal {
       background-color: #1e674e;
+
+      &:hover {
+        background-color: #1c1c20;
+      }
     }
   }
 
