@@ -18,7 +18,7 @@
       &-item {
         display: block;
         flex: 0 0 auto;
-        padding: 14px;
+        padding: 16px;
         box-sizing: border-box;
         font-weight: 500;
         font-size: 14px;
@@ -30,6 +30,14 @@
         transition-timing-function: ease-out;
         transition-duration: 0.2s;
         cursor: pointer;
+
+        @include desktoplg {
+          font-size: 15px;
+        }
+
+        @include laptop {
+          font-size: 14px;
+        }
 
         &:hover {
           color: #ffffff;
@@ -122,21 +130,24 @@
     }
 
     &-item.active &-submenu {
-      display: block;
+      display: flex;
     }
 
     &-submenu {
-      display: none;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
       margin: 0;
       padding: 14px 0 0;
       padding-left: 10px;
       list-style-type: none;
+      display: none;
 
       &-item {
         &-link {
           font-weight: 500;
           font-size: 18px;
-          line-height: 180%;
+          line-height: 140%;
           letter-spacing: -0.01em;
           color: #87878e;
           transition-property: color, font-weight;
@@ -153,7 +164,7 @@
 
           &:hover {
             font-weight: 600;
-            color: #1c1c20;
+            color: #1e674e;
           }
         }
       }
@@ -177,7 +188,7 @@
       flex-wrap: wrap;
       flex: 1 1 100%;
       gap: 10px 24px;
-      padding: 0 24px 32px;
+      padding: 0 24px;
       box-sizing: border-box;
       border: 1px solid #e9e9e9;
 
@@ -299,7 +310,7 @@
           color: #1c1c20;
 
           @include laptop {
-            font-size: 16px;
+            font-size: 15px;
           }
 
           @include tablet {
@@ -325,10 +336,12 @@
           min-height: 56px;
           padding: 18px 44px;
           box-sizing: border-box;
+          font-weight: 600;
           font-size: 16px;
-          line-height: 125%;
-          color: #ffffff;
+          letter-spacing: -0.01em;
           text-transform: uppercase;
+          text-align: center;
+          color: #fefefe;
           border: none;
           background-color: #1e674e;
 
@@ -346,6 +359,7 @@
           @include laptop {
             min-height: 45px;
             padding: 13px 32px;
+            font-size: 14px;
           }
 
           @include tablet {
@@ -361,11 +375,13 @@
         flex: 1 1 100%;
         gap: 20px;
         order: 4;
+        padding-bottom: 32px;
 
         @include tablet {
           flex-wrap: wrap;
           gap: 24px 16px;
           order: 2;
+          padding-bottom: 0;
         }
 
         &-item,
@@ -451,7 +467,16 @@
         color: #87878e;
         border: 1px solid #e9e9e9;
         background-color: rgba($color: #ffffff, $alpha: 0);
+        transition-property: color, border-color, background-color;
+        transition-timing-function: ease-out;
+        transition-duration: 0.2s;
         cursor: pointer;
+
+        &:hover {
+          color: #fefefe;
+          border-color: #1e674e;
+          background-color: #1e674e;
+        }
       }
     }
   }

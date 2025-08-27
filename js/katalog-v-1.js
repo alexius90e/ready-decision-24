@@ -62,7 +62,7 @@ if (katalogV1ModalProposal && katalogV1ModalProposalForm) {
 
   katalogV1ModalProposal.addEventListener('click', (event) => {
     const isLayout = event.currentTarget === event.target;
-    const isClose = event.target.classList.contains('katalog-v-1__modal-consult-close-button');
+    const isClose = event.target.classList.contains('katalog-v-1__modal-proposal-close-button');
     if (isLayout || isClose) katalogV1ModalProposal.classList.remove('active');
   });
 
