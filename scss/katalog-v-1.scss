@@ -9,7 +9,6 @@
       display: flex;
       flex-wrap: wrap;
       gap: 15px;
-      max-height: calc(2 * 48px + 15px);
       width: 100%;
       margin: 0;
       padding: 0;
@@ -18,11 +17,11 @@
       &-item {
         display: block;
         flex: 0 0 auto;
-        padding: 16px;
+        padding: 18px;
         box-sizing: border-box;
         font-weight: 500;
-        font-size: 14px;
-        line-height: 20px;
+        font-size: 16px;
+        line-height: 140%;
         letter-spacing: -0.01em;
         color: #1c1c20;
         background-color: #e9e9e9;
@@ -32,10 +31,12 @@
         cursor: pointer;
 
         @include desktoplg {
+          padding: 17px;
           font-size: 15px;
         }
 
         @include laptop {
+          padding: 14px;
           font-size: 14px;
         }
 
@@ -163,7 +164,6 @@
           }
 
           &:hover {
-            font-weight: 600;
             color: #1e674e;
           }
         }
@@ -376,6 +376,18 @@
         gap: 20px;
         order: 4;
         padding-bottom: 32px;
+
+        @include desktoplg {
+          padding-bottom: 23px;
+        }
+
+        @include desktop {
+          padding-bottom: 16px;
+        }
+
+        @include laptop {
+          padding-bottom: 20px;
+        }
 
         @include tablet {
           flex-wrap: wrap;
