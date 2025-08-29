@@ -1,0 +1,60 @@
+@import './b-mixins';
+
+.karusel-izobr-v-8 {
+  overflow: hidden;
+
+  &__gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include desktop {
+      gap: 20px;
+    }
+
+    & .swiper {
+      overflow: visible;
+    }
+  }
+
+  &__slide {
+    &-figure {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    &-text {
+      padding: 20px 6px 0;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 140%;
+      letter-spacing: -0.01em;
+      color: #000;
+
+      @include desktoplg {
+        font-size: 18px;
+      }
+
+      @include desktop {
+        padding: 16px 6px 0;
+        font-size: 16px;
+      }
+
+      @include laptop {
+        font-size: 15px;
+      }
+
+      @include tablet {
+        padding: 12px 6px 0;
+      }
+    }
+  }
+}
