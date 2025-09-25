@@ -106,7 +106,7 @@
   display: block;
   width: 24px;
   aspect-ratio: 1/1;
-  background: url(../assets/proekty-v-4/arrow-left.svg) center/cover no-repeat;
+  background: url(../assets/proekty-v-5/arrow-left.svg) center/cover no-repeat;
 }
 .proekty-v-5__card-sliders-main-controls-prev {
   left: 0;
@@ -442,7 +442,7 @@
   display: block;
   width: 28px;
   aspect-ratio: 1/1;
-  background: url(../assets/proekty-v-4/close.svg) center/cover no-repeat;
+  background: url(../assets/proekty-v-5/close.svg) center/cover no-repeat;
   -webkit-filter: brightness(0);
           filter: brightness(0);
 }
